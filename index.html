@@ -35,7 +35,8 @@
         .lang-toggle-btn:hover { background-color: rgba(255, 255, 255, 0.4); transform: scale(1.05); }
         #dark-mode-toggle { background: none; border: none; color: #fff; font-size: 1.5em; cursor: pointer; transition: transform 0.3s ease; }
         #dark-mode-toggle:hover { transform: scale(1.2); }
-        .hero { padding: 120px 20px 60px; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; }
+        main { display: flex; flex-direction: column; justify-content: center; min-height: calc(100vh - 160px); /* Adjust based on header/footer height */ }
+        .hero { padding: 60px 20px; color: #fff; }
         .hero h1 { font-size: 3.5em; margin: 0; }
         .hero p { font-size: 1.5em; margin: 20px 0; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
         .daily-quote { background: rgba(255, 255, 255, 0.9); border-radius: 15px; padding: 20px; margin: 20px auto; width: 90%; max-width: 600px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); font-size: 1.3em; color: #333; transition: transform 0.3s ease; }
@@ -50,12 +51,10 @@
         .feature-card i { font-size: 2.5em; color: var(--primary-color); margin-bottom: 15px; }
         .feature-card h2 { color: #333; }
         body.dark-mode .feature-card h2 { color: #eee; }
-        .ad-placeholder { width: 90%; max-width: 728px; min-height: 90px; border: 2px dashed #999; display: flex; justify-content: center; align-items: center; font-weight: bold; margin: 40px auto; border-radius: 8px; color: #777; }
-        body.dark-mode .ad-placeholder { border-color: #666; color: #aaa; }
         footer { padding: 30px; margin-top: 40px; color: #fff; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
         body.dark-mode footer { color: var(--font-color-dark); }
         @media (max-width: 992px) { .nav-links { display: none; } }
-        @media (max-width: 768px) { .navbar-brand .site-name { display: none; } }
+        @media (max-width: 768px) { .navbar-brand .site-name { display: none; } .hero h1 { font-size: 2.5em; } }
     </style>
 </head>
 <body
@@ -68,7 +67,7 @@
         <div class="nav-links">
             <a href="index.html" class="active"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
             <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
-            <a href="#"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+            <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
             <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
         </div>
         <div class="nav-controls">
@@ -88,7 +87,6 @@
             <div class="feature-card"><i class="fas fa-mobile-alt"></i><h2><span class="lang-ar">تصميم متجاوب</span><span class="lang-en">Responsive Design</span></h2><p><span class="lang-ar">تجربة مثالية وسلسة على جميع الأجهزة، من الجوال إلى الحاسوب.</span><span class="lang-en">A perfect and seamless experience on all devices.</span></p></div>
             <div class="feature-card"><i class="fas fa-star"></i><h2><span class="lang-ar">واجهة فاخرة</span><span class="lang-en">Elegant Interface</span></h2><p><span class="lang-ar">تصميم أنيق ووضع ليلي مريح للعين لتجربة قراءة ممتعة.</span><span class="lang-en">An elegant design and a comfortable dark mode.</span></p></div>
         </section>
-        <div class="ad-placeholder"><span class="lang-ar">مساحة إعلانية</span><span class="lang-en">Advertisement Area</span></div>
     </main>
     <footer>
         <p><span class="lang-ar">جميع الحقوق محفوظة © 2024 - موقع ذِكْرَى</span><span class="lang-en">Copyright © 2024 - Dhikra Website</span></p>
@@ -100,13 +98,11 @@
             const htmlEl = document.documentElement;
             const darkModeToggle = document.getElementById('dark-mode-toggle');
             const langToggleBtn = document.getElementById('lang-toggle');
-
             const applyDarkMode = (isDark) => {
                 const icon = darkModeToggle.querySelector('i');
                 if (isDark) { document.body.classList.add('dark-mode'); icon.classList.replace('fa-moon', 'fa-sun'); } 
                 else { document.body.classList.remove('dark-mode'); icon.classList.replace('fa-sun', 'fa-moon'); }
             };
-
             const setLanguage = (lang) => {
                 htmlEl.lang = lang;
                 htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -114,12 +110,9 @@
                 document.title = lang === 'ar' ? document.body.getAttribute('data-title-ar') : document.body.getAttribute('data-title-en');
                 localStorage.setItem('language', lang);
             };
-            
             darkModeToggle.addEventListener('click', () => { const isDarkMode = !document.body.classList.contains('dark-mode'); applyDarkMode(isDarkMode); localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); });
             langToggleBtn.addEventListener('click', () => { const newLang = htmlEl.lang === 'ar' ? 'en' : 'ar'; setLanguage(newLang); });
-
             particlesJS("particles-js", { particles: { number: { value: 60 }, color: { value: ["#ffffff", "#81c784", "#4caf50"] }, shape: { type: "circle" }, opacity: { value: 0.4, random: true }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.3, width: 1 }, move: { enable: true, speed: 2, direction: "none", out_mode: "out" } }, interactivity: { events: { onhover: { enable: true, mode: "repulse" } } }, retina_detect: true });
-            
             applyDarkMode(localStorage.getItem('theme') === 'dark');
             setLanguage(localStorage.getItem('language') || 'ar'); 
         });
