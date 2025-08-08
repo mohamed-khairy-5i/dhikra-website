@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO: Unique Title, Description, and Keywords for this page -->
+    <title>مدونة ذِكْرَى | مقالات ومواضيع إسلامية</title>
+    <meta name="description" content="اقرأ مقالات ومواضيع عن فضل الذكر، تفسير الأدعية، وقصص ملهمة لتعميق فهمك وتجربتك الروحية في الإسلام.">
+    <meta name="keywords" content="مدونة إسلامية, فضل الذكر, مواضيع دينية, قصص إسلامية, تأملات قرآنية, حياة المسلم, السنة النبوية">
+    <link rel="icon" href="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS is identical to previous pages for consistency */
+        :root { --primary-color: #4CAF50; --font-color-light: #333; --bg-gradient-light: linear-gradient(135deg, #e0f7fa, #80deea); --font-color-dark: #e0e0e0; --bg-gradient-dark: linear-gradient(135deg, #1a2a44, #2e4a66); }
+        html[lang="ar"] { font-family: 'Cairo', sans-serif; }
+        html[lang="en"] { font-family: 'Poppins', sans-serif; }
+        html[lang="ar"] .lang-en { display: none; }
+        html[lang="en"] .lang-ar { display: none; }
+        body { margin: 0; padding-top: 80px; min-height: 100vh; overflow-x: hidden; position: relative; background: var(--bg-gradient-light); color: var(--font-color-light); text-align: center; transition: background 0.5s ease, color 0.5s ease; }
+        body.dark-mode { background: var(--bg-gradient-dark); color: var(--font-color-dark); }
+        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
+        h1, h2, h3 { font-family: 'Amiri', serif; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); }
+        html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3 { font-family: 'Poppins', sans-serif; font-weight: 700; }
+        nav { background: rgba(0, 0, 0, 0.7); padding: 10px 5%; position: fixed; width: 90%; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); display: flex; justify-content: space-between; align-items: center; }
+        .navbar-brand { display: flex; align-items: center; text-decoration: none; }
+        .navbar-brand img { height: 50px; }
+        .navbar-brand .site-name { font-family: 'Amiri', serif; font-size: 1.8em; color: #fff; }
+        html[dir="rtl"] .navbar-brand .site-name { margin-right: 15px; }
+        html[dir="ltr"] .navbar-brand .site-name { margin-left: 15px; }
+        .nav-links a { color: #fff; font-size: 1.1em; margin: 0 15px; text-decoration: none; padding-bottom: 5px; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary-color); }
+        .nav-controls { display: flex; align-items: center; gap: 15px; }
+        .lang-toggle-btn { background-color: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.5); color: #fff; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.9em; }
+        #dark-mode-toggle { background: none; border: none; color: #fff; font-size: 1.5em; cursor: pointer; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 20px; }
+        .page-header h1 { color: #fff; }
+        .page-header p { color: #fff; text-shadow: 1px 1px 3px #000; font-size: 1.2em; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .blog-card { background: rgba(255, 255, 255, 0.9); border-top: 4px solid var(--primary-color); border-radius: 15px; text-align: right; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; color: var(--font-color-light); overflow: hidden; }
+        html[lang="en"] .blog-card { text-align: left; }
+        body.dark-mode .blog-card { background: rgba(40, 40, 40, 0.95); color: var(--font-color-dark); }
+        .blog-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); }
+        .blog-card img { width: 100%; height: 180px; object-fit: cover; }
+        .blog-card-content { padding: 20px; }
+        .blog-card h3 { margin-top: 0; }
+        .blog-card p { font-size: 0.95em; }
+        .btn { display: inline-block; padding: 12px 28px; background: linear-gradient(to right, #4caf50, #81c784); color: #fff !important; text-decoration: none; border-radius: 25px; font-size: 1.1em; transition: transform 0.3s ease, box-shadow 0.3s ease; border: none; margin-top: 15px; }
+        .btn:hover { transform: scale(1.05); }
+        footer { padding: 30px; margin-top: 40px; color: #fff; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
+        body.dark-mode footer { color: var(--font-color-dark); }
+    </style>
+</head>
+<body
+    data-title-ar="مدونة ذِكْرَى | مقالات ومواضيع إسلامية"
+    data-title-en="Dhikra Blog | Islamic Articles & Topics"
+>
+    <div id="particles-js"></div>
+    <nav>
+        <a href="index.html" class="navbar-brand"><img src="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" alt="Dhikra Logo"><span class="site-name"><span class="lang-ar">ذِكْرَى</span><span class="lang-en">Dhikra</span></span></a>
+        <div class="nav-links">
+            <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+            <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+            <a href="blog.html" class="active"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+            <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
+        </div>
+        <div class="nav-controls">
+            <button id="lang-toggle" class="lang-toggle-btn"></button>
+            <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="page-header">
+            <h1><span class="lang-ar">مدونة ذِكْرَى</span><span class="lang-en">Dhikra Blog</span></h1>
+            <p><span class="lang-ar">مقالات وتأملات لقلب أكثر تعلقًا بالله.</span><span class="lang-en">Articles and reflections for a heart more attached to Allah.</span></p>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <img src="https://via.placeholder.com/400x200/4CAF50/FFFFFF?text=Dhikr" alt="فضل الذكر">
+                <div class="blog-card-content">
+                    <h3><span class="lang-ar">فضل الذكر وأثره في حياة المسلم</span><span class="lang-en">The Virtue of Dhikr and its Impact on a Muslim's Life</span></h3>
+                    <p><span class="lang-ar">الذكر من أيسر العبادات وأعظمها أجرًا. في هذا المقال، نستعرض فضل المداومة على الذكر وكيف يغير حياتك...</span><span class="lang-en">Dhikr is one of the easiest acts of worship with the greatest reward. In this article, we explore its virtues...</span></p>
+                    <a href="blog-post-1.html" class="btn"><span class="lang-ar">اقرأ المزيد</span><span class="lang-en">Read More</span></a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://via.placeholder.com/400x200/81c784/FFFFFF?text=Khushu" alt="الخشوع في الصلاة">
+                <div class="blog-card-content">
+                    <h3><span class="lang-ar">السكينة في الصلاة: 5 خطوات لخشوع أعمق</span><span class="lang-en">Tranquility in Prayer: 5 Steps for Deeper Khushu</span></h3>
+                    <p><span class="lang-ar">هل تعاني من السرحان في الصلاة؟ إليك خطوات عملية تساعدك على استحضار قلبك وروحك أثناء الصلاة...</span><span class="lang-en">Do you struggle with a wandering mind during prayer? Here are practical steps to help you...</span></p>
+                    <a href="#" class="btn"><span class="lang-ar">قريباً</span><span class="lang-en">Coming Soon</span></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p><span class="lang-ar">جميع الحقوق محفوظة © 2024 - موقع ذِكْرَى</span><span class="lang-en">Copyright © 2024 - Dhikra Website</span></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // JS is identical to previous pages
+        document.addEventListener('DOMContentLoaded', () => {
+            const htmlEl = document.documentElement;
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
+            const langToggleBtn = document.getElementById('lang-toggle');
+            const applyDarkMode = (isDark) => { const icon = darkModeToggle.querySelector('i'); if (isDark) { document.body.classList.add('dark-mode'); icon.classList.replace('fa-moon', 'fa-sun'); } else { document.body.classList.remove('dark-mode'); icon.classList.replace('fa-sun', 'fa-moon'); } };
+            const setLanguage = (lang) => { htmlEl.lang = lang; htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr'; langToggleBtn.textContent = lang === 'ar' ? 'EN' : 'AR'; document.title = lang === 'ar' ? document.body.getAttribute('data-title-ar') : document.body.getAttribute('data-title-en'); localStorage.setItem('language', lang); };
+            darkModeToggle.addEventListener('click', () => { const isDarkMode = !document.body.classList.contains('dark-mode'); applyDarkMode(isDarkMode); localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); });
+            langToggleBtn.addEventListener('click', () => { const newLang = htmlEl.lang === 'ar' ? 'en' : 'ar'; setLanguage(newLang); });
+            particlesJS("particles-js", { particles: { number: { value: 60 }, color: { value: ["#ffffff", "#81c784", "#4caf50"] }, opacity: { value: 0.4 }, size: { value: 3 }, line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.3 }, move: { enable: true, speed: 2 } }, interactivity: { events: { onhover: { enable: true, mode: "repulse" } } } });
+            applyDarkMode(localStorage.getItem('theme') === 'dark');
+            setLanguage(localStorage.getItem('language') || 'ar'); 
+        });
+    </script>
+</body>
+</html>
