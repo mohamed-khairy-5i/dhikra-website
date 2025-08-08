@@ -3,58 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع ذِكْرَى - بوابتك اليومية للأذكار والتأمل</title>
-    <meta name="description" content="موقع ذِكْرَى هو مكانكم المفضل لتلاوة الأذكار اليومية، أدعية الصباح والمساء، بأسلوب عصري وفاخر.">
-    <meta name="keywords" content="أذكار, اذكار الصباح, اذكار المساء, دعاء, إسلام, قرآن, تسبيح, حصن المسلم">
+    <title>موقع ذِكْرَى - أذكار، أدعية، ومقالات إسلامية</title>
+    <meta name="description" content="موقع ذِكْرَى هو حصنك اليومي لتلاوة أذكار الصباح والمساء، وقراءة مقالات إسلامية ملهمة. ابدأ يومك ببركة وطمأنينة.">
+    <meta name="keywords" content="أذكار, اذكار الصباح, اذكار المساء, دعاء, إسلام, حصن المسلم, سيد الاستغفار, فضل الذكر, مدونة إسلامية">
     <link rel="icon" href="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
     <style>
-        :root { --primary-color: #4CAF50; --font-color-light: #333; --bg-gradient-light: linear-gradient(135deg, #e0f7fa, #80deea); --font-color-dark: #e0e0e0; --bg-gradient-dark: linear-gradient(135deg, #1a2a44, #2e4a66); }
+        :root { --primary-color: #4CAF50; --secondary-color: #81c784; --font-color-light: #333; --bg-gradient-light: linear-gradient(135deg, #e0f7fa, #80deea); --card-bg-light: #ffffff; --font-color-dark: #e0e0e0; --bg-gradient-dark: linear-gradient(135deg, #1a2a44, #2e4a66); --card-bg-dark: #1f292e; }
         html[lang="ar"] { font-family: 'Cairo', sans-serif; }
         html[lang="en"] { font-family: 'Poppins', sans-serif; }
         html[lang="ar"] .lang-en { display: none; }
         html[lang="en"] .lang-ar { display: none; }
-        body { margin: 0; padding-top: 80px; min-height: 100vh; overflow-x: hidden; position: relative; background: var(--bg-gradient-light); color: var(--font-color-light); text-align: center; transition: background 0.5s ease, color 0.5s ease; }
+        body { margin: 0; padding-top: 80px; background: var(--bg-gradient-light); color: var(--font-color-light); text-align: center; transition: background 0.5s ease, color 0.5s ease; }
         body.dark-mode { background: var(--bg-gradient-dark); color: var(--font-color-dark); }
         #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
-        h1, h2, h3 { font-family: 'Amiri', serif; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); }
+        h1, h2, h3 { font-family: 'Amiri', serif; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); }
         html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3 { font-family: 'Poppins', sans-serif; font-weight: 700; }
-        nav { background: rgba(0, 0, 0, 0.7); padding: 10px 5%; position: fixed; width: 90%; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); display: flex; justify-content: space-between; align-items: center; }
+        nav { background: rgba(0, 0, 0, 0.7); padding: 10px 5%; position: fixed; width: 90%; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(5px); }
         .navbar-brand { display: flex; align-items: center; text-decoration: none; }
-        .navbar-brand img { height: 50px; transition: transform 0.3s ease; }
-        .navbar-brand:hover img { transform: rotate(15deg) scale(1.1); }
+        .navbar-brand img { height: 50px; }
         .navbar-brand .site-name { font-family: 'Amiri', serif; font-size: 1.8em; color: #fff; }
         html[dir="rtl"] .navbar-brand .site-name { margin-right: 15px; }
         html[dir="ltr"] .navbar-brand .site-name { margin-left: 15px; }
-        .nav-links a { color: #fff; font-size: 1.1em; margin: 0 15px; text-decoration: none; padding-bottom: 5px; transition: color 0.3s; }
+        .nav-links a { color: #fff; font-size: 1.1em; margin: 0 15px; text-decoration: none; transition: color 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: var(--primary-color); }
         .nav-controls { display: flex; align-items: center; gap: 15px; }
-        .lang-toggle-btn { background-color: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.5); color: #fff; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.9em; transition: background-color 0.3s, transform 0.3s; }
-        .lang-toggle-btn:hover { background-color: rgba(255, 255, 255, 0.4); transform: scale(1.05); }
-        #dark-mode-toggle { background: none; border: none; color: #fff; font-size: 1.5em; cursor: pointer; transition: transform 0.3s ease; }
-        #dark-mode-toggle:hover { transform: scale(1.2); }
-        main { display: flex; flex-direction: column; justify-content: center; min-height: calc(100vh - 160px); /* Adjust based on header/footer height */ }
-        .hero { padding: 60px 20px; color: #fff; }
-        .hero h1 { font-size: 3.5em; margin: 0; }
-        .hero p { font-size: 1.5em; margin: 20px 0; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
-        .daily-quote { background: rgba(255, 255, 255, 0.9); border-radius: 15px; padding: 20px; margin: 20px auto; width: 90%; max-width: 600px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); font-size: 1.3em; color: #333; transition: transform 0.3s ease; }
-        body.dark-mode .daily-quote { background: rgba(0, 0, 0, 0.5); color: var(--font-color-dark); }
-        .btn { display: inline-block; padding: 15px 30px; background: linear-gradient(to right, #4caf50, #81c784); color: #fff; text-decoration: none; border-radius: 25px; font-size: 1.2em; transition: transform 0.3s ease, box-shadow 0.3s ease; border: none; }
-        .btn:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); }
-        .features { display: flex; justify-content: center; flex-wrap: wrap; padding: 40px 20px; background-color: rgba(255, 255, 255, 0.8); }
-        body.dark-mode .features { background-color: rgba(0, 0, 0, 0.3); }
-        .feature-card { background: #fff; border-top: 4px solid var(--primary-color); border-radius: 15px; padding: 25px; margin: 15px; width: 280px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; color: var(--font-color-light); }
-        body.dark-mode .feature-card { background: rgba(40, 40, 40, 0.95); color: var(--font-color-dark); }
-        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); }
+        .lang-toggle-btn { background-color: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.5); color: #fff; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.9em; transition: background-color 0.3s; }
+        #dark-mode-toggle { background: none; border: none; color: #fff; font-size: 1.5em; cursor: pointer; }
+        .hero { padding: 100px 20px 80px; color: #fff; }
+        .hero h1 { font-size: 3.2em; margin: 0; }
+        .hero p { font-size: 1.4em; margin: 20px 0 30px; }
+        .btn { display: inline-block; padding: 15px 35px; background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); color: #fff; text-decoration: none; border-radius: 30px; font-size: 1.2em; transition: transform 0.3s, box-shadow 0.3s; border: none; }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 5px 20px rgba(76, 175, 80, 0.4); }
+        .section-wrapper { padding: 50px 20px; }
+        .section-wrapper.bg-light { background: rgba(255,255,255,0.8); }
+        body.dark-mode .section-wrapper.bg-light { background: rgba(0,0,0,0.3); }
+        .section-title { font-size: 2.5em; margin-bottom: 10px; color: var(--font-color-light); text-shadow: none; }
+        body.dark-mode .section-title { color: var(--font-color-dark); }
+        .section-subtitle { font-size: 1.2em; color: #555; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        body.dark-mode .section-subtitle { color: #ccc; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .feature-card, .blog-card { background: var(--card-bg-light); border-top: 4px solid var(--primary-color); border-radius: 15px; padding: 25px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); transition: transform 0.3s, box-shadow 0.3s; color: var(--font-color-light); }
+        body.dark-mode .feature-card, body.dark-mode .blog-card { background: var(--card-bg-dark); color: var(--font-color-dark); }
+        .feature-card:hover, .blog-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); }
         .feature-card i { font-size: 2.5em; color: var(--primary-color); margin-bottom: 15px; }
-        .feature-card h2 { color: #333; }
-        body.dark-mode .feature-card h2 { color: #eee; }
-        footer { padding: 30px; margin-top: 40px; color: #fff; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
+        .blog-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+        .dhikr-highlight { background: rgba(255, 255, 255, 0.9); border-radius: 15px; padding: 40px; max-width: 800px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        body.dark-mode .dhikr-highlight { background: var(--card-bg-dark); }
+        .dhikr-highlight .dhikr-title { font-size: 1.8em; color: var(--primary-color); }
+        .dhikr-highlight .dhikr-text { font-family: 'Amiri', serif; font-size: 1.5em; line-height: 2; }
+        .cta-section { padding: 60px 20px; background: var(--secondary-color); color: #fff; }
+        .cta-section h2 { font-size: 2.2em; margin: 0 0 20px 0; }
+        footer { padding: 30px; color: #fff; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
         body.dark-mode footer { color: var(--font-color-dark); }
         @media (max-width: 992px) { .nav-links { display: none; } }
-        @media (max-width: 768px) { .navbar-brand .site-name { display: none; } .hero h1 { font-size: 2.5em; } }
+        @media (max-width: 768px) { .navbar-brand .site-name { display: none; } .hero h1 { font-size: 2.8em; } }
     </style>
 </head>
 <body
@@ -77,15 +82,49 @@
     </nav>
     <main>
         <section class="hero">
-            <h1><span class="lang-ar">مرحبًا بكم في موقع ذِكْرَى</span><span class="lang-en">Welcome to Dhikra Website</span></h1>
-            <p><span class="lang-ar">مكانكم المفضل لتلاوة الأذكار اليومية بأسلوب عصري وفاخر</span><span class="lang-en">Your favorite place for daily remembrances in a modern, elegant style</span></p>
-            <div class="daily-quote"><span class="lang-ar">"أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ"</span><span class="lang-en">"Verily, in the remembrance of Allah do hearts find rest."</span></div>
-            <a href="adhkar.html" class="btn"><span class="lang-ar">استكشف الأذكار</span><span class="lang-en">Explore Adhkar</span></a>
+            <h1><span class="lang-ar">أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ</span><span class="lang-en">Verily, in the remembrance of Allah do hearts find rest.</span></h1>
+            <p><span class="lang-ar">حصنك اليومي للسكينة والطمأنينة في عالم سريع الخطى</span><span class="lang-en">Your daily fortress of peace and tranquility in a fast-paced world</span></p>
+            <a href="adhkar.html" class="btn"><span class="lang-ar">ابدأ رحلتك مع الذكر</span><span class="lang-en">Start Your Journey with Dhikr</span></a>
         </section>
-        <section class="features">
-            <div class="feature-card"><i class="fas fa-prayer-hands"></i><h2><span class="lang-ar">أذكار شاملة</span><span class="lang-en">Comprehensive Adhkar</span></h2><p><span class="lang-ar">مجموعة واسعة من الأذكار لكل مناسبة في حياة المسلم.</span><span class="lang-en">A wide collection of remembrances for every occasion.</span></p></div>
-            <div class="feature-card"><i class="fas fa-mobile-alt"></i><h2><span class="lang-ar">تصميم متجاوب</span><span class="lang-en">Responsive Design</span></h2><p><span class="lang-ar">تجربة مثالية وسلسة على جميع الأجهزة، من الجوال إلى الحاسوب.</span><span class="lang-en">A perfect and seamless experience on all devices.</span></p></div>
-            <div class="feature-card"><i class="fas fa-star"></i><h2><span class="lang-ar">واجهة فاخرة</span><span class="lang-en">Elegant Interface</span></h2><p><span class="lang-ar">تصميم أنيق ووضع ليلي مريح للعين لتجربة قراءة ممتعة.</span><span class="lang-en">An elegant design and a comfortable dark mode.</span></p></div>
+
+        <section class="section-wrapper bg-light">
+            <h2 class="section-title"><span class="lang-ar">لماذا تختار ذِكْرَى؟</span><span class="lang-en">Why Choose Dhikra?</span></h2>
+            <p class="section-subtitle"><span class="lang-ar">نحن نقدم لك تجربة إيمانية متكاملة وسهلة الوصول في أي وقت ومن أي مكان.</span><span class="lang-en">We offer you a complete and easily accessible spiritual experience, anytime and anywhere.</span></p>
+            <div class="grid">
+                <div class="feature-card"><i class="fas fa-book-open"></i><h3><span class="lang-ar">محتوى موثوق</span><span class="lang-en">Authentic Content</span></h3><p><span class="lang-ar">أذكار وأدعية من القرآن والسنة النبوية الشريفة.</span><span class="lang-en">Remembrances and supplications from the Qur'an and authentic Sunnah.</span></p></div>
+                <div class="feature-card"><i class="fas fa-palette"></i><h3><span class="lang-ar">تصميم يريح العين</span><span class="lang-en">Soothing Design</span></h3><p><span class="lang-ar">واجهة هادئة ووضع ليلي لتقليل إجهاد العين أثناء القراءة.</span><span class="lang-en">A calm interface and dark mode to reduce eye strain during reading.</span></p></div>
+                <div class="feature-card"><i class="fas fa-universal-access"></i><h3><span class="lang-ar">سهولة الوصول</span><span class="lang-en">Easy Access</span></h3><p><span class="lang-ar">يعمل بسلاسة على جميع أجهزتك، من الجوال إلى الحاسوب.</span><span class="lang-en">Works seamlessly on all your devices, from mobile to desktop.</span></p></div>
+            </div>
+        </section>
+        
+        <section class="section-wrapper">
+            <h2 class="section-title"><span class="lang-ar">من أذكارنا المميزة</span><span class="lang-en">Featured Dhikr</span></h2>
+            <div class="dhikr-highlight">
+                <h3 class="dhikr-title"><span class="lang-ar">سيد الاستغفار</span><span class="lang-en">The Master of Seeking Forgiveness</span></h3>
+                <p class="dhikr-text"><span class="lang-ar">"اللَّهُمَّ أَنْتَ رَبِّي لا إِلَهَ إِلا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي، فَإِنَّهُ لا يَغْفِرُ الذُّنُوبَ إِلا أَنْتَ".</span><span class="lang-en">"O Allah, You are my Lord, none has the right to be worshiped except You. You created me and I am Your servant, and I abide by Your covenant and promise as best I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favor upon me and I acknowledge my sin, so forgive me, for none forgives sins except You."</span></p>
+            </div>
+        </section>
+
+        <section class="section-wrapper bg-light">
+            <h2 class="section-title"><span class="lang-ar">من مدونتنا</span><span class="lang-en">From Our Blog</span></h2>
+            <p class="section-subtitle"><span class="lang-ar">مقالات لتعميق فهمك وإثراء تجربتك الروحية.</span><span class="lang-en">Articles to deepen your understanding and enrich your spiritual experience.</span></p>
+            <div class="grid">
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/400x200/4CAF50/FFFFFF?text=Dhikr" alt="فضل الذكر">
+                    <h3><span class="lang-ar">فضل الذكر وأثره العظيم</span><span class="lang-en">The Great Virtue of Dhikr</span></h3>
+                    <a href="blog-post-1.html" class="btn"><span class="lang-ar">اقرأ المقال</span><span class="lang-en">Read Article</span></a>
+                </div>
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/400x200/81c784/FFFFFF?text=Peace" alt="السكينة والطمأنينة">
+                    <h3><span class="lang-ar">كيف تجد الطمأنينة في حياتك؟</span><span class="lang-en">How to Find Tranquility in Your Life?</span></h3>
+                    <a href="#" class="btn"><span class="lang-ar">قريباً</span><span class="lang-en">Coming Soon</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2><span class="lang-ar">هل أنت مستعد لتبدأ؟</span><span class="lang-en">Are You Ready to Begin?</span></h2>
+            <a href="adhkar.html" class="btn"><span class="lang-ar">تصفح الأذكار الآن</span><span class="lang-en">Browse Adhkar Now</span></a>
         </section>
     </main>
     <footer>
@@ -98,18 +137,8 @@
             const htmlEl = document.documentElement;
             const darkModeToggle = document.getElementById('dark-mode-toggle');
             const langToggleBtn = document.getElementById('lang-toggle');
-            const applyDarkMode = (isDark) => {
-                const icon = darkModeToggle.querySelector('i');
-                if (isDark) { document.body.classList.add('dark-mode'); icon.classList.replace('fa-moon', 'fa-sun'); } 
-                else { document.body.classList.remove('dark-mode'); icon.classList.replace('fa-sun', 'fa-moon'); }
-            };
-            const setLanguage = (lang) => {
-                htmlEl.lang = lang;
-                htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr';
-                langToggleBtn.textContent = lang === 'ar' ? 'EN' : 'AR';
-                document.title = lang === 'ar' ? document.body.getAttribute('data-title-ar') : document.body.getAttribute('data-title-en');
-                localStorage.setItem('language', lang);
-            };
+            const applyDarkMode = (isDark) => { const icon = darkModeToggle.querySelector('i'); if (isDark) { document.body.classList.add('dark-mode'); icon.classList.replace('fa-moon', 'fa-sun'); } else { document.body.classList.remove('dark-mode'); icon.classList.replace('fa-sun', 'fa-moon'); } };
+            const setLanguage = (lang) => { htmlEl.lang = lang; htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr'; langToggleBtn.textContent = lang === 'ar' ? 'EN' : 'AR'; document.title = lang === 'ar' ? document.body.getAttribute('data-title-ar') : document.body.getAttribute('data-title-en'); localStorage.setItem('language', lang); };
             darkModeToggle.addEventListener('click', () => { const isDarkMode = !document.body.classList.contains('dark-mode'); applyDarkMode(isDarkMode); localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); });
             langToggleBtn.addEventListener('click', () => { const newLang = htmlEl.lang === 'ar' ? 'en' : 'ar'; setLanguage(newLang); });
             particlesJS("particles-js", { particles: { number: { value: 60 }, color: { value: ["#ffffff", "#81c784", "#4caf50"] }, shape: { type: "circle" }, opacity: { value: 0.4, random: true }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.3, width: 1 }, move: { enable: true, speed: 2, direction: "none", out_mode: "out" } }, interactivity: { events: { onhover: { enable: true, mode: "repulse" } } }, retina_detect: true });
