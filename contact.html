@@ -11,36 +11,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* CSS is identical for consistency */
-        :root { --primary-color: #4CAF50; --font-color-light: #333; --bg-gradient-light: linear-gradient(135deg, #e0f7fa, #80deea); --font-color-dark: #e0e0e0; --bg-gradient-dark: linear-gradient(135deg, #1a2a44, #2e4a66); }
+        :root { --primary-color: #4CAF50; --secondary-color: #81c784; --font-color-light: #333; --bg-gradient-light: linear-gradient(135deg, #e0f7fa, #80deea); --card-bg-light: #ffffff; --font-color-dark: #e0e0e0; --bg-gradient-dark: linear-gradient(135deg, #1a2a44, #2e4a66); --card-bg-dark: #1f292e; }
         html[lang="ar"] { font-family: 'Cairo', sans-serif; }
         html[lang="en"] { font-family: 'Poppins', sans-serif; }
         html[lang="ar"] .lang-en { display: none; }
         html[lang="en"] .lang-ar { display: none; }
-        body { margin: 0; padding-top: 80px; min-height: 100vh; overflow-x: hidden; position: relative; background: var(--bg-gradient-light); color: var(--font-color-light); text-align: center; transition: background 0.5s ease, color 0.5s ease; }
+        body { margin: 0; padding-top: 80px; background: var(--bg-gradient-light); color: var(--font-color-light); text-align: center; transition: background 0.5s ease, color 0.5s ease; }
         body.dark-mode { background: var(--bg-gradient-dark); color: var(--font-color-dark); }
         #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
-        h1, h2, h3 { font-family: 'Amiri', serif; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); }
+        h1, h2, h3 { font-family: 'Amiri', serif; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); }
         html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3 { font-family: 'Poppins', sans-serif; font-weight: 700; }
-        nav { background: rgba(0, 0, 0, 0.7); padding: 10px 5%; position: fixed; width: 90%; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); display: flex; justify-content: space-between; align-items: center; }
+        nav { background: rgba(0, 0, 0, 0.7); padding: 10px 5%; position: fixed; width: 90%; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(5px); }
         .navbar-brand { display: flex; align-items: center; text-decoration: none; }
         .navbar-brand img { height: 50px; }
         .navbar-brand .site-name { font-family: 'Amiri', serif; font-size: 1.8em; color: #fff; }
         html[dir="rtl"] .navbar-brand .site-name { margin-right: 15px; }
         html[dir="ltr"] .navbar-brand .site-name { margin-left: 15px; }
-        .nav-links a { color: #fff; font-size: 1.1em; margin: 0 15px; text-decoration: none; padding-bottom: 5px; transition: color 0.3s; }
+        .nav-links a { color: #fff; font-size: 1.1em; margin: 0 15px; text-decoration: none; transition: color 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: var(--primary-color); }
         .nav-controls { display: flex; align-items: center; gap: 15px; }
         .lang-toggle-btn { background-color: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.5); color: #fff; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.9em; }
         #dark-mode-toggle { background: none; border: none; color: #fff; font-size: 1.5em; cursor: pointer; }
-        .container { max-width: 900px; margin: 40px auto; padding: 20px; }
-        .page-header h1 { color: #fff; }
-        .page-header p { color: #fff; text-shadow: 1px 1px 3px #000; font-size: 1.2em; }
-        .contact-card { background: rgba(255, 255, 255, 0.9); border-top: 4px solid var(--primary-color); border-radius: 15px; padding: 30px; margin-top: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); color: var(--font-color-light); }
-        body.dark-mode .contact-card { background: rgba(40, 40, 40, 0.95); color: var(--font-color-dark); }
-        .contact-card i { font-size: 2em; color: var(--primary-color); margin-bottom: 10px; }
-        .contact-card p, .contact-card a { font-size: 1.2em; word-wrap: break-word; color: inherit !important; text-decoration: none; }
-        footer { padding: 30px; margin-top: 40px; color: #fff; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
+        main { padding: 40px 20px; }
+        .page-header h1 { color: #fff; font-size: 3em; }
+        .page-header p { color: #fff; text-shadow: 1px 1px 3px #000; font-size: 1.2em; max-width: 700px; margin: 10px auto 40px; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 800px; margin: 0 auto; }
+        .contact-card { background: rgba(255, 255, 255, 0.9); border-top: 4px solid var(--primary-color); border-radius: 15px; padding: 30px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); color: var(--font-color-light); }
+        body.dark-mode .contact-card { background: var(--card-bg-dark); color: var(--font-color-dark); }
+        .contact-card i { font-size: 2.5em; color: var(--primary-color); margin-bottom: 10px; }
+        .contact-card p, .contact-card a { font-size: 1.3em; word-wrap: break-word; color: inherit !important; text-decoration: none; font-weight: 500; }
+        footer { padding: 30px; color: #fff; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
         body.dark-mode footer { color: var(--font-color-dark); }
+        @media (max-width: 992px) { .nav-links { display: none; } }
+        @media (max-width: 768px) { .navbar-brand .site-name { display: none; } .page-header h1 { font-size: 2.5em; } }
     </style>
 </head>
 <body
@@ -53,28 +56,29 @@
         <div class="nav-links">
             <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
             <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
-            <a href="#"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+            <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
             <a href="contact.html" class="active"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
         </div>
         <div class="nav-controls">
-            <button id="lang-toggle" class="lang-toggle-btn"></button>
-            <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+            <button id="lang-toggle" class="lang-toggle-btn" title="Change Language"></button>
+            <button id="dark-mode-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
         </div>
     </nav>
-    <main class="container">
+    <main>
         <div class="page-header">
             <h1><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact Us</span></h1>
             <p><span class="lang-ar">نسعد بتواصلكم! نرحب بأسئلتكم، اقتراحاتكم، وملاحظاتكم.</span><span class="lang-en">We are happy to hear from you! We welcome your questions, suggestions, and feedback.</span></p>
         </div>
-        <div class="contact-card"><i class="fas fa-envelope"></i><h2><span class="lang-ar">البريد الإلكتروني</span><span class="lang-en">Email</span></h2><p><a href="mailto:mohamedkhairy0887@gmail.com">mohamedkhairy0887@gmail.com</a></p></div>
-        <div class="contact-card"><i class="fas fa-phone"></i><h2><span class="lang-ar">الهاتف</span><span class="lang-en">Phone</span></h2><p><a href="tel:+201060487315">+201060487315</a></p></div>
+        <div class="contact-grid">
+            <div class="contact-card"><i class="fas fa-envelope"></i><h2><span class="lang-ar">البريد الإلكتروني</span><span class="lang-en">Email</span></h2><p><a href="mailto:mohamedkhairy0887@gmail.com">mohamedkhairy0887@gmail.com</a></p></div>
+            <div class="contact-card"><i class="fas fa-phone"></i><h2><span class="lang-ar">الهاتف</span><span class="lang-en">Phone</span></h2><p><a href="tel:+201060487315">+201060487315</a></p></div>
+        </div>
     </main>
     <footer>
         <p><span class="lang-ar">جميع الحقوق محفوظة © 2024 - موقع ذِكْرَى</span><span class="lang-en">Copyright © 2024 - Dhikra Website</span></p>
     </footer>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        // JS is identical to index.html
         document.addEventListener('DOMContentLoaded', () => {
             const htmlEl = document.documentElement;
             const darkModeToggle = document.getElementById('dark-mode-toggle');
