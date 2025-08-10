@@ -1,0 +1,6 @@
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Point search engines to the sitemap for a full list of pages
+Sitemap: https://dhikra.netlify.app/sitemap.xml
