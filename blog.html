@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TVWLF8DK');</script>
+    <!-- End Google Tag Manager -->
+    
     <title>مدونة ذِكْرَى | مقالات ومواضيع إسلامية</title>
     <meta name="description" content="اقرأ مقالات ومواضيع عن فضل الذكر، تفسير الأدعية، وقصص ملهمة لتعميق فهمك وتجربتك الروحية في الإسلام.">
     <meta name="keywords" content="مدونة إسلامية, فضل الذكر, مواضيع دينية, قصص إسلامية, تأملات قرآنية, حياة المسلم, السنة النبوية">
@@ -58,6 +67,11 @@
     data-title-ar="مدونة ذِكْرَى | مقالات ومواضيع إسلامية"
     data-title-en="Dhikra Blog | Islamic Articles & Topics"
 >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVWLF8DK"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div id="particles-js"></div>
     <nav class="navbar">
         <a href="index.html" class="navbar-brand"><img src="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" alt="Dhikra Logo"><span class="site-name"><span class="lang-ar">ذِكْرَى</span><span class="lang-en">Dhikra</span></span></a>
@@ -97,8 +111,8 @@
             <div class="blog-card">
                 <img src="https://www.dropbox.com/scl/fi/1csshgsgozajpyukiabkm/IMG-20250809-WA0002.jpg?rlkey=t8w44saqvc8gy0opjs490ijdz&st=zc36y3kj&dl=1" alt="شخص يدعو في الطبيعة">
                 <div class="blog-card-content">
-                    <h3><span class="lang-ar">السكينة في الصلاة: 5 خطوات لخشوع أعمق</span><span class="lang-en">Tranquility in Prayer: 5 Steps for Deeper Khushu</span></h3>
-                    <a href="#" class="btn"><span class="lang-ar">قريباً</span><span class="lang-en">Coming Soon</span></a>
+                    <h3><span class="lang-ar">كيف تجد الطمأنينة في حياتك؟</span><span class="lang-en">How to Find Tranquility in Your Life?</span></h3>
+                    <a href="blog-post-2.html" class="btn"><span class="lang-ar">اقرأ المزيد</span><span class="lang-en">Read More</span></a>
                 </div>
             </div>
         </div>
@@ -108,15 +122,16 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
+        const particlesConfig = { particles: { number: { value: 60 }, color: { value: "#ffffff" }, shape: { type: "circle" }, opacity: { value: 0.4, random: true }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.3, width: 1 }, move: { enable: true, speed: 2, direction: "none", out_mode: "out" } }, interactivity: { events: { onhover: { enable: true, mode: "repulse" } } }, retina_detect: true };
         document.addEventListener('DOMContentLoaded', () => {
             const htmlEl = document.documentElement; const darkModeToggle = document.getElementById('dark-mode-toggle'); const langToggleBtn = document.getElementById('lang-toggle'); const navToggle = document.querySelector('.nav-toggle'); const mobileNavMenu = document.querySelector('.mobile-nav-menu');
-            const applyDarkMode = (isDark) => { const icon = darkModeToggle.querySelector('i'); if (isDark) { document.body.classList.add('dark-mode'); if(icon) icon.classList.replace('fa-moon', 'fa-sun'); } else { document.body.classList.remove('dark-mode'); if(icon) icon.classList.replace('fa-sun', 'fa-moon'); } };
+            const applyDarkMode = (isDark) => { const icon = darkModeToggle.querySelector('i'); if (isDark) { document.body.classList.add('dark-mode'); if(icon) icon.classList.replace('fa-moon', 'fa-sun'); particlesConfig.particles.color.value = ["#ffffff", "#81c784", "#4caf50"]; } else { document.body.classList.remove('dark-mode'); if(icon) icon.classList.replace('fa-sun', 'fa-moon'); particlesConfig.particles.color.value = "#ffffff"; } if (window.pJSDom && window.pJSDom[0]) { window.pJSDom[0].pJS.fn.particlesRefresh(); } };
             const setLanguage = (lang) => { htmlEl.lang = lang; htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr'; langToggleBtn.textContent = lang === 'ar' ? 'EN' : 'AR'; document.title = lang === 'ar' ? document.body.getAttribute('data-title-ar') : document.body.getAttribute('data-title-en'); localStorage.setItem('language', lang); };
             darkModeToggle.addEventListener('click', () => { const isDarkMode = !document.body.classList.contains('dark-mode'); applyDarkMode(isDarkMode); localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); });
             langToggleBtn.addEventListener('click', () => { const newLang = htmlEl.lang === 'ar' ? 'en' : 'ar'; setLanguage(newLang); });
             navToggle.addEventListener('click', () => { mobileNavMenu.classList.toggle('active'); });
-            particlesJS("particles-js", { particles: { number: { value: 60 }, color: { value: ["#ffffff", "#81c784", "#4caf50"] }, opacity: { value: 0.4 }, size: { value: 3 }, line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.3 }, move: { enable: true, speed: 2 } }, interactivity: { events: { onhover: { enable: true, mode: "repulse" } } } });
-            applyDarkMode(localStorage.getItem('theme') === 'dark'); setLanguage(localStorage.getItem('language') || 'ar'); 
+            const isInitiallyDark = localStorage.getItem('theme') === 'dark'; if (isInitiallyDark) { particlesConfig.particles.color.value = ["#ffffff", "#81c784", "#4caf50"]; } particlesJS('particles-js', particlesConfig);
+            applyDarkMode(isInitiallyDark); setLanguage(localStorage.getItem('language') || 'ar'); 
         });
     </script>
 </body>
