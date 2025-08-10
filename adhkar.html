@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TVWLF8DK');</script>
+    <!-- End Google Tag Manager -->
+    
     <title>الأذكار اليومية | موقع ذِكْرَى</title>
     <meta name="description" content="تصفح قائمة الأذكار اليومية الكاملة. اختر أذكار الصباح، المساء، النوم، وما بعد الصلاة لتبدأ القراءة. حصن المسلم اليومي في مكان واحد.">
     <meta name="keywords" content="أذكار يومية, قائمة الأذكار, اذكار الصباح والمساء, أذكار النوم, أذكار الصلاة, حصن المسلم">
@@ -38,7 +47,7 @@
         .mobile-nav-menu a { color: #fff; text-decoration: none; font-size: 1.2em; padding: 15px 0; width: 100%; }
         .mobile-nav-menu a:hover { background-color: rgba(255,255,255,0.1); color: var(--primary-color); }
         main { padding: 40px 20px; }
-        .page-header h1 { color: #fff; font-size: 3em; }
+        .page-header h1 { color: #fff; font-size: clamp(2.5em, 6vw, 3em); }
         .page-header p { color: #fff; text-shadow: 1px 1px 3px #000; font-size: 1.2em; max-width: 700px; margin: 10px auto 40px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
         .feature-card { background: var(--card-bg-light); border-top: 4px solid var(--primary-color); border-radius: 15px; padding: 30px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); transition: transform 0.3s, box-shadow 0.3s; color: var(--font-color-light); }
@@ -55,6 +64,11 @@
     data-title-ar="الأذكار اليومية | موقع ذِكْرَى"
     data-title-en="Daily Adhkar | Dhikra Website"
 >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVWLF8DK"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div id="particles-js"></div>
     <nav class="navbar">
         <a href="index.html" class="navbar-brand"><img src="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" alt="Dhikra Logo"><span class="site-name"><span class="lang-ar">ذِكْرَى</span><span class="lang-en">Dhikra</span></span></a>
@@ -85,7 +99,7 @@
         </div>
         <div class="grid">
             <div class="feature-card"><i class="fas fa-sun"></i><h2><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning Adhkar</span></h2><p><span class="lang-ar">ابدأ يومك ببركة وحفظ من الله.</span><span class="lang-en">Start your day with blessings and protection from Allah.</span></p><a href="adhkar-sabah.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a></div>
-            <div class="feature-card"><i class="fas fa-moon"></i><h2><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening Adhkar</span></h2><p><span class="lang-ar">اختم يومك بسكينة وطمأنينة.</span><span class="lang-en">End your day with peace and tranquility.</span></p><a href="#" class="btn"><span class="lang-ar">قريباً</span><span class="lang-en">Coming Soon</span></a></div>
+            <div class="feature-card"><i class="fas fa-moon"></i><h2><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening Adhkar</span></h2><p><span class="lang-ar">اختم يومك بسكينة وطمأنينة.</span><span class="lang-en">End your day with peace and tranquility.</span></p><a href="adhkar-masaa.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a></div>
             <div class="feature-card"><i class="fas fa-bed"></i><h2><span class="lang-ar">أذكار النوم</span><span class="lang-en">Bedtime Adhkar</span></h2><p><span class="lang-ar">حصّن نفسك قبل النوم واستودع الله أحلامك.</span><span class="lang-en">Protect yourself before sleep and entrust your dreams to Allah.</span></p><a href="#" class="btn"><span class="lang-ar">قريباً</span><span class="lang-en">Coming Soon</span></a></div>
             <div class="feature-card"><i class="fas fa-mosque"></i><h2><span class="lang-ar">أذكار بعد الصلاة</span><span class="lang-en">After Prayer Adhkar</span></h2><p><span class="lang-ar">لا تفوت فضل الذكر بعد كل صلاة مكتوبة.</span><span class="lang-en">Do not miss the virtue of remembrance after each prescribed prayer.</span></p><a href="#" class="btn"><span class="lang-ar">قريباً</span><span class="lang-en">Coming Soon</span></a></div>
         </div>
@@ -95,15 +109,16 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
+        const particlesConfig = { particles: { number: { value: 60 }, color: { value: "#ffffff" }, shape: { type: "circle" }, opacity: { value: 0.4, random: true }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.3, width: 1 }, move: { enable: true, speed: 2, direction: "none", out_mode: "out" } }, interactivity: { events: { onhover: { enable: true, mode: "repulse" } } }, retina_detect: true };
         document.addEventListener('DOMContentLoaded', () => {
             const htmlEl = document.documentElement; const darkModeToggle = document.getElementById('dark-mode-toggle'); const langToggleBtn = document.getElementById('lang-toggle'); const navToggle = document.querySelector('.nav-toggle'); const mobileNavMenu = document.querySelector('.mobile-nav-menu');
-            const applyDarkMode = (isDark) => { const icon = darkModeToggle.querySelector('i'); if (isDark) { document.body.classList.add('dark-mode'); if(icon) icon.classList.replace('fa-moon', 'fa-sun'); } else { document.body.classList.remove('dark-mode'); if(icon) icon.classList.replace('fa-sun', 'fa-moon'); } };
+            const applyDarkMode = (isDark) => { const icon = darkModeToggle.querySelector('i'); if (isDark) { document.body.classList.add('dark-mode'); if(icon) icon.classList.replace('fa-moon', 'fa-sun'); particlesConfig.particles.color.value = ["#ffffff", "#81c784", "#4caf50"]; } else { document.body.classList.remove('dark-mode'); if(icon) icon.classList.replace('fa-sun', 'fa-moon'); particlesConfig.particles.color.value = "#ffffff"; } if (window.pJSDom && window.pJSDom[0]) { window.pJSDom[0].pJS.fn.particlesRefresh(); } };
             const setLanguage = (lang) => { htmlEl.lang = lang; htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr'; langToggleBtn.textContent = lang === 'ar' ? 'EN' : 'AR'; document.title = lang === 'ar' ? document.body.getAttribute('data-title-ar') : document.body.getAttribute('data-title-en'); localStorage.setItem('language', lang); };
             darkModeToggle.addEventListener('click', () => { const isDarkMode = !document.body.classList.contains('dark-mode'); applyDarkMode(isDarkMode); localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); });
             langToggleBtn.addEventListener('click', () => { const newLang = htmlEl.lang === 'ar' ? 'en' : 'ar'; setLanguage(newLang); });
             navToggle.addEventListener('click', () => { mobileNavMenu.classList.toggle('active'); });
-            particlesJS("particles-js", { particles: { number: { value: 60 }, color: { value: ["#ffffff", "#81c784", "#4caf50"] }, opacity: { value: 0.4 }, size: { value: 3 }, line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.3 }, move: { enable: true, speed: 2 } }, interactivity: { events: { onhover: { enable: true, mode: "repulse" } } } });
-            applyDarkMode(localStorage.getItem('theme') === 'dark'); setLanguage(localStorage.getItem('language') || 'ar'); 
+            const isInitiallyDark = localStorage.getItem('theme') === 'dark'; if (isInitiallyDark) { particlesConfig.particles.color.value = ["#ffffff", "#81c784", "#4caf50"]; } particlesJS('particles-js', particlesConfig);
+            applyDarkMode(isInitiallyDark); setLanguage(localStorage.getItem('language') || 'ar'); 
         });
     </script>
 </body>
