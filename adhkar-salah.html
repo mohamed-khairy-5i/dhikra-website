@@ -12,9 +12,9 @@
     })(window,document,'script','dataLayer','GTM-TVWLF8DK');</script>
     <!-- End Google Tag Manager -->
     
-    <title>أذكار بعد الصلاة المكتوبة كاملة | موقع ذِكْرَى</title>
-    <meta name="description" content="اقرأ أذكار ما بعد الصلاة المكتوبة كاملة مع الدليل والفضل. لا تفوت أجر الذكر والتسبيح بعد كل فريضة كما ورد في السنة النبوية.">
-    <meta name="keywords" content="أذكار بعد الصلاة, دعاء بعد الصلاة, تسبيح بعد الصلاة, ماذا أقول بعد الصلاة, حصن المسلم, فضل التسبيح">
+    <title>أذكار بعد الصلاة | موقع ذِكْرَى</title>
+    <meta name="description" content="اقرأ أذكار بعد الصلاة كاملة مع الدليل والفضل. اكتسب الأجر العظيم بهذه الأذكار النبوية الصحيحة بعد كل صلاة.">
+    <meta name="keywords" content="أذكار بعد الصلاة, أدعية بعد الصلاة, حصن المسلم, أذكار بعد الصلاة مكتوبة, فضل أذكار بعد الصلاة">
     <link rel="icon" href="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
@@ -27,7 +27,9 @@
             --card-bg-light: #ffffff; 
             --font-color-dark: #e0e0e0; 
             --bg-gradient-dark: linear-gradient(135deg, #1a2a44, #2e4a66); 
-            --card-bg-dark: #1f292e; 
+            --card-bg-dark: #1f292e;
+            --ad-bg: #f8f9fa;
+            --ad-border: #e9ecef;
         }
         
         * {
@@ -339,6 +341,85 @@
             margin-inline-end: 8px; 
         }
         
+        /* Ad Spaces */
+        .ad-container {
+            background: var(--ad-bg);
+            border: 1px solid var(--ad-border);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 728px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ad-label {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 0.7em;
+            color: #999;
+            background: rgba(255,255,255,0.8);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .ad-content {
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .ad-square {
+            max-width: 336px;
+            margin: 20px auto;
+        }
+        
+        .ad-square .ad-content {
+            min-height: 280px;
+        }
+        
+        .ad-sticky {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 320px;
+            background: var(--ad-bg);
+            border: 1px solid var(--ad-border);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 998;
+            display: none;
+        }
+        
+        .ad-sticky .ad-label {
+            position: static;
+            display: block;
+            margin-bottom: 10px;
+            background: transparent;
+            color: #999;
+        }
+        
+        .ad-sticky .ad-content {
+            min-height: 50px;
+        }
+        
+        .ad-close {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        
         footer { 
             padding: 20px; 
             color: #fff; 
@@ -351,7 +432,7 @@
             color: var(--font-color-dark); 
         }
         
-        /* Additional responsive improvements */
+        /* Responsive */
         @media (max-width: 576px) {
             .navbar {
                 padding: 8px 12px;
@@ -388,6 +469,12 @@
             .dhikr-footer {
                 padding: 12px 15px;
             }
+            
+            .ad-sticky {
+                width: calc(100% - 40px);
+                left: 20px;
+                right: 20px;
+            }
         }
         
         @media (min-width: 577px) and (max-width: 768px) {
@@ -399,11 +486,17 @@
                 padding: 18px;
             }
         }
+        
+        @media (min-width: 769px) {
+            .ad-sticky {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body
-    data-title-ar="أذكار بعد الصلاة المكتوبة | موقع ذِكْرَى"
-    data-title-en="Adhkar after Obligatory Prayer | Dhikra Website"
+    data-title-ar="أذكار بعد الصلاة | موقع ذِكْرَى"
+    data-title-en="Post-Prayer Adhkar | Dhikra Website"
 >
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVWLF8DK"
@@ -432,50 +525,241 @@
         <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
         <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
     </div>
+    
+    <!-- Sticky Ad -->
+    <div class="ad-sticky" id="stickyAd">
+        <button class="ad-close" onclick="this.parentElement.style.display='none'">&times;</button>
+        <div class="ad-label">إعلان</div>
+        <div class="ad-content">
+            <i class="fas fa-ad"></i> مساحة إعلانية (320x50)
+        </div>
+    </div>
+    
     <main>
         <div class="page-header">
-            <h1><span class="lang-ar">أذكار بعد الصلاة</span><span class="lang-en">Adhkar After Prayer</span></h1>
-            <p><span class="lang-ar">لا تفوت فضل الذكر بعد كل صلاة مكتوبة، فهي من أعظم أسباب مغفرة الذنوب ورفعة الدرجات.</span><span class="lang-en">Do not miss the virtue of remembrance after each prescribed prayer, as it is one of the greatest means of forgiveness and elevation in rank.</span></p>
+            <h1><span class="lang-ar">أذكار بعد الصلاة</span><span class="lang-en">Post-Prayer Adhkar</span></h1>
+            <p><span class="lang-ar">اكتسب الأجر العظيم بهذه الأذكار النبوية الصحيحة بعد كل صلاة</span><span class="lang-en">Gain great reward with these authentic prophetic remembrances after every prayer</span></p>
         </div>
+        
+        <!-- Leaderboard Ad -->
+        <div class="ad-container">
+            <div class="ad-label">إعلان</div>
+            <div class="ad-content">
+                <i class="fas fa-ad"></i> مساحة إعلانية (728x90)
+            </div>
+        </div>
+        
         <div class="dhikr-container">
-            <!-- 1 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">الاستغفار والسلام</span><span class="lang-en">Istighfar & As-Salam</span></h3><span class="dhikr-count">3x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">أَسْتَغْفِرُ اللَّهَ (ثَلَاثَاً).<br>اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ.</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قال ذلك غفرت ذنوبه وإن كانت مثل زبد البحر.</span><span class="lang-en"><b>Virtue:</b> Whoever says this, his sins will be forgiven even if they are like the foam of the sea.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح مسلم.</span><span class="lang-en"><b>Source:</b> Sahih Muslim.</span></span></div></div>
+            <!-- 1 -->
+            <div class="dhikr-card">
+                <div class="dhikr-header">
+                    <h3 class="dhikr-title"><span class="lang-ar">أستغفر الله</span><span class="lang-en">I Seek Forgiveness</span></h3>
+                    <span class="dhikr-count">3x</span>
+                </div>
+                <div class="dhikr-body">
+                    <p class="dhikr-text-ar">أَسْتَغْفِرُ اللَّهَ (ثلاث مرات)</p>
+                </div>
+                <div class="dhikr-footer">
+                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها بعد الصلاة غفر الله له</span><span class="lang-en"><b>Virtue:</b> Whoever says this after prayer, Allah will forgive him</span></span>
+                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح مسلم</span><span class="lang-en"><b>Source:</b> Sahih Muslim</span></span>
+                </div>
+            </div>
             
-            <!-- 2 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">التوحيد</span><span class="lang-en">Declaration of Oneness</span></h3><span class="dhikr-count">1x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، اللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ، وَلَا مُعْطِيَ لِمَا مَنَعْتَ، وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ.</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قال ذلك بعد كل صلاة كتب الله له عشر حسنات، ومحا عنه عشر سيئات، ورفع له عشر درجات.</span><span class="lang-en"><b>Virtue:</b> Whoever says this after every prayer, Allah will write for him ten good deeds, erase ten evil deeds, and raise him ten degrees.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> البخاري ومسلم.</span><span class="lang-en"><b>Source:</b> Al-Bukhari & Muslim.</span></span></div></div>
+            <!-- 2 -->
+            <div class="dhikr-card">
+                <div class="dhikr-header">
+                    <h3 class="dhikr-title"><span class="lang-ar">اللهم أنت السلام</span><span class="lang-en">O Allah You are Peace</span></h3>
+                    <span class="dhikr-count">1x</span>
+                </div>
+                <div class="dhikr-body">
+                    <p class="dhikr-text-ar">اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ</p>
+                </div>
+                <div class="dhikr-footer">
+                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها بعد الصلاة كان حقاً على الله أن يؤمنه من عذاب القبر</span><span class="lang-en"><b>Virtue:</b> Whoever says this after prayer, it is Allah's right to protect him from the torment of the grave</span></span>
+                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> سنن أبي داود</span><span class="lang-en"><b>Source:</b> Sunan Abu Dawud</span></span>
+                </div>
+            </div>
             
-            <!-- 3 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">تسبيح فاطمة</span><span class="lang-en">Tasbeeh of Fatimah</span></h3><span class="dhikr-count">33x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">سُبْحَانَ اللَّهِ (33 مرة)<br>الْحَمْدُ لِلَّهِ (33 مرة)<br>اللَّهُ أَكْبَرُ (33 مرة)</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قال ذلك بعد كل صلاة غفرت له ذنوبه ولو كانت مثل زبد البحر.</span><span class="lang-en"><b>Virtue:</b> Whoever says this after every prayer, his sins will be forgiven even if they are like the foam of the sea.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح مسلم.</span><span class="lang-en"><b>Source:</b> Sahih Muslim.</span></span></div></div>
+            <!-- 3 -->
+            <div class="dhikr-card">
+                <div class="dhikr-header">
+                    <h3 class="dhikr-title"><span class="lang-ar">لا إله إلا الله وحده</span><span class="lang-en">There is no god but Allah</span></h3>
+                    <span class="dhikr-count">1x</span>
+                </div>
+                <div class="dhikr-body">
+                    <p class="dhikr-text-ar">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</p>
+                </div>
+                <div class="dhikr-footer">
+                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها بعد الصلاة غفر له ذنوبه</span><span class="lang-en"><b>Virtue:</b> Whoever says this after prayer, his sins will be forgiven</span></span>
+                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح مسلم</span><span class="lang-en"><b>Source:</b> Sahih Muslim</span></span>
+                </div>
+            </div>
             
-            <!-- 4 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">تمام المئة</span><span class="lang-en">Completing the Hundred</span></h3><span class="dhikr-count">1x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قال ذلك دبر كل صلاة غفرت خطاياه وإن كانت مثل زبد البحر.</span><span class="lang-en"><b>Virtue:</b> Whoever says this after every prayer, his sins will be forgiven even if they are like the foam of the sea.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح مسلم.</span><span class="lang-en"><b>Source:</b> Sahih Muslim.</span></span></div></div>
+            <!-- 4 -->
+            <div class="dhikr-card">
+                <div class="dhikr-header">
+                    <h3 class="dhikr-title"><span class="lang-ar">التسبيح والتحميد والتكبير</span><span class="lang-en">Tasbih, Tahmid, Takbir</span></h3>
+                    <span class="dhikr-count">33x, 33x, 33x</span>
+                </div>
+                <div class="dhikr-body">
+                    <p class="dhikr-text-ar">سُبْحَانَ اللَّهِ (ثلاثاً وثلاثين مرة)</p>
+                    <p class="dhikr-text-ar">الْحَمْدُ لِلَّهِ (ثلاثاً وثلاثين مرة)</p>
+                    <p class="dhikr-text-ar">اللَّهُ أَكْبَرُ (ثلاثاً وثلاثين مرة)</p>
+                </div>
+                <div class="dhikr-footer">
+                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها بعد الصلاة غفرت له خطاياه وإن كانت مثل زبد البحر</span><span class="lang-en"><b>Virtue:</b> Whoever says this after prayer, his sins will be forgiven even if they are as much as the foam of the sea</span></span>
+                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح مسلم</span><span class="lang-en"><b>Source:</b> Sahih Muslim</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Square Ad -->
+        <div class="ad-container ad-square">
+            <div class="ad-label">إعلان</div>
+            <div class="ad-content">
+                <i class="fas fa-ad"></i> مساحة إعلانية (336x280)
+            </div>
+        </div>
+        
+        <div class="dhikr-container">
+            <!-- 5 -->
+            <div class="dhikr-card">
+                <div class="dhikr-header">
+                    <h3 class="dhikr-title"><span class="lang-ar">لا إله إلا الله وحده</span><span class="lang-en">There is no god but Allah</span></h3>
+                    <span class="dhikr-count">10x</span>
+                </div>
+                <div class="dhikr-body">
+                    <p class="dhikr-text-ar">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ (عشر مرات)</p>
+                </div>
+                <div class="dhikr-footer">
+                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها بعد الصلاة كتب له عشر حسنات ومحي عنه عشر سيئات</span><span class="lang-en"><b>Virtue:</b> Whoever says this ten times after prayer, ten good deeds will be recorded for him and ten sins will be erased</span></span>
+                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح مسلم</span><span class="lang-en"><b>Source:</b> Sahih Muslim</span></span>
+                </div>
+            </div>
             
-            <!-- 5 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">آية الكرسي</span><span class="lang-en">Ayat Al-Kursi</span></h3><span class="dhikr-count">1x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ.</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قرأها دبر كل صلاة مكتوبة لم يمنعه من دخول الجنة إلا أن يموت.</span><span class="lang-en"><b>Virtue:</b> Whoever recites it after each obligatory prayer, nothing prevents him from entering Paradise except death.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> النسائي وصححه الألباني.</span><span class="lang-en"><b>Source:</b> An-Nasa'i, authenticated by Al-Albani.</span></span></div></div>
+            <!-- 6 -->
+            <div class="dhikr-card">
+                <div class="dhikr-header">
+                    <h3 class="dhikr-title"><span class="lang-ar">آية الكرسي</span><span class="lang-en">Ayat Al-Kursi</span></h3>
+                    <span class="dhikr-count">1x</span>
+                </div>
+                <div class="dhikr-body">
+                    <p class="dhikr-text-ar">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ</p>
+                </div>
+                <div class="dhikr-footer">
+                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قرأها بعد الصلاة كان في حفظ الله حتى الصلاة الأخرى</span><span class="lang-en"><b>Virtue:</b> Whoever recites it after prayer will be under Allah's protection until the next prayer</span></span>
+                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح الجامع</span><span class="lang-en"><b>Source:</b> Sahih Al-Jami'</span></span>
+                </div>
+            </div>
             
-            <!-- 6 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">سورة الإخلاص</span><span class="lang-en">Surah Al-Ikhlas</span></h3><span class="dhikr-count">1x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">قُلْ هُوَ اللَّهُ أَحَدٌ (1) اللَّهُ الصَّمَدُ (2) لَمْ يَلِدْ وَلَمْ يُولَدْ (3) وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ (4)</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> تعدل ثلث القرآن.</span><span class="lang-en"><b>Virtue:</b> It is equivalent to one-third of the Quran.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> البخاري.</span><span class="lang-en"><b>Source:</b> Al-Bukhari.</span></span></div></div>
+            <!-- 7 -->
+            <div class="dhikr-card">
+                <div class="dhikr-header">
+                    <h3 class="dhikr-title"><span class="lang-ar">سور الإخلاص والفلق والناس</span><span class="lang-en">Al-Ikhlas, Al-Falaq, An-Nas</span></h3>
+                    <span class="dhikr-count">1x</span>
+                </div>
+                <div class="dhikr-body">
+                    <p class="dhikr-text-ar">قُلْ هُوَ اللَّهُ أَحَدٌ (1) اللَّهُ الصَّمَدُ (2) لَمْ يَلِدْ وَلَمْ يُولَدْ (3) وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ (4)</p>
+                    <p class="dhikr-text-ar">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ (1) مِن شَرِّ مَا خَلَقَ (2) وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ (3) وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ (4) وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ (5)</p>
+                    <p class="dhikr-text-ar">قُلْ أَعُوذُ بِرَبِّ النَّاسِ (1) مَلِكِ النَّاسِ (2) إِلَٰهِ النَّاسِ (3) مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ (4) الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ (5) مِنَ الْجِنَّةِ وَالنَّاسِ (6)</p>
+                </div>
+                <div class="dhikr-footer">
+                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قرأهن بعد الصلاة كن له حرساً من كل شيء</span><span class="lang-en"><b>Virtue:</b> Whoever recites them after prayer, they will be a guard for him from everything</span></span>
+                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> سنن الترمذي</span><span class="lang-en"><b>Source:</b> Sunan At-Tirmidhi</span></span>
+                </div>
+            </div>
             
-            <!-- 7 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">سورة الفلق</span><span class="lang-en">Surah Al-Falaq</span></h3><span class="dhikr-count">1x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ (1) مِن شَرِّ مَا خَلَقَ (2) وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ (3) وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ (4) وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ (5)</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> تعوذ بها النبي صلى الله عليه وسلم من شر ما خلق الله.</span><span class="lang-en"><b>Virtue:</b> The Prophet (peace be upon him) used to seek refuge with it from the evil of what Allah has created.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> البخاري ومسلم.</span><span class="lang-en"><b>Source:</b> Al-Bukhari & Muslim.</span></span></div></div>
+            <!-- 8 -->
+            <div class="dhikr-card">
+                <div class="dhikr-header">
+                    <h3 class="dhikr-title"><span class="lang-ar">اللهم أعني على ذكرك</span><span class="lang-en">O Allah Help Me</span></h3>
+                    <span class="dhikr-count">1x</span>
+                </div>
+                <div class="dhikr-body">
+                    <p class="dhikr-text-ar">اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ</p>
+                </div>
+                <div class="dhikr-footer">
+                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها بعد الصلاة أعانه الله على ذكره وشكره</span><span class="lang-en"><b>Virtue:</b> Whoever says this after prayer, Allah will help him in His remembrance and gratitude</span></span>
+                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح مسلم</span><span class="lang-en"><b>Source:</b> Sahih Muslim</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Square Ad -->
+        <div class="ad-container ad-square">
+            <div class="ad-label">إعلان</div>
+            <div class="ad-content">
+                <i class="fas fa-ad"></i> مساحة إعلانية (336x280)
+            </div>
+        </div>
+        
+        <div class="dhikr-container">
+            <!-- 9 -->
+            <div class="dhikr-card">
+                <div class="dhikr-header">
+                    <h3 class="dhikr-title"><span class="lang-ar">اللهم إني أعوذ بك</span><span class="lang-en">O Allah I Seek Refuge</span></h3>
+                    <span class="dhikr-count">1x</span>
+                </div>
+                <div class="dhikr-body">
+                    <p class="dhikr-text-ar">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْجُبْنِ، وَأَعُوذُ بِكَ أَنْ أُرَدَّ إِلَى أَرْذَلِ الْعُمُرِ، وَأَعُوذُ بِكَ مِنْ فِتْنَةِ الدُّنْيَا، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ</p>
+                </div>
+                <div class="dhikr-footer">
+                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها بعد الصلاة وقاه الله من هذه الأمور</span><span class="lang-en"><b>Virtue:</b> Whoever says this after prayer, Allah will protect him from these matters</span></span>
+                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح البخاري</span><span class="lang-en"><b>Source:</b> Sahih Al-Bukhari</span></span>
+                </div>
+            </div>
             
-            <!-- 8 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">سورة الناس</span><span class="lang-en">Surah An-Nas</span></h3><span class="dhikr-count">1x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">قُلْ أَعُوذُ بِرَبِّ النَّاسِ (1) مَلِكِ النَّاسِ (2) إِلَٰهِ النَّاسِ (3) مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ (4) الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ (5) مِنَ الْجِنَّةِ وَالنَّاسِ (6)</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> تعوذ بها النبي صلى الله عليه وسلم من شر الوسواس الخناس.</span><span class="lang-en"><b>Virtue:</b> The Prophet (peace be upon him) used to seek refuge with it from the evil of the whisperer who withdraws.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> البخاري ومسلم.</span><span class="lang-en"><b>Source:</b> Al-Bukhari & Muslim.</span></span></div></div>
+            <!-- 10 -->
+            <div class="dhikr-card">
+                <div class="dhikr-header">
+                    <h3 class="dhikr-title"><span class="lang-ar">اللهم ربنا آتنا</span><span class="lang-en">O Allah Our Lord</span></h3>
+                    <span class="dhikr-count">1x</span>
+                </div>
+                <div class="dhikr-body">
+                    <p class="dhikr-text-ar">اللَّهُمَّ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً، وَفِي الْآخِرَةِ حَسَنَةً، وَقِنَا عَذَابَ النَّارِ</p>
+                </div>
+                <div class="dhikr-footer">
+                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها بعد الصلاة استجيب دعاؤه</span><span class="lang-en"><b>Virtue:</b> Whoever says this after prayer, his supplication will be answered</span></span>
+                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح مسلم</span><span class="lang-en"><b>Source:</b> Sahih Muslim</span></span>
+                </div>
+            </div>
             
-            <!-- 9 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">دعاء الإعانة</span><span class="lang-en">Supplication for Assistance</span></h3><span class="dhikr-count">1x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ، وَشُكْرِكَ، وَحُسْنِ عِبَادَتِكَ.</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من دعا بهذا الدعاء أعانه الله على ذكره وشكره وحسن عبادته.</span><span class="lang-en"><b>Virtue:</b> Whoever supplicates with this, Allah will assist him in His remembrance, gratitude, and worship.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> أبو داود والنسائي.</span><span class="lang-en"><b>Source:</b> Abu Dawud & An-Nasa'i.</span></span></div></div>
+            <!-- 11 -->
+            <div class="dhikr-card">
+                <div class="dhikr-header">
+                    <h3 class="dhikr-title"><span class="lang-ar">بسم الله الرحمن الرحيم</span><span class="lang-en">In the Name of Allah</span></h3>
+                    <span class="dhikr-count">1x</span>
+                </div>
+                <div class="dhikr-body">
+                    <p class="dhikr-text-ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ (26) قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ تُؤْتِي الْمُلْكَ مَنْ تَشَاءُ وَتَنْزِعُ الْمُلْكَ مِمَّنْ تَشَاءُ وَتُعِزُّ مَنْ تَشَاءُ وَتُذِلُّ مَنْ تَشَاءُ ۖ بِيَدِكَ الْخَيْرُ ۖ إِنَّكَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ (27) تُولِجُ اللَّيْلَ فِي النَّهَارِ وَتُولِجُ النَّهَارَ فِي اللَّيْلِ ۖ وَتُخْرِجُ الْحَيَّ مِنَ الْمَيِّتِ وَتُخْرِجُ الْمَيِّتَ مِنَ الْحَيِّ ۖ وَتَرْزُقُ مَنْ تَشَاءُ بِغَيْرِ حِسَابٍ (27)</p>
+                </div>
+                <div class="dhikr-footer">
+                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قرأها بعد الصلاة كفي ما أهمه</span><span class="lang-en"><b>Virtue:</b> Whoever recites this after prayer, it will suffice him for what concerns him</span></span>
+                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح الجامع</span><span class="lang-en"><b>Source:</b> Sahih Al-Jami'</span></span>
+                </div>
+            </div>
             
-            <!-- 10 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">التهليل (بعد الفجر والمغرب)</span><span class="lang-en">Tahleel (After Fajr & Maghrib)</span></h3><span class="dhikr-count">10x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> كتب الله له عشر حسنات، ومحا عنه عشر سيئات، ورفع له عشر درجات، وكانت له حرزاً من كل مكروه.</span><span class="lang-en"><b>Virtue:</b> Allah will write for him ten good deeds, erase ten evil deeds, raise him ten degrees, and it will be a protection for him from every disliked thing.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> الترمذي.</span><span class="lang-en"><b>Source:</b> At-Tirmidhi.</span></span></div></div>
-            
-            <!-- 11 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">طلب العلم (بعد الفجر)</span><span class="lang-en">Seeking Knowledge (After Fajr)</span></h3><span class="dhikr-count">1x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا.</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من دعا بهذا الدعاء أعطاه الله علماً نافعاً ورزقاً طيباً وعملاً متقبلاً.</span><span class="lang-en"><b>Virtue:</b> Whoever supplicates with this, Allah will grant him beneficial knowledge, good provision, and accepted deeds.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> ابن ماجه.</span><span class="lang-en"><b>Source:</b> Ibn Majah.</span></span></div></div>
-            
-            <!-- 12 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">دعاء المغفرة الشامل</span><span class="lang-en">Comprehensive Forgiveness</span></h3><span class="dhikr-count">1x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">اللَّهُمَّ اغْفِرْ لِي مَا قَدَّمْتُ وَمَا أَخَّرْتُ، وَمَا أَسْرَرْتُ وَمَا أَعْلَنْتُ، وَمَا أَسْرَفْتُ، وَمَا أَنْتَ أَعْلَمُ بِهِ مِنِّي، أَنْتَ الْمُقَدِّمُ وَأَنْتَ الْمُؤَخِّرُ، لَا إِلَهَ إِلَّا أَنْتَ.</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قال ذلك غفرت له ذنوبه كلها.</span><span class="lang-en"><b>Virtue:</b> Whoever says this, all his sins will be forgiven.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح مسلم.</span><span class="lang-en"><b>Source:</b> Sahih Muslim.</span></span></div></div>
-            
-            <!-- 13 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">دعاء الحماية من الشرك</span><span class="lang-en">Protection from Shirk</span></h3><span class="dhikr-count">1x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ وَأَنَا أَعْلَمُ، وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ.</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قال ذلك كان له حرزاً من الشرك الخفي.</span><span class="lang-en"><b>Virtue:</b> Whoever says this, it will be a protection for him from hidden shirk.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> مسند أحمد وصححه الألباني.</span><span class="lang-en"><b>Source:</b> Musnad Ahmad, authenticated by Al-Albani.</span></span></div></div>
-            
-            <!-- 14 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">طلب التوبة والمغفرة</span><span class="lang-en">Seeking Repentance</span></h3><span class="dhikr-count">1x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ، إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ.</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قال ذلك تاب الله عليه وغفر له.</span><span class="lang-en"><b>Virtue:</b> Whoever says this, Allah will accept his repentance and forgive him.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> الترمذي.</span><span class="lang-en"><b>Source:</b> At-Tirmidhi.</span></span></div></div>
-            
-            <!-- 15 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">دعاء سيد الاستغفار</span><span class="lang-en">Supplication of Master of Forgiveness</span></h3><span class="dhikr-count">1x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ.</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها موقناً بها حين يمسي ومات من ليلته دخل الجنة، ومن قالها موقناً بها حين يصبح ومات من يومه دخل الجنة.</span><span class="lang-en"><b>Virtue:</b> Whoever says it with conviction in the evening and dies from his night, he will enter Paradise, and whoever says it with conviction in the morning and dies from his day, he will enter Paradise.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> البخاري.</span><span class="lang-en"><b>Source:</b> Al-Bukhari.</span></span></div></div>
-            
-            <!-- 16 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">دعاء التسبيح والتحميد</span><span class="lang-en">Supplication of Tasbeeh and Tahmeed</span></h3><span class="dhikr-count">1x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">سُبْحَانَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُونَ، وَسَلَامٌ عَلَى الْمُرْسَلِينَ، وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ.</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها بعد كل صلاة كتب الله له بكل حرف عشر حسنات.</span><span class="lang-en"><b>Virtue:</b> Whoever says this after every prayer, Allah will write for him ten good deeds for each letter.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> البيهقي في شعب الإيمان.</span><span class="lang-en"><b>Source:</b> Al-Bayhaqi in Shu'ab Al-Iman.</span></span></div></div>
-            
-            <!-- 17 --> <div class="dhikr-card"><div class="dhikr-header"><h3 class="dhikr-title"><span class="lang-ar">دعاء الصلاة على النبي</span><span class="lang-en">Supplication of Sending Peace upon the Prophet</span></h3><span class="dhikr-count">10x</span></div><div class="dhikr-body"><p class="dhikr-text-ar">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ.</p></div><div class="dhikr-footer"><span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من صلى على النبي صلى الله عليه وسلم عشراً في يوم صلى الله عليه وسلم عليه مائة مرة.</span><span class="lang-en"><b>Virtue:</b> Whoever sends peace upon the Prophet (peace be upon him) ten times in a day, Allah will send peace upon him one hundred times.</span></span><span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> النسائي.</span><span class="lang-en"><b>Source:</b> An-Nasa'i.</span></span></div></div>
+            <!-- 12 -->
+            <div class="dhikr-card">
+                <div class="dhikr-header">
+                    <h3 class="dhikr-title"><span class="lang-ar">قل هو الله أحد</span><span class="lang-en">Say He is Allah</span></h3>
+                    <span class="dhikr-count">10x</span>
+                </div>
+                <div class="dhikr-body">
+                    <p class="dhikr-text-ar">قُلْ هُوَ اللَّهُ أَحَدٌ (1) اللَّهُ الصَّمَدُ (2) لَمْ يَلِدْ وَلَمْ يُولَدْ (3) وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ (4) (عشر مرات)</p>
+                </div>
+                <div class="dhikr-footer">
+                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قرأها بعد الصلاة بنى الله له قصراً في الجنة</span><span class="lang-en"><b>Virtue:</b> Whoever recites this ten times after prayer, Allah will build a palace for him in Paradise</span></span>
+                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> سنن الترمذي</span><span class="lang-en"><b>Source:</b> Sunan At-Tirmidhi</span></span>
+                </div>
+            </div>
         </div>
     </main>
+    
     <footer>
         <p><span class="lang-ar">جميع الحقوق محفوظة © 2024 - موقع ذِكْرَى</span><span class="lang-en">Copyright © 2024 - Dhikra Website</span></p>
     </footer>
+    
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         const particlesConfig = { 
