@@ -1,6 +1,120 @@
-# Allow all search engines to crawl the entire site
+# =============================================
+# ROBOTS.TXT FOR DHIKRA WEBSITE
+# =============================================
+# Last Updated: 2025-08-22
+
+# Allow all search engines to access the site
 User-agent: *
 Allow: /
 
-# Point search engines to the sitemap for a full list of pages
+# Sitemap location
 Sitemap: https://dhikra.netlify.app/sitemap.xml
+
+# Block access to development files and directories
+Disallow: /_drafts/
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /_plugins/
+Disallow: /_site/
+Disallow: /assets/css/src/
+Disallow: /assets/js/src/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /netlify/
+
+# Block access to admin and backend files
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /dashboard/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+
+# Block access to private files
+Disallow: /private/
+Disallow: /config/
+Disallow: /env/
+Disallow: /.env
+
+# Block access to search and filter pages that might create duplicate content
+Disallow: /search?
+Disallow: /filter?
+Disallow: /tag/
+Disallow: /category/
+Disallow: /author/
+Disallow: /page/
+Disallow: /?s=
+Disallow: /?q=
+
+# Block access to non-html resources that shouldn't be indexed
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.xls$
+Disallow: /*.xlsx$
+Disallow: /*.ppt$
+Disallow: /*.pptx$
+Disallow: /*.zip$
+Disallow: /*.rar$
+Disallow: /*.tar$
+Disallow: /*.gz$
+
+# Block access to API endpoints
+Disallow: /api/
+Disallow: /graphql/
+Disallow: /rest/
+
+# Block access to temporary and cache files
+Disallow: /tmp/
+Disallow: /cache/
+Disallow: /temp/
+
+# Block access to error pages
+Disallow: /404.html
+Disallow: /500.html
+
+# Special rules for common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Block unwanted bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: BacklinkCrawler
+Disallow: /
+
+# Crawl delay to prevent server overload
+Crawl-delay: 1
+
+# =============================================
+# END OF FILE
+# =============================================
