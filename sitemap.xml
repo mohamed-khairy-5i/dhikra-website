@@ -1,60 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
     <url>
         <loc>https://dhikra.netlify.app/</loc>
-        <lastmod>2024-08-10</lastmod>
+        <lastmod>2025-08-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    
     <url>
         <loc>https://dhikra.netlify.app/adhkar.html</loc>
-        <lastmod>2024-08-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <url>
-        <loc>https://dhikra.netlify.app/blog.html</loc>
-        <lastmod>2024-08-10</lastmod>
+        <lastmod>2025-08-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-
-    <url>
-        <loc>https://dhikra.netlify.app/contact.html</loc>
-        <lastmod>2024-08-10</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
     <url>
         <loc>https://dhikra.netlify.app/adhkar-sabah.html</loc>
-        <lastmod>2024-08-10</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    
     <url>
         <loc>https://dhikra.netlify.app/adhkar-masaa.html</loc>
-        <lastmod>2024-08-10</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    
+    <url>
+        <loc>https://dhikra.netlify.app/adhkar-nawm.html</loc>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dhikra.netlify.app/adhkar-salah.html</loc>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dhikra.netlify.app/adhkar-wakeup.html</loc>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dhikra.netlify.app/adhkar-food.html</loc>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dhikra.netlify.app/adhkar-home.html</loc>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dhikra.netlify.app/adhkar-mosque.html</loc>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dhikra.netlify.app/adhkar-wudu.html</loc>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dhikra.netlify.app/blog.html</loc>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
     <url>
         <loc>https://dhikra.netlify.app/blog-post-1.html</loc>
-        <lastmod>2024-08-10</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
-    
     <url>
         <loc>https://dhikra.netlify.app/blog-post-2.html</loc>
-        <lastmod>2024-08-10</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
-    
+    <url>
+        <loc>https://dhikra.netlify.app/blog-post-3.html</loc>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://dhikra.netlify.app/blog-post-4.html</loc>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://dhikra.netlify.app/contact.html</loc>
+        <lastmod>2025-08-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
