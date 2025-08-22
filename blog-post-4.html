@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TVWLF8DK');</script>
+    <!-- End Google Tag Manager -->
+    
+    <title>برنامج يومي لقراءة القرآن | مدونة ذِكْرَى</title>
+    <meta name="description" content="دليلك لإنشاء برنامج يومي فعال لقراءة القرآن الكريم والحفاظ على استمراريتك في تلاوة القرآن وتدبر آياته.">
+    <meta name="keywords" content="برنامج قراءة القرآن, ختم القرآن, قراءة القرآن اليومية, جدول قراءة القرآن, كيفية ختم القرآن, تدبر القرآن">
+    <link rel="icon" href="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary-color: #4CAF50; 
+            --secondary-color: #81c784; 
+            --font-color-light: #333; 
+            --bg-gradient-light: linear-gradient(135deg, #e0f7fa, #80deea); 
+            --card-bg-light: #ffffff; 
+            --font-color-dark: #e0e0e0; 
+            --bg-gradient-dark: linear-gradient(135deg, #1a2a44, #2e4a66); 
+            --card-bg-dark: #1f292e;
+            --ad-bg: #f8f9fa;
+            --ad-border: #e9ecef;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html[lang="ar"] { font-family: 'Cairo', sans-serif; }
+        html[lang="en"] { font-family: 'Poppins', sans-serif; }
+        html[lang="ar"] .lang-en { display: none; }
+        html[lang="en"] .lang-ar { display: none; }
+        
+        body { 
+            margin: 0; 
+            padding-top: 60px; 
+            background: var(--bg-gradient-light); 
+            color: var(--font-color-light); 
+            text-align: center; 
+            transition: background 0.5s ease, color 0.5s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        body.dark-mode { 
+            background: var(--bg-gradient-dark); 
+            color: var(--font-color-dark); 
+        }
+        
+        #particles-js { 
+            position: fixed; 
+            width: 100%; 
+            height: 100%; 
+            top: 0; 
+            left: 0; 
+            z-index: -1; 
+        }
+        
+        h1, h2, h3 { 
+            font-family: 'Amiri', serif; 
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); 
+        }
+        
+        html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3 { 
+            font-family: 'Poppins', sans-serif; 
+            font-weight: 700; 
+        }
+        
+        .navbar { 
+            background: rgba(0, 0, 0, 0.75); 
+            padding: 10px 15px; 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand { 
+            display: flex; 
+            align-items: center; 
+            text-decoration: none; 
+        }
+        
+        .navbar-brand img { 
+            height: 40px; 
+            width: auto;
+        }
+        
+        .navbar-brand .site-name { 
+            font-family: 'Amiri', serif; 
+            font-size: 1.4em; 
+            color: #fff; 
+        }
+        
+        html[dir="rtl"] .navbar-brand .site-name { 
+            margin-right: 10px; 
+        }
+        
+        html[dir="ltr"] .navbar-brand .site-name { 
+            margin-left: 10px; 
+        }
+        
+        .navbar-right { 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        
+        .nav-links { 
+            display: none; 
+        }
+        
+        .nav-controls { 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+        }
+        
+        .lang-toggle-btn { 
+            background-color: rgba(255, 255, 255, 0.2); 
+            border: 1px solid rgba(255, 255, 255, 0.5); 
+            color: #fff; 
+            padding: 5px 10px; 
+            border-radius: 20px; 
+            cursor: pointer; 
+            font-family: 'Poppins', sans-serif; 
+            font-weight: 500; 
+            font-size: 0.8em; 
+        }
+        
+        #dark-mode-toggle { 
+            background: none; 
+            border: none; 
+            color: #fff; 
+            font-size: 1.2em; 
+            cursor: pointer; 
+        }
+        
+        .nav-toggle { 
+            display: block; 
+            background: none; 
+            border: none; 
+            color: #fff; 
+            font-size: 1.5em; 
+            cursor: pointer; 
+        }
+        
+        @media (min-width: 992px) { 
+            .nav-toggle { display: none; } 
+            .nav-links { 
+                display: flex; 
+                align-items: center; 
+                gap: 20px; 
+                margin: 0 15px; 
+            } 
+            .nav-links a { 
+                color: #fff; 
+                font-size: 1em; 
+                text-decoration: none; 
+                transition: color 0.3s; 
+            } 
+            .nav-links a:hover, .nav-links a.active { 
+                color: var(--primary-color); 
+            } 
+        }
+        
+        .mobile-nav-menu { 
+            display: none; 
+            position: fixed; 
+            top: 60px; 
+            left: 0; 
+            width: 100%; 
+            background: rgba(0, 0, 0, 0.9); 
+            backdrop-filter: blur(10px); 
+            flex-direction: column; 
+            padding: 10px 0; 
+            border-top: 1px solid rgba(255,255,255,0.2);
+            z-index: 999;
+        }
+        
+        .mobile-nav-menu.active { 
+            display: flex; 
+        }
+        
+        .mobile-nav-menu a { 
+            color: #fff; 
+            text-decoration: none; 
+            font-size: 1.1em; 
+            padding: 12px 0; 
+            width: 100%; 
+            transition: background-color 0.3s;
+        }
+        
+        .mobile-nav-menu a:hover { 
+            background-color: rgba(255,255,255,0.1); 
+            color: var(--primary-color); 
+        }
+        
+        main { 
+            padding: 30px 15px; 
+            flex: 1;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .page-header h1 { 
+            color: #fff; 
+            font-size: clamp(2em, 5vw, 2.8em);
+            margin-bottom: 15px;
+        }
+        
+        .page-header p { 
+            color: #fff; 
+            text-shadow: 1px 1px 3px #000; 
+            font-size: clamp(1em, 2.5vw, 1.2em); 
+            max-width: 700px; 
+            margin: 0 auto 30px; 
+            line-height: 1.6;
+        }
+        
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: right;
+        }
+        
+        html[lang="en"] .article-container {
+            text-align: left;
+        }
+        
+        .article-content {
+            background: var(--card-bg-light);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        body.dark-mode .article-content {
+            background: var(--card-bg-dark);
+        }
+        
+        .article-content h2 {
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+            font-size: 1.8em;
+        }
+        
+        .article-content h3 {
+            color: var(--secondary-color);
+            margin: 25px 0 10px;
+            font-size: 1.5em;
+        }
+        
+        .article-content p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 20px 0;
+            padding-right: 30px;
+        }
+        
+        html[lang="en"] .article-content ul, html[lang="en"] .article-content ol {
+            padding-left: 30px;
+            padding-right: 0;
+        }
+        
+        .article-content li {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .article-content .verse {
+            background: rgba(76, 175, 80, 0.1);
+            border-right: 4px solid var(--primary-color);
+            padding: 15px;
+            margin: 20px 0;
+            font-family: 'Amiri', serif;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        html[lang="en"] .article-content .verse {
+            border-right: none;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .article-content .hadith {
+            background: rgba(129, 199, 132, 0.1);
+            border-right: 4px solid var(--secondary-color);
+            padding: 15px;
+            margin: 20px 0;
+            font-family: 'Amiri', serif;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        html[lang="en"] .article-content .hadith {
+            border-right: none;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .btn { 
+            display: inline-block; 
+            padding: 12px 28px; 
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); 
+            color: #fff !important; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            font-size: 1.1em; 
+            transition: transform 0.3s; 
+            border: none;
+            margin: 10px;
+        }
+        
+        .btn:hover { 
+            transform: scale(1.05); 
+        }
+        
+        /* Ad Spaces */
+        .ad-container {
+            background: var(--ad-bg);
+            border: 1px solid var(--ad-border);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 728px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ad-label {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 0.7em;
+            color: #999;
+            background: rgba(255,255,255,0.8);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .ad-content {
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .ad-square {
+            max-width: 336px;
+            margin: 20px auto;
+        }
+        
+        .ad-square .ad-content {
+            min-height: 280px;
+        }
+        
+        .ad-sticky {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 320px;
+            background: var(--ad-bg);
+            border: 1px solid var(--ad-border);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 998;
+            display: none;
+        }
+        
+        .ad-sticky .ad-label {
+            position: static;
+            display: block;
+            margin-bottom: 10px;
+            background: transparent;
+            color: #999;
+        }
+        
+        .ad-sticky .ad-content {
+            min-height: 50px;
+        }
+        
+        .ad-close {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        
+        .related-articles {
+            margin-top: 40px;
+        }
+        
+        .related-articles h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .related-card {
+            background: var(--card-bg-light);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        body.dark-mode .related-card {
+            background: var(--card-bg-dark);
+        }
+        
+        .related-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .related-card h4 {
+            color: var(--primary-color);
+            margin: 0 0 10px;
+        }
+        
+        .related-card p {
+            margin: 0 0 15px;
+            font-size: 0.9em;
+        }
+        
+        footer { 
+            padding: 20px; 
+            color: #fff; 
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); 
+            width: 100%;
+            font-size: clamp(0.8em, 2vw, 1em);
+        }
+        
+        body.dark-mode footer { 
+            color: var(--font-color-dark); 
+        }
+        
+        /* Responsive */
+        @media (max-width: 576px) {
+            .navbar {
+                padding: 8px 12px;
+            }
+            
+            .navbar-brand img {
+                height: 35px;
+            }
+            
+            .navbar-brand .site-name {
+                font-size: 1.2em;
+            }
+            
+            body {
+                padding-top: 55px;
+            }
+            
+            .mobile-nav-menu {
+                top: 55px;
+            }
+            
+            main {
+                padding: 20px 10px;
+            }
+            
+            .article-content {
+                padding: 25px;
+            }
+            
+            .ad-sticky {
+                width: calc(100% - 40px);
+                left: 20px;
+                right: 20px;
+            }
+        }
+        
+        @media (min-width: 577px) and (max-width: 768px) {
+            main {
+                padding: 25px 12px;
+            }
+            
+            .article-content {
+                padding: 30px;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .ad-sticky {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body
+    data-title-ar="برنامج يومي لقراءة القرآن | مدونة ذِكْرَى"
+    data-title-en="A Daily Program for Quran Reading | Dhikra Blog"
+>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVWLF8DK"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="particles-js"></div>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand"><img src="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" alt="Dhikra Logo"><span class="site-name"><span class="lang-ar">ذِكْرَى</span><span class="lang-en">Dhikra</span></span></a>
+        <div class="navbar-right">
+            <div class="nav-links">
+                <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+                <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+                <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+                <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
+            </div>
+            <div class="nav-controls">
+                <button id="lang-toggle" class="lang-toggle-btn" title="Change Language"></button>
+                <button id="dark-mode-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    <div class="mobile-nav-menu">
+        <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+        <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+        <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+        <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
+    </div>
+    
+    <!-- Sticky Ad -->
+    <div class="ad-sticky" id="stickyAd">
+        <button class="ad-close" onclick="this.parentElement.style.display='none'">&times;</button>
+        <div class="ad-label">إعلان</div>
+        <div class="ad-content">
+            <i class="fas fa-ad"></i> مساحة إعلانية (320x50)
+        </div>
+    </div>
+    
+    <main>
+        <div class="page-header">
+            <h1><span class="lang-ar">برنامج يومي لقراءة القرآن</span><span class="lang-en">A Daily Program for Quran Reading</span></h1>
+            <p><span class="lang-ar">دليلك لإنشاء برنامج يومي فعال لقراءة القرآن الكريم والحفاظ على استمراريتك في تلاوة القرآن</span><span class="lang-en">Your guide to creating an effective daily program for reading the Holy Quran and maintaining your continuity in recitation</span></p>
+        </div>
+        
+        <!-- Leaderboard Ad -->
+        <div class="ad-container">
+            <div class="ad-label">إعلان</div>
+            <div class="ad-content">
+                <i class="fas fa-ad"></i> مساحة إعلانية (728x90)
+            </div>
+        </div>
+        
+        <div class="article-container">
+            <article class="article-content">
+                <p><span class="lang-ar">قراءة القرآن الكريم هي عبادة عظيمة لها أثر عميق في حياة المسلم. فهي لا تقتصر على مجرد التلاوة، بل تشمل التدبر في معاني الآيات وتطبيقها في الحياة. ومع انشغال حياة الكثير من المسلمين، يجد الكثيرون صعوبة في الحفاظ على استمرارية قراءة القرآن. في هذا المقال، سقدم لك برنامجاً يومياً فعالاً لقراءة القرآن يمكنك اتباعه بسهولة.</span><span class="lang-en">Reading the Holy Quran is a great act of worship that has a profound impact on a Muslim's life. It is not limited to mere recitation, but includes contemplating the meanings of the verses and applying them in life. With the busy lives of many Muslims, many find it difficult to maintain continuity in Quran reading. In this article, we present to you an effective daily program for Quran reading that you can easily follow.</span></p>
+                
+                <h2><span class="lang-ar">أهمية قراءة القرآن يومياً</span><span class="lang-en">The Importance of Daily Quran Reading</span></h2>
+                
+                <h3><span class="lang-ar">1. نور للقلب</span><span class="lang-en">1. Light for the Heart</span></h3>
+                <p><span class="lang-ar">القرآن الكريم هو نور للقلوب، فقراءته تزيل الظلمات وتجلب النور والهداية. قال الله تعالى: "يَا أَيُّهَا النَّاسُ قَدْ جَاءَكُم مِّن رَّبِّكُمْ هُدًى وَنُورٌ" [المائدة: 15].</span><span class="lang-en">The Holy Quran is light for hearts, its recitation removes darkness and brings light and guidance. Allah said: "O mankind, there has come to you from your Lord guidance and light." [Al-Ma'idah: 15].</span></p>
+                
+                <h3><span class="lang-ar">2. شفاء للأمراض</span><span class="lang-en">2. Healing for Diseases</span></h3>
+                <p><span class="lang-ar">القرآن شفاء لما في الصدور، فقراءته تشفي الأمراض القلبية والجسدية. قال الله تعالى: "وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِّلْمُؤْمِنِينَ" [الإسراء: 82].</span><span class="lang-en">The Quran is healing for what is in the chests, its recitation heals heart and physical diseases. Allah said: "And We send down of the Quran that which is healing and mercy for the believers." [Al-Isra: 82].</span></p>
+                
+                <h3><span class="lang-ar">3. زيادة الإيمان</span><span class="lang-en">3. Increasing Faith</span></h3>
+                <p><span class="lang-ar">قراءة القرآن تزيد الإيمان وتقوي العلاقة بالله تعالى. فكلما زادت قراءة المسلم للقرآن، كلما ازداد إيمانه وقربه من الله.</span><span class="lang-en">Reading the Quran increases faith and strengthens the relationship with Allah. The more a Muslim reads the Quran, the more their faith increases and their closeness to Allah.</span></p>
+                
+                <h3><span class="lang-ar">4. بركة في الوقت</span><span class="lang-en">4. Blessing in Time</span></h3>
+                <p><span class="lang-ar">الوقت الذي يقضيه المسلم في قراءة القرآن هو وقت مبارك، فالبركة تنزل على حياة المسلم الذي يداوم على قراءة القرآن.</span><span class="lang-en">The time a Muslim spends reading the Quran is blessed time, blessing descends on the life of a Muslim who consistently reads the Quran.</span></p>
+                
+                <!-- Square Ad -->
+                <div class="ad-container ad-square">
+                    <div class="ad-label">إعلان</div>
+                    <div class="ad-content">
+                        <i class="fas fa-ad"></i> مساحة إعلانية (336x280)
+                    </div>
+                </div>
+                
+                <h2><span class="lang-ar">برنامج يومي مقترح لقراءة القرآن</span><span class="lang-en">A Suggested Daily Program for Quran Reading</span></h2>
+                
+                <p><span class="lang-ar">هذا البرنامج مصمم ليناسب مختلف الأوقات والظروف، ويمكن تعديله حسب احتياجاتك:</span><span class="lang-en">This program is designed to suit different times and circumstances, and can be modified according to your needs:</span></p>
+                
+                <h3><span class="lang-ar">1. بعد صلاة الفجر</span><span class="lang-en">1. After Fajr Prayer</span></h3>
+                <p><span class="lang-ar">وقت الفجر من أفضل الأوقات لقراءة القرآن، حيث يكون القلب صافياً والذهن مستعداً للتلقي. يمكنك قراءة:</span><span class="lang-en">Fajr time is one of the best times for Quran reading, as the heart is pure and the mind is ready to receive. You can read:</span></p>
+                
+                <ul>
+                    <li><span class="lang-ar">صفحة إلى صفحتين من القرآن</span><span class="lang-en">One to two pages of the Quran</span></li>
+                    <li><span class="lang-ar">أو سورة قصيرة مثل الإخلاص، الفلق، الناس</span><span class="lang-en">Or a short surah like Al-Ikhlas, Al-Falaq, An-Nas</span></li>
+                </ul>
+                
+                <h3><span class="lang-ar">2. بعد صلاة الظهر</span><span class="lang-en">2. After Dhuhr Prayer</span></h3>
+                <p><span class="lang-ar">بعد صلاة الظهر، يمكنك قراءة:</span><span class="lang-en">After Dhuhr prayer, you can read:</span></p>
+                
+                <ul>
+                    <li><span class="lang-ar">صفحة واحدة من القرآن</span><span class="lang-en">One page of the Quran</span></li>
+                    <li><span class="lang-ar">أو عدة آيات من السورة التي تقرأها</span><span class="lang-en">Or several verses from the surah you are reading</span></li>
+                </ul>
+                
+                <h3><span class="lang-ar">3. بعد صلاة العصر</span><span class="lang-en">3. After Asr Prayer</span></h3>
+                <p><span class="lang-ar">بعد صلاة العصر، يمكنك قراءة:</span><span class="lang-en">After Asr prayer, you can read:</span></p>
+                
+                <ul>
+                    <li><span class="lang-ar">صفحة واحدة من القرآن</span><span class="lang-en">One page of the Quran</span></li>
+                    <li><span class="lang-ar">أو التركيز على تدبر آيات معينة</span><span class="lang-en">Or focus on contemplating certain verses</span></li>
+                </ul>
+                
+                <h3><span class="lang-ar">4. بعد صلاة المغرب</span><span class="lang-en">4. After Maghrib Prayer</span></h3>
+                <p><span class="lang-ar">بعد صلاة المغرب، يمكنك قراءة:</span><span class="lang-en">After Maghrib prayer, you can read:</span></p>
+                
+                <ul>
+                    <li><span class="lang-ar">صفحة إلى صفحتين من القرآن</span><span class="lang-en">One to two pages of the Quran</span></li>
+                    <li><span class="lang-ar">أو سورة الملك (المانعة)</span><span class="lang-en">Or Surah Al-Mulk (The Preventer)</span></li>
+                </ul>
+                
+                <h3><span class="lang-ar">5. قبل النوم</span><span class="lang-en">5. Before Sleep</span></h3>
+                <p><span class="lang-ar">قبل النوم، يمكنك قراءة:</span><span class="lang-en">Before sleep, you can read:</span></p>
+                
+                <ul>
+                    <li><span class="lang-ar">صفحة واحدة من القرآن</span><span class="lang-en">One page of the Quran</span></li>
+                    <li><span class="lang-ar">أو سور الإخلاص والفلق والناس</span><span class="lang-en">Or Surahs Al-Ikhlas, Al-Falaq, and An-Nas</span></li>
+                    <li><span class="lang-ar">آية الكرسي</span><span class="lang-en">Ayat Al-Kursi</span></li>
+                </ul>
+                
+                <h3><span class="lang-ar">6. وقت الفراغ</span><span class="lang-en">6. Free Time</span></h3>
+                <p><span class="lang-ar">استغل وقت الفراغ في قراءة القرآن، مثل:</span><span class="lang-en">Utilize free time for Quran reading, such as:</span></p>
+                
+                <ul>
+                    <li><span class="lang-ar">أثناء الانتظار في الطوابير</span><span class="lang-en">While waiting in lines</span></li>
+                    <li><span class="lang-ar">في المواصلات العامة</span><span class="lang-en">In public transportation</span></li>
+                    <li><span class="lang-ar">قبل النوم بوقت كافٍ</span><span class="lang-en">Before sufficient sleep time</span></li>
+                </ul>
+                
+                <h2><span class="lang-ar">نصائح للحفاظ على استمرارية قراءة القرآن</span><span class="lang-en">Tips for Maintaining Continuity in Quran Reading</span></h2>
+                
+                <h3><span class="lang-ar">1. ابدأ بكمية قليلة</span><span class="lang-en">1. Start with a Small Amount</span></h3>
+                <p><span class="lang-ar">لا تحاول قراءة الكثير من البداية، بل ابدأ بكمية قليلة يمكنك الالتزام بها، ثم زدها تدريجياً.</span><span class="lang-en">Don't try to read a lot from the beginning, but start with a small amount you can commit to, then increase it gradually.</span></p>
+                
+                <h3><span class="lang-ar">2. حدد وقتاً ثابتاً</span><span class="lang-en">2. Set a Fixed Time</span></h3>
+                <p><span class="lang-ar">حدد وقتاً ثابتاً كل يوم لقراءة القرآن، واجعله عادة يومية لا تتركها.</span><span class="lang-en">Set a fixed time every day for Quran reading, and make it a daily habit you don't skip.</span></p>
+                
+                <h3><span class="lang-ar">3. استخدم مصحفاً إلكترونياً</span><span class="lang-en">3. Use a Digital Mushaf</span></h3>
+                <p><span class="lang-ar">يمكنك استخدام تطبيقات القرآن الإلكترونية على هاتفك، مما يسهل قراءة القرآن في أي وقت ومكان.</span><span class="lang-en">You can use digital Quran applications on your phone, which facilitates reading the Quran anytime and anywhere.</span></p>
+                
+                <h3><span class="lang-ar">4. استمع إلى القرآن</span><span class="lang-en">4. Listen to the Quran</span></h3>
+                <p><span class="lang-ar">إذا كنت مشغولاً ولا تستطيع القراءة، يمكنك الاستماع إلى القرآن أثناء القيادة أو العمل أو أداء المهام المنزلية.</span><span class="lang-en">If you are busy and cannot read, you can listen to the Quran while driving, working, or doing household chores.</span></p>
+                
+                <h3><span class="lang-ar">5. شارك مع الآخرين</span><span class="lang-en">5. Share with Others</span></h3>
+                <p><span class="lang-ar">شارك أصدقاءك أو عائلتك في برنامج قراءة القرآن، حيث يمكنكم تشجيع بعضكم البعض.</span><span class="lang-en">Share your Quran reading program with friends or family, where you can encourage each other.</span></p>
+                
+                <h3><span class="lang-ar">6. سجل تقدمك</span><span class="lang-en">6. Record Your Progress</span></h3>
+                <p><span class="lang-ar">سجل تقدمك في قراءة القرآن، حيث يساعدك ذلك على الاستمرارية وتحفيزك للمزيد.</span><span class="lang-en">Record your progress in Quran reading, as this helps you with continuity and motivates you for more.</span></p>
+                
+                <h2><span class="lang-ar">برامج متقدمة لختم القرآن</span><span class="lang-en">Advanced Programs for Completing the Quran</span></h2>
+                
+                <h3><span class="lang-ar">1. ختم القرآن في شهر</span><span class="lang-en">1. Completing the Quran in a Month</span></h3>
+                <p><span class="lang-ar">لختم القرآن في شهر، تحتاج إلى قراءة جزء واحد يومياً (حوالي 20 صفحة). يمكن تقسيم هذا الجزء على الصلوات الخمس:</span><span class="lang-en">To complete the Quran in a month, you need to read one juz daily (about 20 pages). This juz can be divided over the five prayers:</span></p>
+                
+                <ul>
+                    <li><span class="lang-ar">بعد الفجر: 4 صفحات</span><span class="lang-en">After Fajr: 4 pages</span></li>
+                    <li><span class="lang-ar">بعد الظهر: 4 صفحات</span><span class="lang-en">After Dhuhr: 4 pages</span></li>
+                    <li><span class="lang-ar">بعد العصر: 4 صفحات</span><span class="lang-en">After Asr: 4 pages</span></li>
+                    <li><span class="lang-ar">بعد المغرب: 4 صفحات</span><span class="lang-en">After Maghrib: 4 pages</span></li>
+                    <li><span class="lang-ar">بعد العشاء: 4 صفحات</span><span class="lang-en">After Isha: 4 pages</span></li>
+                </ul>
+                
+                <h3><span class="lang-ar">2. ختم القرآن في ثلاثة أشهر</span><span class="lang-en">2. Completing the Quran in Three Months</span></h3>
+                <p><span class="lang-ar">لختم القرآن في ثلاثة أشهر، تحتاج إلى قراءة 10 صفحات يومياً. يمكن تقسيمها كالتالي:</span><span class="lang-en">To complete the Quran in three months, you need to read 10 pages daily. It can be divided as follows:</span></p>
+                
+                <ul>
+                    <li><span class="lang-ar">بعد الفجر: 3 صفحات</span><span class="lang-en">After Fajr: 3 pages</span></li>
+                    <li><span class="lang-ar">بعد الظهر: 2 صفحات</span><span class="lang-en">After Dhuhr: 2 pages</span></li>
+                    <li><span class="lang-ar">بعد العصر: 2 صفحات</span><span class="lang-en">After Asr: 2 pages</span></li>
+                    <li><span class="lang-ar">بعد المغرب: 2 صفحات</span><span class="lang-en">After Maghrib: 2 pages</span></li>
+                    <li><span class="lang-ar">قبل النوم: 1 صفحة</span><span class="lang-en">Before sleep: 1 page</span></li>
+                </ul>
+                
+                <h3><span class="lang-ar">3. ختم القرآن في ستة أشهر</span><span class="lang-en">3. Completing the Quran in Six Months</span></h3>
+                <p><span class="lang-ar">لختم القرآن في ستة أشهر، تحتاج إلى قراءة 5 صفحات يومياً. يمكن قراءتها في وقتين:</span><span class="lang-en">To complete the Quran in six months, you need to read 5 pages daily. It can be read in two times:</span></p>
+                
+                <ul>
+                    <li><span class="lang-ar">بعد الفجر: 3 صفحات</span><span class="lang-en">After Fajr: 3 pages</span></li>
+                    <li><span class="lang-ar">بعد المغرب: 2 صفحات</span><span class="lang-en">After Maghrib: 2 pages</span></li>
+                </ul>
+                
+                <h2><span class="lang-ar">كيف تحقق التدبر في قراءة القرآن؟</span><span class="lang-en">How to Achieve Contemplation in Quran Reading?</span></h2>
+                
+                <p><span class="lang-ar">التدبر في القرآن يعني التفكر في معاني الآيات وتطبيقها في الحياة. لتحقيق التدبر:</span><span class="lang-en">Contemplation in the Quran means thinking about the meanings of the verses and applying them in life. To achieve contemplation:</span></p>
+                
+                <ol>
+                    <li><span class="lang-ar">اقرأ الآية ببطء وتمعن</span><span class="lang-en">Read the verse slowly and carefully</span></li>
+                    <li><span class="lang-ar">توقف عند كل آية وفكر في معناها</span><span class="lang-en">Stop at each verse and think about its meaning</span></li>
+                    <li><span class="lang-ar">اسأل نفسك: ماذا يريد الله مني في هذه الآية؟</span><span class="lang-en">Ask yourself: What does Allah want from me in this verse?</span></li>
+                    <li><span class="lang-ar">حاول تطبيق ما تعلمته في حياتك</span><span class="lang-en">Try to apply what you learned in your life</span></li>
+                    <li><span class="lang-ar">ادع الله أن يساعدك على فهم كتابه</span><span class="lang-en">Pray to Allah to help you understand His book</span></li>
+                </ol>
+                
+                <h2><span class="lang-ar">خاتمة</span><span class="lang-en">Conclusion</span></h2>
+                <p><span class="lang-ar">قراءة القرآن اليومية ليست مجرد عبادة، بل هي طريق لحياة أفضل وأقرب إلى الله. فإذا أردت أن تغير حياتك إلى الأفضل، فاجعل قراءة القرآن جزءاً أساسياً من يومك. تذكر دائماً أن الأهم ليس كمية القراءة، بل استمراريتها والتدبر في معانيها. ابدأ اليوم بقراءة ولو آية واحدة، وشاهد كيف ستتغير حياتك تدريجياً.</span><span class="lang-en">Daily Quran reading is not just an act of worship, but a path to a better life closer to Allah. If you want to change your life for the better, make Quran reading an essential part of your day. Always remember that what matters is not the quantity of reading, but its continuity and contemplation of its meanings. Start today by reading even one verse, and watch how your life will gradually change.</span></p>
+            </article>
+            
+            <div class="related-articles">
+                <h3><span class="lang-ar">مقالات ذات صلة</span><span class="lang-en">Related Articles</span></h3>
+                <div class="related-grid">
+                    <div class="related-card">
+                        <h4><span class="lang-ar">فضل الذكر وأثره في حياة المسلم</span><span class="lang-en">The Virtue of Dhikr and its Impact on a Muslim's Life</span></h4>
+                        <p><span class="lang-ar">اكتشف فضل الذكر وأثره العظيم في حياتك</span><span class="lang-en">Discover the virtue of dhikr and its great impact on your life</span></p>
+                        <a href="blog-post-1.html" class="btn"><span class="lang-ar">اقرأ المقال</span><span class="lang-en">Read Article</span></a>
+                    </div>
+                    <div class="related-card">
+                        <h4><span class="lang-ar">كيف تجد الطمأنينة في حياتك؟</span><span class="lang-en">How to Find Tranquility in Your Life?</span></h4>
+                        <p><span class="lang-ar">دليل عملي لتحقيق السكينة في حياتك اليومية</span><span class="lang-en">A practical guide to achieving peace in your daily life</span></p>
+                        <a href="blog-post-2.html" class="btn"><span class="lang-ar">اقرأ المقال</span><span class="lang-en">Read Article</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p><span class="lang-ar">جميع الحقوق محفوظة © 2024 - موقع ذِكْرَى</span><span class="lang-en">Copyright © 2024 - Dhikra Website</span></p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        const particlesConfig = { 
+            particles: { 
+                number: { value: 60 }, 
+                color: { value: "#ffffff" }, 
+                shape: { type: "circle" }, 
+                opacity: { value: 0.4, random: true }, 
+                size: { value: 3, random: true }, 
+                line_linked: { 
+                    enable: true, 
+                    distance: 150, 
+                    color: "#ffffff", 
+                    opacity: 0.3, 
+                    width: 1 
+                }, 
+                move: { 
+                    enable: true, 
+                    speed: 2, 
+                    direction: "none", 
+                    out_mode: "out" 
+                } 
+            }, 
+            interactivity: { 
+                events: { 
+                    onhover: { 
+                        enable: true, 
+                        mode: "repulse" 
+                    } 
+                } 
+            }, 
+            retina_detect: true 
+        };
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const htmlEl = document.documentElement; 
+            const darkModeToggle = document.getElementById('dark-mode-toggle'); 
+            const langToggleBtn = document.getElementById('lang-toggle'); 
+            const navToggle = document.querySelector('.nav-toggle'); 
+            const mobileNavMenu = document.querySelector('.mobile-nav-menu');
+            
+            const applyDarkMode = (isDark) => { 
+                const icon = darkModeToggle.querySelector('i'); 
+                if (isDark) { 
+                    document.body.classList.add('dark-mode'); 
+                    if(icon) icon.classList.replace('fa-moon', 'fa-sun'); 
+                    particlesConfig.particles.color.value = ["#ffffff", "#81c784", "#4caf50"]; 
+                } else { 
+                    document.body.classList.remove('dark-mode'); 
+                    if(icon) icon.classList.replace('fa-sun', 'fa-moon'); 
+                    particlesConfig.particles.color.value = "#ffffff"; 
+                } 
+                if (window.pJSDom && window.pJSDom[0]) { 
+                    window.pJSDom[0].pJS.fn.particlesRefresh(); 
+                } 
+            };
+            
+            const setLanguage = (lang) => { 
+                htmlEl.lang = lang; 
+                htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr'; 
+                langToggleBtn.textContent = lang === 'ar' ? 'EN' : 'AR'; 
+                document.title = lang === 'ar' ? document.body.getAttribute('data-title-ar') : document.body.getAttribute('data-title-en'); 
+                localStorage.setItem('language', lang); 
+            };
+            
+            darkModeToggle.addEventListener('click', () => { 
+                const isDarkMode = !document.body.classList.contains('dark-mode'); 
+                applyDarkMode(isDarkMode); 
+                localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); 
+            });
+            
+            langToggleBtn.addEventListener('click', () => { 
+                const newLang = htmlEl.lang === 'ar' ? 'en' : 'ar'; 
+                setLanguage(newLang); 
+            });
+            
+            navToggle.addEventListener('click', () => { 
+                mobileNavMenu.classList.toggle('active'); 
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navToggle.contains(e.target) && !mobileNavMenu.contains(e.target)) {
+                    mobileNavMenu.classList.remove('active');
+                }
+            });
+            
+            const isInitiallyDark = localStorage.getItem('theme') === 'dark'; 
+            if (isInitiallyDark) { 
+                particlesConfig.particles.color.value = ["#ffffff", "#81c784", "#4caf50"]; 
+            } 
+            
+            particlesJS('particles-js', particlesConfig);
+            applyDarkMode(isInitiallyDark); 
+            setLanguage(localStorage.getItem('language') || 'ar'); 
+        });
+    </script>
+</body>
+</html>
