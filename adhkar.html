@@ -28,8 +28,7 @@
             --font-color-dark: #e0e0e0; 
             --bg-gradient-dark: linear-gradient(135deg, #1a2a44, #2e4a66); 
             --card-bg-dark: #1f292e;
-            --ad-bg: #f8f9fa;
-            --ad-border: #e9ecef;
+
         }
         
         * {
@@ -305,84 +304,7 @@
             transform: scale(1.05); 
         }
         
-        /* Ad Spaces */
-        .ad-container {
-            background: var(--ad-bg);
-            border: 1px solid var(--ad-border);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 30px auto;
-            max-width: 728px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .ad-label {
-            position: absolute;
-            top: 5px;
-            right: 10px;
-            font-size: 0.7em;
-            color: #999;
-            background: rgba(255,255,255,0.8);
-            padding: 2px 8px;
-            border-radius: 4px;
-        }
-        
-        .ad-content {
-            min-height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 0.9em;
-        }
-        
-        .ad-square {
-            max-width: 336px;
-            margin: 20px auto;
-        }
-        
-        .ad-square .ad-content {
-            min-height: 280px;
-        }
-        
-        .ad-sticky {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            width: 320px;
-            background: var(--ad-bg);
-            border: 1px solid var(--ad-border);
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            z-index: 998;
-            display: none;
-        }
-        
-        .ad-sticky .ad-label {
-            position: static;
-            display: block;
-            margin-bottom: 10px;
-            background: transparent;
-            color: #999;
-        }
-        
-        .ad-sticky .ad-content {
-            min-height: 50px;
-        }
-        
-        .ad-close {
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            background: none;
-            border: none;
-            color: #999;
-            font-size: 1.2em;
-            cursor: pointer;
-        }
+
         
         footer { 
             padding: 20px; 
@@ -431,11 +353,7 @@
                 gap: 15px;
             }
             
-            .ad-sticky {
-                width: calc(100% - 40px);
-                left: 20px;
-                right: 20px;
-            }
+
         }
         
         @media (min-width: 577px) and (max-width: 768px) {
@@ -454,11 +372,7 @@
             }
         }
         
-        @media (min-width: 769px) {
-            .ad-sticky {
-                display: block;
-            }
-        }
+
     </style>
 </head>
 <body
@@ -493,14 +407,7 @@
         <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
     </div>
     
-    <!-- Sticky Ad -->
-    <div class="ad-sticky" id="stickyAd">
-        <button class="ad-close" onclick="this.parentElement.style.display='none'">&times;</button>
-        <div class="ad-label">إعلان</div>
-        <div class="ad-content">
-            <i class="fas fa-ad"></i> مساحة إعلانية (320x50)
-        </div>
-    </div>
+
     
     <main>
         <div class="page-header">
@@ -508,13 +415,7 @@
             <p><span class="lang-ar">اختر مجموعة الأذكار التي ترغب في قراءتها. كل ذكر هو خطوة أقرب إلى الله، وحصن لك في يومك.</span><span class="lang-en">Choose the set of remembrances you wish to read. Every dhikr is a step closer to Allah and a fortress for you in your day.</span></p>
         </div>
         
-        <!-- Leaderboard Ad -->
-        <div class="ad-container">
-            <div class="ad-label">إعلان</div>
-            <div class="ad-content">
-                <i class="fas fa-ad"></i> مساحة إعلانية (728x90)
-            </div>
-        </div>
+
         
         <div class="grid">
             <!-- الأذكار الأساسية -->
@@ -547,13 +448,7 @@
             </div>
         </div>
         
-        <!-- Square Ad -->
-        <div class="ad-container ad-square">
-            <div class="ad-label">إعلان</div>
-            <div class="ad-content">
-                <i class="fas fa-ad"></i> مساحة إعلانية (336x280)
-            </div>
-        </div>
+
         
         <div class="grid">
             <!-- الأذكار الجديدة -->
@@ -590,6 +485,37 @@
                 <h2><span class="lang-ar">أذكار الوضوء والصلاة</span><span class="lang-en">Wudu and Prayer Adhkar</span></h2>
                 <p><span class="lang-ar">اذكر الله خلال الوضوء وفي كل ركعة من الصلاة.</span><span class="lang-en">Remember Allah during wudu and in every rak'ah of prayer.</span></p>
                 <a href="adhkar-wudu.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
+            </div>
+        </div>
+        
+        <!-- الأذكار الإضافية الجديدة -->
+        <div class="grid" style="margin-top: 30px;">
+            <div class="feature-card">
+                <i class="fas fa-plane"></i>
+                <h2><span class="lang-ar">أذكار السفر والركوب</span><span class="lang-en">Travel and Riding Adhkar</span></h2>
+                <p><span class="lang-ar">أدعية وأذكار السفر لحفظك وحمايتك في الطريق.</span><span class="lang-en">Travel supplications and remembrances for your protection on the road.</span></p>
+                <a href="adhkar-travel.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-praying-hands"></i>
+                <h2><span class="lang-ar">دعاء الاستخارة</span><span class="lang-en">Istikhara Prayer</span></h2>
+                <p><span class="lang-ar">تعلم كيفية صلاة الاستخارة مع دعائها الكامل.</span><span class="lang-en">Learn how to perform Istikhara prayer with its complete supplication.</span></p>
+                <a href="adhkar-istikhara.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-heart-pulse"></i>
+                <h2><span class="lang-ar">أذكار المريض والرقية</span><span class="lang-en">Patient's Adhkar & Ruqyah</span></h2>
+                <p><span class="lang-ar">الرقية الشرعية وأذكار الشفاء من القرآن والسنة.</span><span class="lang-en">Legal Ruqyah and healing remembrances from Quran and Sunnah.</span></p>
+                <a href="adhkar-healing.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-cloud-rain"></i>
+                <h2><span class="lang-ar">أذكار المطر والطقس</span><span class="lang-en">Rain and Weather Adhkar</span></h2>
+                <p><span class="lang-ar">أذكار المطر والرعد والرياح من السنة النبوية.</span><span class="lang-en">Rain, thunder, and wind remembrances from the Prophetic Sunnah.</span></p>
+                <a href="adhkar-weather.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
             </div>
         </div>
     </main>

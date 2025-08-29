@@ -28,8 +28,6 @@
             --font-color-dark: #e0e0e0; 
             --bg-gradient-dark: linear-gradient(135deg, #1a2a44, #2e4a66); 
             --card-bg-dark: #1f292e;
-            --ad-bg: #f8f9fa;
-            --ad-border: #e9ecef;
         }
         
         * {
@@ -341,75 +339,6 @@
             margin-inline-end: 8px; 
         }
         
-        /* Ad Spaces */
-        .ad-container {
-            background: var(--ad-bg);
-            border: 1px solid var(--ad-border);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 30px auto;
-            max-width: 728px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .ad-label {
-            position: absolute;
-            top: 5px;
-            right: 10px;
-            font-size: 0.7em;
-            color: #999;
-            background: rgba(255,255,255,0.8);
-            padding: 2px 8px;
-            border-radius: 4px;
-        }
-        
-        .ad-content {
-            min-height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 0.9em;
-        }
-        
-        .ad-square {
-            max-width: 336px;
-            margin: 20px auto;
-        }
-        
-        .ad-square .ad-content {
-            min-height: 280px;
-        }
-        
-        .ad-sticky {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            width: 320px;
-            background: var(--ad-bg);
-            border: 1px solid var(--ad-border);
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            z-index: 998;
-            display: none;
-        }
-        
-        .ad-sticky .ad-label {
-            position: static;
-            display: block;
-            margin-bottom: 10px;
-            background: transparent;
-            color: #999;
-        }
-        
-        .ad-sticky .ad-content {
-            min-height: 50px;
-        }
-        
-        .ad-close {
             position: absolute;
             top: 5px;
             left: 5px;
@@ -470,7 +399,6 @@
                 padding: 12px 15px;
             }
             
-            .ad-sticky {
                 width: calc(100% - 40px);
                 left: 20px;
                 right: 20px;
@@ -488,7 +416,6 @@
         }
         
         @media (min-width: 769px) {
-            .ad-sticky {
                 display: block;
             }
         }
@@ -527,11 +454,8 @@
     </div>
     
     <!-- Sticky Ad -->
-    <div class="ad-sticky" id="stickyAd">
         <button class="ad-close" onclick="this.parentElement.style.display='none'">&times;</button>
-        <div class="ad-label">إعلان</div>
         <div class="ad-content">
-            <i class="fas fa-ad"></i> مساحة إعلانية (320x50)
         </div>
     </div>
     
@@ -542,10 +466,7 @@
         </div>
         
         <!-- Leaderboard Ad -->
-        <div class="ad-container">
-            <div class="ad-label">إعلان</div>
             <div class="ad-content">
-                <i class="fas fa-ad"></i> مساحة إعلانية (728x90)
             </div>
         </div>
         
@@ -612,10 +533,7 @@
         </div>
         
         <!-- Square Ad -->
-        <div class="ad-container ad-square">
-            <div class="ad-label">إعلان</div>
             <div class="ad-content">
-                <i class="fas fa-ad"></i> مساحة إعلانية (336x280)
             </div>
         </div>
         
@@ -682,10 +600,7 @@
         </div>
         
         <!-- Square Ad -->
-        <div class="ad-container ad-square">
-            <div class="ad-label">إعلان</div>
             <div class="ad-content">
-                <i class="fas fa-ad"></i> مساحة إعلانية (336x280)
             </div>
         </div>
         
