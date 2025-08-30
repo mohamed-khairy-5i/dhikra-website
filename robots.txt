@@ -1,7 +1,9 @@
 # =============================================
 # ROBOTS.TXT FOR DHIKRA WEBSITE
 # =============================================
-# Last Updated: 2025-08-22
+# Last Updated: 2025-08-30
+# Website: dhikra.netlify.app
+# Contact: mohamedkhairy0887@gmail.com
 
 # Allow all search engines to access the site
 User-agent: *

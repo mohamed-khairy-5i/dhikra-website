@@ -318,7 +318,6 @@
             font-size: 0.95em;
         }
         
-        .counter-container {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -329,7 +328,6 @@
             border-radius: 15px;
         }
         
-        .counter-btn {
             background: var(--primary-color);
             color: white;
             border: none;
@@ -341,12 +339,10 @@
             transition: all 0.3s;
         }
         
-        .counter-btn:hover {
             background: var(--secondary-color);
             transform: scale(1.1);
         }
         
-        .counter-display {
             font-size: 1.5em;
             font-weight: bold;
             color: var(--primary-color);
@@ -451,7 +447,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <div id="particles-js"></div>
     <nav class="navbar">
-        <a href="index.html" class="navbar-brand"><img src="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" alt="Dhikra Logo"><span class="site-name"><span class="lang-ar">ذِكْرَى</span><span class="lang-en">Dhikra</span></span></a>
+        <a href="index.html" class="navbar-brand"><img loading="lazy" src="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" alt="Dhikra Logo"><span class="site-name"><span class="lang-ar">ذِكْرَى</span><span class="lang-en">Dhikra</span></span></a>
         <div class="navbar-right">
             <div class="nav-links">
                 <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
@@ -495,10 +491,6 @@
                     <span class="lang-ar">اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ</span>
                     <span class="lang-en">"I seek refuge in Allah from Satan, the accursed. Allah - there is no deity except Him, the Ever-Living, the Sustainer of existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursi extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great."</span>
                 </div>
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decreaseCount(1)">-</button>
-                    <span class="counter-display" id="count1">0</span>
-                    <button class="counter-btn" onclick="increaseCount(1)">+</button>
                 </div>
                 <div class="dhikr-reference">
                     <span class="lang-ar">سورة البقرة آية 255</span>
@@ -513,10 +505,6 @@
                     <span class="lang-ar">بِسْمِ اللهِ الرَّحْمنِ الرَّحِيْمِ ﴿١﴾ الْحَمْدُ للّهِ رَبِّ الْعَالَمِينَ ﴿٢﴾ الرَّحْمـنِ الرَّحِيمِ ﴿٣﴾ مَالِكِ يَوْمِ الدِّينِ ﴿٤﴾ إِيَّاكَ نَعْبُدُ وإِيَّاكَ نَسْتَعِينُ ﴿٥﴾ اهدِنَــــا الصِّرَاطَ المُستَقِيمَ ﴿٦﴾ صِرَاطَ الَّذِينَ أَنعَمتَ عَلَيهِمْ غَيرِ المَغضُوبِ عَلَيهِمْ وَلاَ الضَّالِّينَ ﴿٧﴾</span>
                     <span class="lang-en">"In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds - The Entirely Merciful, the Especially Merciful, Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path - The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray."</span>
                 </div>
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decreaseCount(2)">-</button>
-                    <span class="counter-display" id="count2">0</span>
-                    <button class="counter-btn" onclick="increaseCount(2)">+</button>
                 </div>
                 <div class="dhikr-benefit">
                     <h4><span class="lang-ar">فضل سورة الفاتحة في الرقية:</span><span class="lang-en">Virtue of Al-Fatiha in Ruqyah:</span></h4>
@@ -537,10 +525,6 @@
                     <strong>Surah An-Nas:</strong><br>
                     "Say: I seek refuge in the Lord of mankind, The Sovereign of mankind, The God of mankind, From the evil of the retreating whisperer - Who whispers [evil] into the breasts of mankind - From among the jinn and mankind."</span>
                 </div>
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decreaseCount(3)">-</button>
-                    <span class="counter-display" id="count3">0</span>
-                    <button class="counter-btn" onclick="increaseCount(3)">+</button>
                 </div>
                 <div class="dhikr-benefit">
                     <h4><span class="lang-ar">فضل المعوذتين:</span><span class="lang-en">Virtue of the Two Protective Chapters:</span></h4>
@@ -555,10 +539,6 @@
                     <span class="lang-ar">قُلْ هُوَ اللَّهُ أَحَدٌ ﴿١﴾ اللَّهُ الصَّمَدُ ﴿٢﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿٣﴾ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ ﴿٤﴾</span>
                     <span class="lang-en">"Say: He is Allah, [who is] One, Allah, the Eternal Refuge. He neither begets nor is born, Nor is there to Him any equivalent."</span>
                 </div>
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decreaseCount(4)">-</button>
-                    <span class="counter-display" id="count4">0</span>
-                    <button class="counter-btn" onclick="increaseCount(4)">+</button>
                 </div>
                 <div class="dhikr-benefit">
                     <h4><span class="lang-ar">فضل سورة الإخلاص:</span><span class="lang-en">Virtue of Surah Al-Ikhlas:</span></h4>
@@ -575,10 +555,6 @@
                     <span class="lang-ar">أَذْهِبِ الْبَاسَ رَبَّ النَّاسِ، اشْفِ وَأَنتَ الشَّافِي، لَا شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لَّا يُغَادِرُ سَقَمًا</span>
                     <span class="lang-en">"Remove the hardship, O Lord of mankind, and heal, for You are the Healer. There is no healing except Your healing, a healing that leaves no illness behind."</span>
                 </div>
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decreaseCount(5)">-</button>
-                    <span class="counter-display" id="count5">0</span>
-                    <button class="counter-btn" onclick="increaseCount(5)">+</button>
                 </div>
                 <div class="dhikr-reference">
                     <span class="lang-ar">رواه البخاري ومسلم</span>
@@ -590,10 +566,6 @@
                     <span class="lang-ar">بِسْمِ اللهِ (ثلاثاً)، أَعُوذُ بِاللهِ وَقُدْرَتِهِ مِنْ شَرِّ مَا أَجِدُ وَأُحَاذِرُ (سبع مرات)</span>
                     <span class="lang-en">"In the name of Allah" (three times), "I seek refuge in Allah and His power from the evil of what I find and fear" (seven times)</span>
                 </div>
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decreaseCount(6)">-</button>
-                    <span class="counter-display" id="count6">0</span>
-                    <button class="counter-btn" onclick="increaseCount(6)">+</button>
                 </div>
                 <div class="dhikr-reference">
                     <span class="lang-ar">رواه مسلم</span>
@@ -614,10 +586,6 @@
                     <span class="lang-ar">آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رُّسُلِهِ ۚ وَقَالُوا سَمِعْنَا وَأَطَعْنَا ۖ غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ ﴿٢٨٥﴾ لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا ۚ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ ۗ رَبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ ۖ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا ۚ أَنتَ مَوْلَانَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ ﴿٢٨٦﴾</span>
                     <span class="lang-en">"The Messenger has believed in what was revealed to him from his Lord, and [so have] the believers. All of them have believed in Allah and His angels and His books and His messengers, [saying], "We make no distinction between any of His messengers." And they say, "We hear and we obey. [We seek] Your forgiveness, our Lord, and to You is the [final] destination." Allah does not charge a soul except [with that within] its capacity. It will have [the consequence of] what [good] it has gained, and it will bear [the consequence of] what [evil] it has earned. "Our Lord, do not impose blame upon us if we have forgotten or erred. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us; and forgive us; and have mercy upon us. You are our protector, so give us victory over the disbelieving people.""</span>
                 </div>
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decreaseCount(7)">-</button>
-                    <span class="counter-display" id="count7">0</span>
-                    <button class="counter-btn" onclick="increaseCount(7)">+</button>
                 </div>
                 <div class="dhikr-reference">
                     <span class="lang-ar">سورة البقرة آيتان 285-286</span>
@@ -632,10 +600,6 @@
                     <span class="lang-ar">أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ الَّتِي لَا يُجَاوِزُهُنَّ بَرٌّ وَلَا فَاجِرٌ مِنْ شَرِّ مَا خَلَقَ وَبَرَأَ وَذَرَأَ، وَمِنْ شَرِّ مَا يَنْزِلُ مِنَ السَّمَاءِ وَمِنْ شَرِّ مَا يَعْرُجُ فِيهَا، وَمِنْ شَرِّ مَا ذَرَأَ فِي الْأَرْضِ وَمِنْ شَرِّ مَا يَخْرُجُ مِنْهَا، وَمِنْ شَرِّ فِتَنِ اللَّيْلِ وَالنَّهَارِ، وَمِنْ شَرِّ كُلِّ طَارِقٍ إِلَّا طَارِقًا يَطْرُقُ بِخَيْرٍ يَا رَحْمَٰنُ</span>
                     <span class="lang-en">"I seek refuge in Allah's perfect words which no righteous person or evildoer can transgress, from the evil of what He has created, made and originated. From the evil of what descends from the sky and the evil of what ascends to it. From the evil of what He has created on earth and the evil of what comes out of it. From the evil of the trials of night and day, and from the evil of every night visitor except the night visitor who comes with good, O Most Merciful."</span>
                 </div>
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decreaseCount(8)">-</button>
-                    <span class="counter-display" id="count8">0</span>
-                    <button class="counter-btn" onclick="increaseCount(8)">+</button>
                 </div>
                 <div class="dhikr-reference">
                     <span class="lang-ar">رواه أحمد وحسنه الألباني</span>
@@ -657,14 +621,11 @@
     
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        // Counter functionality
-        function increaseCount(id) {
             const countElement = document.getElementById('count' + id);
             let count = parseInt(countElement.textContent);
             countElement.textContent = count + 1;
         }
         
-        function decreaseCount(id) {
             const countElement = document.getElementById('count' + id);
             let count = parseInt(countElement.textContent);
             if (count > 0) {

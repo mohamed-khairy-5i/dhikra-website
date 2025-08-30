@@ -318,7 +318,6 @@
             font-size: 0.95em;
         }
         
-        .counter-container {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -329,7 +328,6 @@
             border-radius: 15px;
         }
         
-        .counter-btn {
             background: var(--primary-color);
             color: white;
             border: none;
@@ -341,12 +339,10 @@
             transition: all 0.3s;
         }
         
-        .counter-btn:hover {
             background: var(--secondary-color);
             transform: scale(1.1);
         }
         
-        .counter-display {
             font-size: 1.5em;
             font-weight: bold;
             color: var(--primary-color);
@@ -438,7 +434,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <div id="particles-js"></div>
     <nav class="navbar">
-        <a href="index.html" class="navbar-brand"><img src="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" alt="Dhikra Logo"><span class="site-name"><span class="lang-ar">ذِكْرَى</span><span class="lang-en">Dhikra</span></span></a>
+        <a href="index.html" class="navbar-brand"><img loading="lazy" src="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" alt="Dhikra Logo"><span class="site-name"><span class="lang-ar">ذِكْرَى</span><span class="lang-en">Dhikra</span></span></a>
         <div class="navbar-right">
             <div class="nav-links">
                 <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
@@ -474,10 +470,6 @@
                     <span class="lang-ar">بِسْمِ اللَّهِ، وَالْحَمْدُ لِلَّهِ، سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَٰذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ، وَإِنَّا إِلَىٰ رَبِّنَا لَمُنقَلِبُونَ، الْحَمْدُ لِلَّهِ، الْحَمْدُ لِلَّهِ، الْحَمْدُ لِلَّهِ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، سُبْحَانَكَ اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ</span>
                     <span class="lang-en">"In the name of Allah, and all praise is to Allah. Glory is to Him who has subjected this to us, and we could never have it (by our efforts). And to our Lord we will [surely] return. Praise is to Allah, praise is to Allah, praise is to Allah. Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. Glory is to You, O Allah, indeed I have wronged myself, so forgive me, for none forgives sins except You."</span>
                 </div>
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decreaseCount(1)">-</button>
-                    <span class="counter-display" id="count1">0</span>
-                    <button class="counter-btn" onclick="increaseCount(1)">+</button>
                 </div>
                 <div class="dhikr-reference">
                     <span class="lang-ar">رواه أبو داود والترمذي وحسنه الألباني</span>
@@ -496,10 +488,6 @@
                     <span class="lang-ar">اللَّهُمَّ إِنَّا نَسْأَلُكَ فِي سَفَرِنَا هَٰذَا الْبِرَّ وَالتَّقْوَىٰ، وَمِنَ الْعَمَلِ مَا تَرْضَىٰ، اللَّهُمَّ هَوِّنْ عَلَيْنَا سَفَرَنَا هَٰذَا، وَاطْوِ عَنَّا بُعْدَهُ، اللَّهُمَّ أَنتَ الصَّاحِبُ فِي السَّفَرِ، وَالْخَلِيفَةُ فِي الْأَهْلِ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ وَعْثَاءِ السَّفَرِ، وَكَآبَةِ الْمَنْظَرِ، وَسُوءِ الْمُنقَلَبِ فِي الْمَالِ وَالْأَهْلِ</span>
                     <span class="lang-en">"O Allah, we ask You on this our journey for goodness and piety, and for works that are pleasing to You. O Allah, lighten this journey for us and make its distance easy for us. O Allah, You are our Companion on the road and the One in Whose care we leave our family. O Allah, I seek refuge in You from the difficulties of travel, from having a change of heart and being in a bad predicament, and I seek refuge in You from an ill fated outcome with wealth and family."</span>
                 </div>
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decreaseCount(2)">-</button>
-                    <span class="counter-display" id="count2">0</span>
-                    <button class="counter-btn" onclick="increaseCount(2)">+</button>
                 </div>
                 <div class="dhikr-reference">
                     <span class="lang-ar">رواه مسلم</span>
@@ -518,10 +506,6 @@
                     <span class="lang-ar">أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</span>
                     <span class="lang-en">"I seek refuge in Allah's perfect words from the evil of what He has created."</span>
                 </div>
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decreaseCount(3)">-</button>
-                    <span class="counter-display" id="count3">0</span>
-                    <button class="counter-btn" onclick="increaseCount(3)">+</button>
                 </div>
                 <div class="dhikr-reference">
                     <span class="lang-ar">رواه مسلم</span>
@@ -540,10 +524,6 @@
                     <span class="lang-ar">آيِبُونَ تَائِبُونَ عَابِدُونَ لِرَبِّنَا حَامِدُونَ</span>
                     <span class="lang-en">"We return, repent, worship and praise our Lord."</span>
                 </div>
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decreaseCount(4)">-</button>
-                    <span class="counter-display" id="count4">0</span>
-                    <button class="counter-btn" onclick="increaseCount(4)">+</button>
                 </div>
                 <div class="dhikr-reference">
                     <span class="lang-ar">رواه البخاري ومسلم</span>
@@ -562,10 +542,6 @@
                     <span class="lang-ar">اللَّهُمَّ رَبَّ السَّمَاوَاتِ السَّبْعِ وَمَا أَظْلَلْنَ، وَرَبَّ الْأَرَضِينَ السَّبْعِ وَمَا أَقْلَلْنَ، وَرَبَّ الشَّيَاطِينِ وَمَا أَضْلَلْنَ، وَرَبَّ الرِّيَاحِ وَمَا ذَرَيْنَ، أَسْأَلُكَ خَيْرَ هَٰذِهِ الْقَرْيَةِ وَخَيْرَ أَهْلِهَا، وَخَيْرَ مَا فِيهَا، وَأَعُوذُ بِكَ مِنْ شَرِّهَا وَشَرِّ أَهْلِهَا، وَشَرِّ مَا فِيهَا</span>
                     <span class="lang-en">"O Allah, Lord of the seven heavens and what they shade, Lord of the seven earths and what they carry, Lord of the devils and what they misguide, Lord of the winds and what they scatter, I ask You for the good of this village, the good of its people, and the good of what is in it, and I seek refuge in You from its evil, the evil of its people, and the evil of what is in it."</span>
                 </div>
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decreaseCount(5)">-</button>
-                    <span class="counter-display" id="count5">0</span>
-                    <button class="counter-btn" onclick="increaseCount(5)">+</button>
                 </div>
                 <div class="dhikr-reference">
                     <span class="lang-ar">رواه النسائي وابن ماجه وحسنه الألباني</span>
@@ -584,10 +560,6 @@
                     <span class="lang-ar">سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَٰهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ</span>
                     <span class="lang-en">"Glory is to Allah, and praise is to Allah, and there is no deity except Allah, and Allah is the Greatest, and there is no power and no strength except with Allah, the Most High, the Most Great."</span>
                 </div>
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decreaseCount(6)">-</button>
-                    <span class="counter-display" id="count6">0</span>
-                    <button class="counter-btn" onclick="increaseCount(6)">+</button>
                 </div>
                 <div class="dhikr-reference">
                     <span class="lang-ar">من الأذكار المستحبة أثناء السفر</span>
@@ -609,14 +581,11 @@
     
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        // Counter functionality
-        function increaseCount(id) {
             const countElement = document.getElementById('count' + id);
             let count = parseInt(countElement.textContent);
             countElement.textContent = count + 1;
         }
         
-        function decreaseCount(id) {
             const countElement = document.getElementById('count' + id);
             let count = parseInt(countElement.textContent);
             if (count > 0) {

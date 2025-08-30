@@ -356,6 +356,108 @@
             width: 100%;
             font-size: clamp(0.8em, 2vw, 1em);
         }
+
+        /* Breadcrumb Styles */
+        .breadcrumb {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 0;
+            margin-bottom: 20px;
+        }
+        body.dark-mode .breadcrumb {
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .breadcrumb a:hover {
+            color: var(--secondary-color);
+        }
+        .breadcrumb .current {
+            color: #666;
+            font-weight: 500;
+        }
+        body.dark-mode .breadcrumb .current {
+            color: #ccc;
+        }
+        .breadcrumb-separator {
+            color: #999;
+            font-size: 0.8em;
+        }
+        html[dir="rtl"] .breadcrumb-separator {
+            transform: scaleX(-1);
+        }
+
+        /* Dhikr Actions */
+        .dhikr-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .dhikr-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .dhikr-actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        body.dark-mode .dhikr-actions {
+            border-top-color: #444;
+        }
+        .action-btn {
+            background: none;
+            border: 1px solid #ddd;
+            color: #666;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+        .action-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        .action-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        body.dark-mode .action-btn {
+            border-color: #555;
+            color: #ccc;
+        }
+        body.dark-mode .action-btn:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        @media (max-width: 768px) {
+            .dhikr-actions {
+                gap: 8px;
+            }
+            .action-btn {
+                padding: 6px 10px;
+                font-size: 0.8em;
+            }
+        }
         
         body.dark-mode footer { 
             color: var(--font-color-dark); 
@@ -431,7 +533,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <div id="particles-js"></div>
     <nav class="navbar">
-        <a href="index.html" class="navbar-brand"><img src="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" alt="Dhikra Logo"><span class="site-name"><span class="lang-ar">ذِكْرَى</span><span class="lang-en">Dhikra</span></span></a>
+        <a href="index.html" class="navbar-brand"><img loading="lazy" src="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" alt="Dhikra Logo"><span class="site-name"><span class="lang-ar">ذِكْرَى</span><span class="lang-en">Dhikra</span></span></a>
         <div class="navbar-right">
             <div class="nav-links">
                 <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
@@ -453,22 +555,24 @@
         <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
     </div>
     
-    <!-- Sticky Ad -->
-        <button class="ad-close" onclick="this.parentElement.style.display='none'">&times;</button>
-        <div class="ad-content">
-        </div>
-    </div>
     
     <main>
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb">
+            <div class="breadcrumb-container">
+                <a href="index.html"><i class="fas fa-home"></i> <span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+                <i class="fas fa-chevron-left breadcrumb-separator"></i>
+                <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+                <i class="fas fa-chevron-left breadcrumb-separator"></i>
+                <span class="current"><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning Adhkar</span></span>
+            </div>
+        </nav>
+
         <div class="page-header">
             <h1><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning Adhkar</span></h1>
             <p><span class="lang-ar">ابدأ يومك ببركة وحفظ من الله مع هذه الأذكار النبوية الصحيحة</span><span class="lang-en">Start your day with blessings and protection from Allah with these authentic prophetic remembrances</span></p>
         </div>
         
-        <!-- Leaderboard Ad -->
-            <div class="ad-content">
-            </div>
-        </div>
         
         <div class="dhikr-container">
             <!-- 1 -->
@@ -481,8 +585,21 @@
                     <p class="dhikr-text-ar">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ</p>
                 </div>
                 <div class="dhikr-footer">
-                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قرأها في الصباح لم يصبه شيء من الجن حتى يمسي</span><span class="lang-en"><b>Virtue:</b> Whoever recites it in the morning, nothing will harm him from the jinn until evening</span></span>
-                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح الجامع</span><span class="lang-en"><b>Source:</b> Sahih Al-Jami'</span></span>
+                    <div class="dhikr-info">
+                        <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قرأها في الصباح لم يصبه شيء من الجن حتى يمسي</span><span class="lang-en"><b>Virtue:</b> Whoever recites it in the morning, nothing will harm him from the jinn until evening</span></span>
+                        <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح الجامع</span><span class="lang-en"><b>Source:</b> Sahih Al-Jami'</span></span>
+                    </div>
+                    <div class="dhikr-actions">
+                        <button class="action-btn favorite-btn" onclick="toggleFavorite(this, 'آية الكرسي', 'Ayat Al-Kursi')" title="إضافة للمفضلة / Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn share-btn" onclick="shareDhikr('آية الكرسي', 'Ayat Al-Kursi')" title="مشاركة / Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                        <button class="action-btn copy-btn" onclick="copyDhikr(this)" title="نسخ النص / Copy Text">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
             
@@ -532,10 +649,6 @@
             </div>
         </div>
         
-        <!-- Square Ad -->
-            <div class="ad-content">
-            </div>
-        </div>
         
         <div class="dhikr-container">
             <!-- 5 -->
@@ -599,10 +712,6 @@
             </div>
         </div>
         
-        <!-- Square Ad -->
-            <div class="ad-content">
-            </div>
-        </div>
         
         <div class="dhikr-container">
             <!-- 9 -->
@@ -766,6 +875,81 @@
             particlesJS('particles-js', particlesConfig);
             applyDarkMode(isInitiallyDark); 
             setLanguage(localStorage.getItem('language') || 'ar'); 
+        });
+
+        // Dhikr Functions
+        function toggleFavorite(button, titleAr, titleEn) {
+            const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+            const dhikr = { titleAr, titleEn, url: window.location.href };
+            const existingIndex = favorites.findIndex(fav => fav.titleAr === titleAr);
+            
+            if (existingIndex > -1) {
+                favorites.splice(existingIndex, 1);
+                button.classList.remove('active');
+                button.querySelector('i').classList.remove('fas');
+                button.querySelector('i').classList.add('far');
+            } else {
+                favorites.push(dhikr);
+                button.classList.add('active');
+                button.querySelector('i').classList.remove('far');
+                button.querySelector('i').classList.add('fas');
+            }
+            
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+        }
+
+        function shareDhikr(titleAr, titleEn) {
+            const title = htmlEl.lang === 'ar' ? titleAr : titleEn;
+            const text = htmlEl.lang === 'ar' ? `${titleAr} - من موقع ذِكْرَى` : `${titleEn} - From Dhikra Website`;
+            
+            if (navigator.share) {
+                navigator.share({ title, text, url: window.location.href });
+            } else {
+                const shareText = `${text}\n${window.location.href}`;
+                navigator.clipboard.writeText(shareText).then(() => {
+                    alert(htmlEl.lang === 'ar' ? 'تم نسخ رابط المشاركة' : 'Share link copied');
+                });
+            }
+        }
+
+        function copyDhikr(button) {
+            const card = button.closest('.dhikr-card');
+            const dhikrText = card.querySelector('.dhikr-text-ar').textContent;
+            const title = card.querySelector('.dhikr-title span.lang-' + htmlEl.lang).textContent;
+            const copyText = `${title}\n\n${dhikrText}`;
+            
+            navigator.clipboard.writeText(copyText).then(() => {
+                const originalIcon = button.querySelector('i');
+                originalIcon.classList.remove('fa-copy');
+                originalIcon.classList.add('fa-check');
+                button.style.background = '#28a745';
+                button.style.color = 'white';
+                
+                setTimeout(() => {
+                    originalIcon.classList.remove('fa-check');
+                    originalIcon.classList.add('fa-copy');
+                    button.style.background = '';
+                    button.style.color = '';
+                }, 2000);
+            });
+        }
+
+        // Initialize favorites on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+            const favoriteButtons = document.querySelectorAll('.favorite-btn');
+            
+            favoriteButtons.forEach(button => {
+                const card = button.closest('.dhikr-card');
+                const titleAr = card.querySelector('.dhikr-title .lang-ar').textContent;
+                const isFavorite = favorites.some(fav => fav.titleAr === titleAr);
+                
+                if (isFavorite) {
+                    button.classList.add('active');
+                    button.querySelector('i').classList.remove('far');
+                    button.querySelector('i').classList.add('fas');
+                }
+            });
         });
     </script>
 </body>

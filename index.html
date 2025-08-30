@@ -16,6 +16,13 @@
     <meta name="description" content="موقع ذِكْرَى هو مصدرك الشامل للأذكار اليومية وأدعية القرآن والسنة. اكتشف أذكار الصباح والمساء، أذكار النوم، أذكار بعد الصلاة، سيد الاستغفار والمزيد من الأذكار النبوية الصحيحة.">
     <meta name="keywords" content="أذكار, أذكار الصباح, أذكار المساء, أذكار النوم, أذكار بعد الصلاة, أدعية, إسلام, حصن المسلم, سيد الاستغفار, فضل الذكر, دعاء مستجاب, قرآن, سنة, أدعية يومية, ذكر الله">
     <link rel="icon" href="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" type="image/png">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.dropbox.com">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -114,10 +121,109 @@
         body.dark-mode .category-card p {
             color: #ccc;
         }
-        .category-card a {
+        .category-card .category-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .category-card .primary-link {
             color: var(--primary-color);
             text-decoration: none;
             font-weight: bold;
+            padding: 8px 15px;
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        .category-card .primary-link:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        .category-card .secondary-link {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9em;
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        .category-card .secondary-link:hover {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        body.dark-mode .category-card .secondary-link {
+            color: #ccc;
+            border-color: #555;
+        }
+        body.dark-mode .category-card .secondary-link:hover {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        /* Legacy support for old links */
+        .category-card a:not(.primary-link):not(.secondary-link) {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Quick Access Styles */
+        .quick-access-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .quick-card {
+            background: var(--card-bg-light);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        body.dark-mode .quick-card {
+            background: var(--card-bg-dark);
+        }
+        .quick-card:hover {
+            transform: translateY(-5px);
+        }
+        .quick-card i {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .quick-card h4 {
+            margin: 0 0 10px;
+            font-size: 1.3em;
+            color: var(--font-color-light);
+        }
+        body.dark-mode .quick-card h4 {
+            color: var(--font-color-dark);
+        }
+        .quick-card p {
+            font-size: 0.95em;
+            margin: 0 0 20px;
+            color: #666;
+            line-height: 1.5;
+        }
+        body.dark-mode .quick-card p {
+            color: #ccc;
+        }
+        .quick-btn {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.95em;
+            transition: transform 0.3s;
+        }
+        .quick-btn:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -131,7 +237,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <div id="particles-js"></div>
     <nav class="navbar">
-        <a href="index.html" class="navbar-brand"><img src="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" alt="Dhikra Logo"><span class="site-name"><span class="lang-ar">ذِكْرَى</span><span class="lang-en">Dhikra</span></span></a>
+        <a href="index.html" class="navbar-brand"><img loading="lazy" src="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" alt="Dhikra Logo"><span class="site-name"><span class="lang-ar">ذِكْرَى</span><span class="lang-en">Dhikra</span></span></a>
         <div class="navbar-right">
             <div class="nav-links">
                 <a href="index.html" class="active"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
@@ -161,39 +267,97 @@
         
         <section class="section-wrapper">
             <h2 class="section-title"><span class="lang-ar">تصفح أذكارك اليومية</span><span class="lang-en">Browse Your Daily Adhkar</span></h2>
-            <p class="section-subtitle"><span class="lang-ar">اختر من بين مجموعتنا الشاملة من الأذكار والأدعية الصحيحة التي تهمك في حياتك اليومية، من أذكار الصباح والمساء إلى أذكار النوم وأذكار بعد الصلاة.</span><span class="lang-en">Choose from our comprehensive collection of authentic remembrances and supplications that matter in your daily life, from morning and evening adhkar to sleep and post-prayer remembrances.</span></p>
+            <p class="section-subtitle"><span class="lang-ar">اختر من بين مجموعتنا الشاملة من الأذكار والأدعية الصحيحة المأخوذة من القرآن الكريم والسنة النبوية، مع مراجع وتوثيق شرعي لكل ذكر.</span><span class="lang-en">Choose from our comprehensive collection of authentic remembrances and supplications from the Quran and Sunnah, with scholarly references for each dhikr.</span></p>
             
             <div class="dhikr-categories">
                 <div class="category-card">
                     <i class="fas fa-sun"></i>
                     <h3><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning Adhkar</span></h3>
                     <p><span class="lang-ar">ابدأ يومك بحصن منيع من الأذكار النبوية</span><span class="lang-en">Start your day with an impenetrable fortress of prophetic remembrances</span></p>
-                    <a href="adhkar-sabah.html"><span class="lang-ar">اقرأ الأذكار</span><span class="lang-en">Read Adhkar</span></a>
+                    <div class="category-links">
+                        <a href="adhkar-sabah.html" class="primary-link"><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning Adhkar</span></a>
+                        <a href="adhkar-wakeup.html" class="secondary-link"><span class="lang-ar">أذكار الاستيقاظ</span><span class="lang-en">Waking Up</span></a>
+                    </div>
                 </div>
                 
                 <div class="category-card">
                     <i class="fas fa-moon"></i>
                     <h3><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening Adhkar</span></h3>
                     <p><span class="lang-ar">اختم يومك بالسكينة والطمأنينة</span><span class="lang-en">End your day with peace and tranquility</span></p>
-                    <a href="adhkar-masaa.html"><span class="lang-ar">اقرأ الأذكار</span><span class="lang-en">Read Adhkar</span></a>
-                </div>
-                
-                <div class="category-card">
-                    <i class="fas fa-bed"></i>
-                    <h3><span class="lang-ar">أذكار النوم</span><span class="lang-en">Sleep Adhkar</span></h3>
-                    <p><span class="lang-ar">أذكار لحمايتك أثناء نومك</span><span class="lang-en">Remembrances to protect you during sleep</span></p>
-                    <a href="adhkar-nawm.html"><span class="lang-ar">اقرأ الأذكار</span><span class="lang-en">Read Adhkar</span></a>
+                    <div class="category-links">
+                        <a href="adhkar-masaa.html" class="primary-link"><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening Adhkar</span></a>
+                        <a href="adhkar-nawm.html" class="secondary-link"><span class="lang-ar">أذكار النوم</span><span class="lang-en">Sleep Adhkar</span></a>
+                    </div>
                 </div>
                 
                 <div class="category-card">
                     <i class="fas fa-praying-hands"></i>
-                    <h3><span class="lang-ar">أذكار بعد الصلاة</span><span class="lang-en">Post-Prayer Adhkar</span></h3>
+                    <h3><span class="lang-ar">أذكار الصلاة</span><span class="lang-en">Prayer Adhkar</span></h3>
                     <p><span class="lang-ar">أذكار تقال بعد كل صلاة مكتوبة</span><span class="lang-en">Remembrances said after every obligatory prayer</span></p>
-                    <a href="adhkar-salah.html"><span class="lang-ar">اقرأ الأذكار</span><span class="lang-en">Read Adhkar</span></a>
+                    <div class="category-links">
+                        <a href="adhkar-salah.html" class="primary-link"><span class="lang-ar">بعد الصلاة</span><span class="lang-en">Post-Prayer</span></a>
+                        <a href="adhkar-wudu.html" class="secondary-link"><span class="lang-ar">دعاء الوضوء</span><span class="lang-en">Wudu Dua</span></a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <i class="fas fa-home"></i>
+                    <h3><span class="lang-ar">أذكار المنزل</span><span class="lang-en">Home Adhkar</span></h3>
+                    <p><span class="lang-ar">أذكار دخول وخروج المنزل والمسجد</span><span class="lang-en">Entering and leaving home and mosque</span></p>
+                    <div class="category-links">
+                        <a href="adhkar-home.html" class="primary-link"><span class="lang-ar">المنزل</span><span class="lang-en">Home</span></a>
+                        <a href="adhkar-mosque.html" class="secondary-link"><span class="lang-ar">المسجد</span><span class="lang-en">Mosque</span></a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <i class="fas fa-route"></i>
+                    <h3><span class="lang-ar">أذكار السفر</span><span class="lang-en">Travel Adhkar</span></h3>
+                    <p><span class="lang-ar">أدعية وأذكار المسافر</span><span class="lang-en">Traveler's supplications and remembrances</span></p>
+                    <div class="category-links">
+                        <a href="adhkar-travel.html" class="primary-link"><span class="lang-ar">أذكار السفر</span><span class="lang-en">Travel Adhkar</span></a>
+                        <a href="adhkar-weather.html" class="secondary-link"><span class="lang-ar">أذكار الطقس</span><span class="lang-en">Weather Adhkar</span></a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <i class="fas fa-heart-pulse"></i>
+                    <h3><span class="lang-ar">أذكار خاصة</span><span class="lang-en">Special Adhkar</span></h3>
+                    <p><span class="lang-ar">الرقية الشرعية وأذكار الطعام والاستخارة</span><span class="lang-en">Ruqyah, food supplications, and Istikhara</span></p>
+                    <div class="category-links">
+                        <a href="adhkar-healing.html" class="primary-link"><span class="lang-ar">الرقية الشرعية</span><span class="lang-en">Ruqyah</span></a>
+                        <a href="adhkar-food.html" class="secondary-link"><span class="lang-ar">الطعام</span><span class="lang-en">Food</span></a>
+                        <a href="adhkar-istikhara.html" class="secondary-link"><span class="lang-ar">الاستخارة</span><span class="lang-en">Istikhara</span></a>
+                    </div>
                 </div>
             </div>
         </section>
         
+        <!-- Quick Access Section -->
+        <section class="section-wrapper">
+            <h2 class="section-title"><span class="lang-ar">وصول سريع</span><span class="lang-en">Quick Access</span></h2>
+            <div class="quick-access-grid">
+                <div class="quick-card">
+                    <i class="fas fa-bookmark"></i>
+                    <h4><span class="lang-ar">قائمة المفضلة</span><span class="lang-en">Favorites</span></h4>
+                    <p><span class="lang-ar">احفظ الأذكار المفضلة لديك</span><span class="lang-en">Save your favorite adhkar</span></p>
+                    <button class="quick-btn" onclick="toggleFavorites()"><span class="lang-ar">عرض المفضلة</span><span class="lang-en">View Favorites</span></button>
+                </div>
+                <div class="quick-card">
+                    <i class="fas fa-random"></i>
+                    <h4><span class="lang-ar">ذكر عشوائي</span><span class="lang-en">Random Dhikr</span></h4>
+                    <p><span class="lang-ar">اكتشف ذكراً جديداً كل يوم</span><span class="lang-en">Discover a new dhikr daily</span></p>
+                    <button class="quick-btn" onclick="getRandomDhikr()"><span class="lang-ar">ذكر اليوم</span><span class="lang-en">Today's Dhikr</span></button>
+                </div>
+                <div class="quick-card">
+                    <i class="fas fa-share-alt"></i>
+                    <h4><span class="lang-ar">مشاركة</span><span class="lang-en">Share</span></h4>
+                    <p><span class="lang-ar">شارك الأذكار مع الآخرين</span><span class="lang-en">Share adhkar with others</span></p>
+                    <button class="quick-btn" onclick="shareWebsite()"><span class="lang-ar">شارك الموقع</span><span class="lang-en">Share Website</span></button>
+                </div>
+            </div>
+        </section>
+
         <section class="section-wrapper bg-light">
             <h2 class="section-title"><span class="lang-ar">لماذا تذكر الله؟</span><span class="lang-en">Why Remember Allah?</span></h2>
             <p class="section-subtitle"><span class="lang-ar">قال الله تعالى: "أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ" [الرعد: 28]. وقال النبي صلى الله عليه وسلم: "ألا أنبئكم بخير أعمالكم، وأزكاها عند مليككم، وأرفعها في درجاتكم، وخير لكم من إنفاق الذهب والورق، وخير لكم من أن تلقوا عدوكم فتضربوا أعناقهم ويضربوا أعناقكم؟ قالوا: بلى. قال: ذكر الله".</span><span class="lang-en">Allah says: "Unquestionably, by the remembrance of Allah hearts are assured." [Ar-Ra'd: 28]. And the Prophet (PBUH) said: "Shall I not tell you of the best of your deeds, and the purest of them with your King, and the highest of them in your ranks, and what is better for you than spending gold and silver, and better for you than meeting your enemy and striking their necks and they strike your necks?" They said: "Of course." He said: "The remembrance of Allah."</span></p>
@@ -229,7 +393,7 @@
             <h2 class="section-title"><span class="lang-ar">مقالات مميزة من مدونتنا الإسلامية</span><span class="lang-en">Featured Articles From Our Islamic Blog</span></h2>
             <div class="grid">
                 <div class="blog-card">
-                    <img src="https://www.dropbox.com/scl/fi/8l6o1okm93mi7d4g5jltg/IMG-20250809-WA0001.jpg?rlkey=daf1x4syvmdl4rohdopy64m6y&st=s041xs3s&dl=1" alt="رجل يقرأ القرآن بخشوع - فضل الذكر">
+                    <img loading="lazy" src="https://www.dropbox.com/scl/fi/8l6o1okm93mi7d4g5jltg/IMG-20250809-WA0001.jpg?rlkey=daf1x4syvmdl4rohdopy64m6y&st=s041xs3s&dl=1" alt="رجل يقرأ القرآن بخشوع - فضل الذكر">
                     <div class="blog-card-content">
                         <h3><span class="lang-ar">فضل الذكر وأثره العظيم في حياة المسلم</span><span class="lang-en">The Great Virtue of Dhikr and Its Impact on a Muslim's Life</span></h3>
                         <p><span class="lang-ar">اكتشف كيف يمكن لذكر الله أن يغير حياتك ويجلب لك السكينة والطمأنينة في عالم مليء بالضغوط.</span><span class="lang-en">Discover how the remembrance of Allah can change your life and bring you peace and tranquility in a world full of pressures.</span></p>
@@ -237,7 +401,7 @@
                     </div>
                 </div>
                 <div class="blog-card">
-                    <img src="https://www.dropbox.com/scl/fi/1csshgsgozajpyukiabkm/IMG-20250809-WA0002.jpg?rlkey=t8w44saqvc8gy0opjs490ijdz&st=zc36y3kj&dl=1" alt="شخص يدعو في الطبيعة - الطمأنينة في الإسلام">
+                    <img loading="lazy" src="https://www.dropbox.com/scl/fi/1csshgsgozajpyukiabkm/IMG-20250809-WA0002.jpg?rlkey=t8w44saqvc8gy0opjs490ijdz&st=zc36y3kj&dl=1" alt="شخص يدعو في الطبيعة - الطمأنينة في الإسلام">
                     <div class="blog-card-content">
                         <h3><span class="lang-ar">كيف تجد الطمأنينة في حياتك من خلال الأذكار اليومية؟</span><span class="lang-en">How to Find Tranquility in Your Life Through Daily Adhkar?</span></h3>
                         <p><span class="lang-ar">دليل عملي لدمج الأذكار في روتينك اليومي لتحقيق السكينة والقرب من الله عز وجل.</span><span class="lang-en">A practical guide to incorporating adhkar into your daily routine to achieve peace and closeness to Allah.</span></p>
@@ -277,6 +441,55 @@
             particlesJS('particles-js', particlesConfig);
             applyDarkMode(isInitiallyDark); setLanguage(localStorage.getItem('language') || 'ar'); 
         });
+
+        // Quick Access Functions
+        function toggleFavorites() {
+            const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+            if (favorites.length === 0) {
+                alert(htmlEl.lang === 'ar' ? 'لا توجد أذكار مفضلة حتى الآن' : 'No favorite adhkar yet');
+                return;
+            }
+            // Create favorites modal (simple implementation)
+            let favoritesText = htmlEl.lang === 'ar' ? 'الأذكار المفضلة:\n\n' : 'Favorite Adhkar:\n\n';
+            favorites.forEach((fav, i) => {
+                favoritesText += `${i + 1}. ${fav.title}\n`;
+            });
+            alert(favoritesText);
+        }
+
+        function getRandomDhikr() {
+            const dhikrPages = [
+                { ar: 'أذكار الصباح', en: 'Morning Adhkar', url: 'adhkar-sabah.html' },
+                { ar: 'أذكار المساء', en: 'Evening Adhkar', url: 'adhkar-masaa.html' },
+                { ar: 'أذكار النوم', en: 'Sleep Adhkar', url: 'adhkar-nawm.html' },
+                { ar: 'أذكار بعد الصلاة', en: 'Post-Prayer Adhkar', url: 'adhkar-salah.html' },
+                { ar: 'أذكار السفر', en: 'Travel Adhkar', url: 'adhkar-travel.html' },
+                { ar: 'الرقية الشرعية', en: 'Ruqyah', url: 'adhkar-healing.html' }
+            ];
+            const randomDhikr = dhikrPages[Math.floor(Math.random() * dhikrPages.length)];
+            const message = htmlEl.lang === 'ar' 
+                ? `ذكر اليوم: ${randomDhikr.ar}\nهل تريد الانتقال إليه؟` 
+                : `Today's Dhikr: ${randomDhikr.en}\nWould you like to go there?`;
+            
+            if (confirm(message)) {
+                window.location.href = randomDhikr.url;
+            }
+        }
+
+        function shareWebsite() {
+            if (navigator.share) {
+                navigator.share({
+                    title: htmlEl.lang === 'ar' ? 'موقع ذِكْرَى' : 'Dhikra Website',
+                    text: htmlEl.lang === 'ar' ? 'أذكار يومية من القرآن والسنة' : 'Daily adhkar from Quran and Sunnah',
+                    url: window.location.href
+                });
+            } else {
+                const url = window.location.href;
+                navigator.clipboard.writeText(url).then(() => {
+                    alert(htmlEl.lang === 'ar' ? 'تم نسخ رابط الموقع' : 'Website link copied');
+                });
+            }
+        }
     </script>
 </body>
 </html>
