@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>أذكار الصباح والمساء: دليل شامل للمسلم المعاصر | مدونة ذِكْرَى</title>
+    <meta name="description" content="دليل شامل لأذكار الصباح والمساء مع فضائلها وأوقاتها الصحيحة. تعرف على أهمية هذه الأذكار في حياة المسلم اليومية وكيفية المحافظة عليها.">
+    <meta name="keywords" content="أذكار الصباح والمساء, أذكار الصباح مكتوبة, أذكار المساء كاملة, فضل أذكار الصباح, أوقات الأذكار, حصن المسلم اليومي, الأذكار النبوية, أدعية الصباح والمساء, الذكر والدعاء, السنة النبوية">
+    <link rel="icon" href="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" type="image/png">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="author" content="مدونة ذِكْرَى">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Arabic">
+    <meta name="revisit-after" content="1 days">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="أذكار الصباح والمساء: دليل شامل للمسلم المعاصر">
+    <meta property="og:description" content="دليل شامل لأذكار الصباح والمساء مع فضائلها وأوقاتها الصحيحة">
+    <meta property="og:image" content="https://www.dropbox.com/scl/fi/8l6o1okm93mi7d4g5jltg/IMG-20250809-WA0001.jpg?rlkey=daf1x4syvmdl4rohdopy64m6y&st=s041xs3s&dl=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary-color: #4CAF50; 
+            --secondary-color: #81c784; 
+            --font-color-light: #333; 
+            --bg-gradient-light: linear-gradient(135deg, #e0f7fa, #80deea); 
+            --card-bg-light: #ffffff; 
+            --font-color-dark: #e0e0e0; 
+            --bg-gradient-dark: linear-gradient(135deg, #1a2a44, #2e4a66); 
+            --card-bg-dark: #1f292e;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html[lang="ar"] { font-family: 'Cairo', sans-serif; }
+        html[lang="en"] { font-family: 'Poppins', sans-serif; }
+        html[lang="ar"] .lang-en { display: none; }
+        html[lang="en"] .lang-ar { display: none; }
+        
+        body { 
+            margin: 0; 
+            padding-top: 60px; 
+            background: var(--bg-gradient-light); 
+            color: var(--font-color-light); 
+            transition: background 0.5s ease, color 0.5s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        body.dark-mode { 
+            background: var(--bg-gradient-dark); 
+            color: var(--font-color-dark); 
+        }
+        
+        #particles-js { 
+            position: fixed; 
+            width: 100%; 
+            height: 100%; 
+            top: 0; 
+            left: 0; 
+            z-index: -1; 
+        }
+        
+        h1, h2, h3 { 
+            font-family: 'Amiri', serif; 
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); 
+        }
+        
+        html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3 { 
+            font-family: 'Poppins', sans-serif; 
+            font-weight: 700; 
+        }
+        
+        .navbar { 
+            background: rgba(0, 0, 0, 0.75); 
+            padding: 10px 15px; 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand { 
+            display: flex; 
+            align-items: center; 
+            text-decoration: none; 
+        }
+        
+        .navbar-brand img { 
+            height: 40px; 
+            width: auto;
+        }
+        
+        .navbar-brand .site-name { 
+            font-family: 'Amiri', serif; 
+            font-size: 1.4em; 
+            color: #fff; 
+            margin-right: 15px;
+        }
+        
+        html[dir="ltr"] .navbar-brand .site-name { margin-right: 0; margin-left: 15px; }
+        
+        .navbar-right { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+        }
+        
+        .nav-links { 
+            display: none; 
+        }
+        
+        .nav-controls { 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        
+        .lang-toggle-btn { 
+            background-color: rgba(255, 255, 255, 0.2); 
+            border: 1px solid rgba(255, 255, 255, 0.5); 
+            color: #fff; 
+            padding: 6px 12px; 
+            border-radius: 20px; 
+            cursor: pointer; 
+            font-family: 'Poppins', sans-serif; 
+            font-weight: 500; 
+            font-size: 0.8em; 
+        }
+        
+        #dark-mode-toggle { 
+            background: none; 
+            border: none; 
+            color: #fff; 
+            font-size: 1.4em; 
+            cursor: pointer; 
+        }
+        
+        .nav-toggle { 
+            display: block; 
+            background: none; 
+            border: none; 
+            color: #fff; 
+            font-size: 1.5em; 
+            cursor: pointer; 
+        }
+        
+        @media (min-width: 992px) { 
+            .nav-toggle { display: none; } 
+            .nav-links { 
+                display: flex; 
+                align-items: center; 
+                gap: 25px; 
+                margin: 0 20px; 
+            } 
+            .nav-links a { 
+                color: #fff; 
+                font-size: 1.1em; 
+                text-decoration: none; 
+                transition: color 0.3s; 
+            } 
+            .nav-links a:hover, .nav-links a.active { 
+                color: var(--primary-color); 
+            } 
+        }
+        
+        .mobile-nav-menu { 
+            display: none; 
+            position: fixed; 
+            top: 60px; 
+            left: 0; 
+            width: 100%; 
+            background: rgba(0, 0, 0, 0.9); 
+            backdrop-filter: blur(10px); 
+            flex-direction: column; 
+            padding: 10px 0; 
+            border-top: 1px solid rgba(255,255,255,0.2); 
+        }
+        
+        .mobile-nav-menu.active { 
+            display: flex; 
+        }
+        
+        .mobile-nav-menu a { 
+            color: #fff; 
+            text-decoration: none; 
+            font-size: 1.1em; 
+            padding: 12px 0; 
+            width: 100%; 
+            transition: background-color 0.3s;
+        }
+        
+        .mobile-nav-menu a:hover { 
+            background-color: rgba(255,255,255,0.1); 
+            color: var(--primary-color); 
+        }
+        
+        main { 
+            padding: 30px 15px; 
+            flex: 1;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: right;
+        }
+        
+        .article-header {
+            background: var(--card-bg-light);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        body.dark-mode .article-header {
+            background: var(--card-bg-dark);
+        }
+        
+        .article-header h1 {
+            color: var(--primary-color);
+            font-size: clamp(1.8em, 4vw, 2.5em);
+            margin-bottom: 15px;
+            text-shadow: none;
+        }
+        
+        .article-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        body.dark-mode .article-meta {
+            color: #ccc;
+        }
+        
+        .article-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .article-content {
+            background: var(--card-bg-light);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            line-height: 1.8;
+        }
+        
+        body.dark-mode .article-content {
+            background: var(--card-bg-dark);
+        }
+        
+        .article-content h2 {
+            color: var(--primary-color);
+            margin: 25px 0 15px 0;
+            font-size: 1.4em;
+            text-shadow: none;
+        }
+        
+        .article-content h3 {
+            color: var(--secondary-color);
+            margin: 20px 0 10px 0;
+            font-size: 1.2em;
+            text-shadow: none;
+        }
+        
+        .article-content p {
+            margin-bottom: 15px;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        .article-content li {
+            margin-bottom: 8px;
+        }
+        
+        .dhikr-box {
+            background: rgba(76, 175, 80, 0.1);
+            border: 2px solid var(--primary-color);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .dhikr-box .dhikr-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.3em;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .dhikr-box .dhikr-meaning {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        body.dark-mode .dhikr-box .dhikr-meaning {
+            color: #ccc;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .btn-back { 
+            display: inline-block; 
+            padding: 12px 28px; 
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); 
+            color: #fff !important; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            font-size: 1em; 
+            transition: transform 0.3s, box-shadow 0.3s; 
+            border: none; 
+            margin-top: 20px;
+        }
+        
+        .btn-back:hover { 
+            transform: scale(1.05); 
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        }
+        
+        footer { 
+            padding: 20px; 
+            color: #fff; 
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); 
+            width: 100%;
+            font-size: clamp(0.8em, 2vw, 1em);
+            text-align: center;
+        }
+        
+        body.dark-mode footer { 
+            color: var(--font-color-dark); 
+        }
+        
+        /* Responsive */
+        @media (max-width: 576px) {
+            .navbar {
+                padding: 8px 12px;
+            }
+            
+            body {
+                padding-top: 55px;
+            }
+            
+            .mobile-nav-menu {
+                top: 55px;
+            }
+            
+            main {
+                padding: 20px 10px;
+            }
+            
+            .article-header, .article-content {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body
+    data-title-ar="أذكار الصباح والمساء: دليل شامل للمسلم المعاصر | مدونة ذِكْرَى"
+    data-title-en="Morning and Evening Adhkar: Complete Guide | Dhikra Blog"
+>
+    <div id="particles-js"></div>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <img loading="lazy" src="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" alt="Dhikra Logo">
+            <span class="site-name"><span class="lang-ar">ذِكْرَى</span><span class="lang-en">Dhikra</span></span>
+        </a>
+        <div class="navbar-right">
+            <div class="nav-links">
+                <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+                <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+                <a href="blog.html" class="active"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+                <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
+            </div>
+            <div class="nav-controls">
+                <button id="lang-toggle" class="lang-toggle-btn" title="Change Language"></button>
+                <button id="dark-mode-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    
+    <div class="mobile-nav-menu">
+        <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+        <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+        <a href="blog.html" class="active"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+        <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
+    </div>
+
+    <main>
+        <article>
+            <div class="article-header">
+                <h1><span class="lang-ar">أذكار الصباح والمساء: دليل شامل للمسلم المعاصر</span><span class="lang-en">Morning and Evening Adhkar: Complete Guide for the Contemporary Muslim</span></h1>
+                <div class="article-meta">
+                    <span class="lang-ar">📅 نُشر في: ديسمبر 2024 | ⏱️ وقت القراءة: 8 دقائق</span>
+                    <span class="lang-en">📅 Published: December 2024 | ⏱️ Reading time: 8 minutes</span>
+                </div>
+            </div>
+
+            <img src="https://www.dropbox.com/scl/fi/8l6o1okm93mi7d4g5jltg/IMG-20250809-WA0001.jpg?rlkey=daf1x4syvmdl4rohdopy64m6y&st=s041xs3s&dl=1" alt="رجل يقرأ الأذكار" class="article-image" loading="lazy">
+
+            <div class="article-content">
+                <span class="lang-ar">
+                <p>في ضوء الحياة المعاصرة المليئة بالضغوط والتحديات، يبحث المسلم عن مصادر الطمأنينة والسكينة التي تعينه على مواجهة صعوبات اليوم. ومن أعظم هذه المصادر وأكثرها بركة هي <strong>أذكار الصباح والمساء</strong> التي شرعها لنا الإسلام كحصن منيع وحماية ربانية.</p>
+
+                <h2>🌅 ما هي أذكار الصباح والمساء؟</h2>
+                <p>أذكار الصباح والمساء هي مجموعة من الأدعية والتسبيحات المأخوذة من القرآن الكريم والسنة النبوية المطهرة، والتي يُستحب للمسلم أن يواظب عليها في أوقات محددة من اليوم. هذه الأذكار ليست مجرد كلمات تُتلى، بل هي <strong>برنامج روحي متكامل</strong> يربط المسلم بربه ويحصنه من الشرور.</p>
+
+                <h3>🕐 الأوقات المستحبة للأذكار</h3>
+                <ul>
+                    <li><strong>أذكار الصباح:</strong> من الفجر حتى الضحى (حوالي الساعة 10 صباحاً)</li>
+                    <li><strong>أذكار المساء:</strong> من العصر حتى المغرب</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h3>💡 حكمة التوقيت</h3>
+                    <p>اختار الشرع هذين الوقتين لأنهما يمثلان بداية ونهاية النشاط اليومي، فيكون المسلم محصناً طوال يومه بذكر الله تعالى.</p>
+                </div>
+
+                <h2>🌟 فضائل أذكار الصباح والمساء</h2>
+                
+                <h3>1. الحماية من الشرور</h3>
+                <p>عن أبي هريرة رضي الله عنه قال: جاء رجل إلى النبي صلى الله عليه وسلم فقال: يا رسول الله! ما لقيت من عقرب لدغتني البارحة، قال: "أما لو قلت حين أمسيت: أعوذ بكلمات الله التامات من شر ما خلق، لم تضرك".</p>
+
+                <div class="dhikr-box">
+                    <div class="dhikr-text">أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</div>
+                    <div class="dhikr-meaning">أستجير بكلمات الله الكاملات من شر جميع مخلوقاته</div>
+                </div>
+
+                <h3>2. تحصيل البركة والأجر</h3>
+                <p>قال رسول الله صلى الله عليه وسلم: "من قال حين يصبح وحين يمسي: سبحان الله وبحمده، مئة مرة، لم يأت أحد يوم القيامة بأفضل مما جاء به، إلا أحد قال مثل ما قال، أو زاد عليه".</p>
+
+                <h3>3. طمأنينة القلب والنفس</h3>
+                <p>الذكر يورث طمأنينة القلب كما قال تعالى: <em>"أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ"</em>. فالمسلم الذي يحافظ على أذكار الصباح والمساء يجد في قلبه سكينة وراحة لا توصف.</p>
+
+                <h2>📿 أهم أذكار الصباح والمساء</h2>
+
+                <h3>قراءة آية الكرسي</h3>
+                <div class="dhikr-box">
+                    <div class="dhikr-text">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ...</div>
+                    <div class="dhikr-meaning">من قرأها صباحاً أُجير من الجن حتى يمسي، ومن قرأها مساءً أُجير حتى يصبح</div>
+                </div>
+
+                <h3>المعوذات الثلاث</h3>
+                <p>قراءة سورة الإخلاص وسورة الفلق وسورة الناس ثلاث مرات في كل وقت. قال النبي صلى الله عليه وسلم: "قل هو الله أحد والمعوذتين حين تمسي وحين تصبح ثلاث مرات تكفيك من كل شيء".</p>
+
+                <h3>سيد الاستغفار</h3>
+                <div class="dhikr-box">
+                    <div class="dhikr-text">اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ...</div>
+                    <div class="dhikr-meaning">من قاله موقناً حين يمسي فمات من ليلته دخل الجنة، وكذلك حين يصبح</div>
+                </div>
+
+                <h2>💫 كيفية المحافظة على الأذكار في العصر الحديث</h2>
+
+                <h3>1. استخدام التطبيقات الذكية</h3>
+                <p>يمكن الاستعانة بتطبيقات الأذكار التي تذكرك بأوقات الأذكار وتعرض عليك النصوص كاملة مع الأدلة.</p>
+
+                <h3>2. ربطها بالعادات اليومية</h3>
+                <p>اربط قراءة أذكار الصباح بتناول القهوة الصباحية، وأذكار المساء بالعودة من العمل أو المدرسة.</p>
+
+                <h3>3. البداية التدريجية</h3>
+                <p>ابدأ بالأذكار الأساسية مثل آية الكرسي والمعوذات، ثم أضف أذكاراً أخرى تدريجياً حتى تكتمل مجموعتك.</p>
+
+                <h3>4. الفهم والتدبر</h3>
+                <p>لا تجعل الأذكار مجرد كلمات تُردد، بل تدبر معانيها واستشعر عظمة ما تقول.</p>
+
+                <h2>🎯 نصائح عملية للثبات على الأذكار</h2>
+
+                <ul>
+                    <li><strong>ضع تذكيرات:</strong> استخدم المنبه أو التطبيقات لتذكيرك بأوقات الأذكار</li>
+                    <li><strong>اجعلها عادة جماعية:</strong> شارك أفراد الأسرة في قراءة الأذكار</li>
+                    <li><strong>احمل كتاباً صغيراً:</strong> أو استخدم الهاتف لقراءة الأذكار في أي مكان</li>
+                    <li><strong>لا تيأس من التقصير:</strong> إذا فاتتك الأذكار يوماً، فابدأ من جديد ولا تتوقف</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h3>⚡ تجربة شخصية</h3>
+                    <p>جرب لمدة أسبوع واحد المحافظة على أذكار الصباح والمساء، وستلاحظ الفرق في راحتك النفسية وطمأنينة قلبك. هذه ليست مجرد كلمات، بل تجربة يشهد بها كل من التزم بهذه السنة العظيمة.</p>
+                </div>
+
+                <h2>🤲 خاتمة</h2>
+                <p>أذكار الصباح والمساء ليست مجرد سنة نافلة، بل هي <strong>حصن المؤمن</strong> وحمايته في هذه الحياة. في زمن كثرت فيه الفتن والمحن، نحن بأمس الحاجة إلى هذا الحصن الرباني الذي يحمينا ويبارك في أوقاتنا وأعمالنا.</p>
+
+                <p>فلنجعل من أذكار الصباح والمساء برنامجاً يومياً ثابتاً في حياتنا، ولنعلمها لأطفالنا ونشجع الآخرين عليها. فبالذكر تحيا القلوب، وبالذكر نكون أقرب إلى الله عز وجل.</p>
+
+                <div class="dhikr-box">
+                    <div class="dhikr-text">وَاذْكُر رَّبَّكَ فِي نَفْسِكَ تَضَرُّعًا وَخِيفَةً وَدُونَ الْجَهْرِ مِنَ الْقَوْلِ بِالْغُدُوِّ وَالْآصَالِ وَلَا تَكُن مِّنَ الْغَافِلِينَ</div>
+                    <div class="dhikr-meaning">سورة الأعراف، آية 205</div>
+                </div>
+                </span>
+                
+                <span class="lang-en">
+                <p>In the light of contemporary life filled with pressures and challenges, Muslims seek sources of tranquility and peace that help them face daily difficulties. Among the greatest and most blessed of these sources are the <strong>morning and evening adhkar</strong> that Islam has prescribed as an impenetrable fortress and divine protection.</p>
+
+                <h2>🌅 What are Morning and Evening Adhkar?</h2>
+                <p>Morning and evening adhkar are a collection of supplications and glorifications taken from the Noble Quran and the pure Prophetic Sunnah, which Muslims are recommended to maintain at specific times of the day. These adhkar are not mere words to be recited, but rather a <strong>complete spiritual program</strong> that connects the Muslim with their Lord and protects them from evils.</p>
+
+                <h3>🕐 Recommended Times for Adhkar</h3>
+                <ul>
+                    <li><strong>Morning Adhkar:</strong> From Fajr until Duha (around 10 AM)</li>
+                    <li><strong>Evening Adhkar:</strong> From Asr until Maghrib</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h3>💡 Wisdom of Timing</h3>
+                    <p>Islamic law chose these two times because they represent the beginning and end of daily activity, so the Muslim remains protected throughout their day by remembering Allah Almighty.</p>
+                </div>
+
+                <h2>🌟 Virtues of Morning and Evening Adhkar</h2>
+                
+                <h3>1. Protection from Evils</h3>
+                <p>Abu Hurairah (may Allah be pleased with him) reported that a man came to the Prophet (peace be upon him) and said: "O Messenger of Allah! I was stung by a scorpion last night." He said: "If you had said when evening came: 'I seek refuge in Allah's perfect words from the evil of what He has created,' it would not have harmed you."</p>
+
+                <div class="dhikr-box">
+                    <div class="dhikr-text">A'udhu bi kalimat Allah at-tammat min sharri ma khalaq</div>
+                    <div class="dhikr-meaning">I seek refuge in Allah's perfect words from the evil of what He has created</div>
+                </div>
+
+                <h3>2. Attaining Blessings and Reward</h3>
+                <p>The Messenger of Allah (peace be upon him) said: "Whoever says when morning comes and when evening comes: 'Glory be to Allah and praise be to Him' one hundred times, no one will come on the Day of Resurrection with anything better than what he brought, except one who said the same as he said or more."</p>
+
+                <h3>3. Peace of Heart and Soul</h3>
+                <p>Dhikr brings tranquility to the heart as Allah Almighty said: <em>"Verily, in the remembrance of Allah do hearts find rest."</em> The Muslim who maintains morning and evening adhkar finds in their heart an indescribable peace and comfort.</p>
+
+                <h2>📿 Most Important Morning and Evening Adhkar</h2>
+
+                <h3>Reciting Ayat al-Kursi</h3>
+                <div class="dhikr-box">
+                    <div class="dhikr-text">Allah - there is no deity except Him, the Ever-Living, the Self-Sustaining...</div>
+                    <div class="dhikr-meaning">Whoever recites it in the morning is protected from jinn until evening, and whoever recites it in the evening is protected until morning</div>
+                </div>
+
+                <h3>The Three Quls (Protective Chapters)</h3>
+                <p>Reciting Surat al-Ikhlas, Surat al-Falaq, and Surat an-Nas three times at each time. The Prophet (peace be upon him) said: "Say 'He is Allah, One' and the two protective chapters when you reach evening and when you reach morning three times - they will suffice you against everything."</p>
+
+                <h2>💫 How to Maintain Adhkar in the Modern Era</h2>
+
+                <h3>1. Use Smart Applications</h3>
+                <p>You can use dhikr applications that remind you of adhkar times and display complete texts with evidence.</p>
+
+                <h3>2. Link Them to Daily Habits</h3>
+                <p>Link reading morning adhkar with your morning coffee, and evening adhkar with returning from work or school.</p>
+
+                <h3>3. Gradual Beginning</h3>
+                <p>Start with basic adhkar like Ayat al-Kursi and the protective chapters, then gradually add other adhkar until your collection is complete.</p>
+
+                <h2>🎯 Practical Tips for Consistency with Adhkar</h2>
+
+                <ul>
+                    <li><strong>Set reminders:</strong> Use alarms or apps to remind you of adhkar times</li>
+                    <li><strong>Make it a family habit:</strong> Share adhkar reading with family members</li>
+                    <li><strong>Carry a small book:</strong> Or use your phone to read adhkar anywhere</li>
+                    <li><strong>Don't despair from shortcomings:</strong> If you miss adhkar one day, start anew and don't stop</li>
+                </ul>
+
+                <h2>🤲 Conclusion</h2>
+                <p>Morning and evening adhkar are not merely optional sunnah, but are the <strong>believer's fortress</strong> and protection in this life. In times when trials and tribulations have increased, we desperately need this divine fortress that protects us and blesses our times and deeds.</p>
+                </span>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="blog.html" class="btn-back">
+                        <span class="lang-ar">← العودة إلى المدونة</span>
+                        <span class="lang-en">← Back to Blog</span>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p><span class="lang-ar">جميع الحقوق محفوظة © 2024 - موقع ذِكْرَى</span><span class="lang-en">Copyright © 2024 - Dhikra Website</span></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        const particlesConfig = { 
+            particles: { 
+                number: { value: 60 }, 
+                color: { value: "#ffffff" }, 
+                shape: { type: "circle" }, 
+                opacity: { value: 0.4, random: true }, 
+                size: { value: 3, random: true }, 
+                line_linked: { 
+                    enable: true, 
+                    distance: 150, 
+                    color: "#ffffff", 
+                    opacity: 0.3, 
+                    width: 1 
+                }, 
+                move: { 
+                    enable: true, 
+                    speed: 2, 
+                    direction: "none", 
+                    out_mode: "out" 
+                } 
+            }, 
+            interactivity: { 
+                events: { 
+                    onhover: { 
+                        enable: true, 
+                        mode: "repulse" 
+                    } 
+                } 
+            }, 
+            retina_detect: true 
+        };
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const htmlEl = document.documentElement; 
+            const darkModeToggle = document.getElementById('dark-mode-toggle'); 
+            const langToggleBtn = document.getElementById('lang-toggle'); 
+            const navToggle = document.querySelector('.nav-toggle'); 
+            const mobileNavMenu = document.querySelector('.mobile-nav-menu');
+            
+            const applyDarkMode = (isDark) => { 
+                const icon = darkModeToggle.querySelector('i'); 
+                if (isDark) { 
+                    document.body.classList.add('dark-mode'); 
+                    if(icon) icon.classList.replace('fa-moon', 'fa-sun'); 
+                    particlesConfig.particles.color.value = ["#ffffff", "#81c784", "#4caf50"]; 
+                } else { 
+                    document.body.classList.remove('dark-mode'); 
+                    if(icon) icon.classList.replace('fa-sun', 'fa-moon'); 
+                    particlesConfig.particles.color.value = "#ffffff"; 
+                } 
+                if (window.pJSDom && window.pJSDom[0]) { 
+                    window.pJSDom[0].pJS.fn.particlesRefresh(); 
+                } 
+            };
+            
+            const setLanguage = (lang) => { 
+                htmlEl.lang = lang; 
+                htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr'; 
+                langToggleBtn.textContent = lang === 'ar' ? 'EN' : 'AR'; 
+                document.title = lang === 'ar' ? document.body.getAttribute('data-title-ar') : document.body.getAttribute('data-title-en'); 
+                localStorage.setItem('language', lang); 
+            };
+            
+            darkModeToggle.addEventListener('click', () => { 
+                const isDarkMode = !document.body.classList.contains('dark-mode'); 
+                applyDarkMode(isDarkMode); 
+                localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); 
+            });
+            
+            langToggleBtn.addEventListener('click', () => { 
+                const newLang = htmlEl.lang === 'ar' ? 'en' : 'ar'; 
+                setLanguage(newLang); 
+            });
+            
+            navToggle.addEventListener('click', () => { 
+                mobileNavMenu.classList.toggle('active'); 
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navToggle.contains(e.target) && !mobileNavMenu.contains(e.target)) {
+                    mobileNavMenu.classList.remove('active');
+                }
+            });
+            
+            const isInitiallyDark = localStorage.getItem('theme') === 'dark'; 
+            if (isInitiallyDark) { 
+                particlesConfig.particles.color.value = ["#ffffff", "#81c784", "#4caf50"]; 
+            } 
+            
+            particlesJS('particles-js', particlesConfig);
+            applyDarkMode(isInitiallyDark); 
+            setLanguage(localStorage.getItem('language') || 'ar'); 
+        });
+    </script>
+</body>
+</html>
