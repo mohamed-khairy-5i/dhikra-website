@@ -13,16 +13,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root { 
-            --primary-color: #4CAF50; 
-            --secondary-color: #81c784; 
-            --font-color-light: #333; 
-            --bg-gradient-light: linear-gradient(135deg, #e0f7fa, #80deea); 
-            --card-bg-light: #ffffff; 
-            --font-color-dark: #e0e0e0; 
-            --bg-gradient-dark: linear-gradient(135deg, #1a2a44, #2e4a66); 
-            --card-bg-dark: #1f292e;
-            --ad-bg: #f8f9fa;
-            --ad-border: #e9ecef;
+            --primary-color: #2E7D32;
+            --secondary-color: #4CAF50;
+            --accent-color: #66BB6A;
+            --font-color-light: #1B5E20;
+            --font-secondary: #2E7D32;
+            --bg-gradient-light: linear-gradient(135deg, #E8F5E8, #C8E6C9);
+            --hero-gradient: linear-gradient(135deg, #2E7D32, #388E3C, #4CAF50);
+            --card-bg-light: #FFFFFF;
+            --card-shadow: 0 8px 32px rgba(46, 125, 50, 0.12);
+            --card-hover-shadow: 0 12px 48px rgba(46, 125, 50, 0.2);
+            --font-color-dark: #E0E0E0;
+            --bg-gradient-dark: linear-gradient(135deg, #1B5E20, #2E7D32);
+            --card-bg-dark: #263238;
         }
         
         * {
@@ -332,17 +335,64 @@
             transform: scale(1.05); 
         }
         
-        /* Ad Spaces */
-        .ad-container {
-            background: var(--ad-bg);
-            border: 1px solid var(--ad-border);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 30px auto;
-            max-width: 728px;
+        /* Related Articles */
+        .related-articles {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.05), rgba(102, 187, 106, 0.08));
+            border-radius: 20px;
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .related-articles h3 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            font-size: 1.5em;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+        }
+        
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .related-card {
+            display: block;
+            padding: 20px;
+            background: var(--card-bg-light);
+            border-radius: 15px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1);
+            border: 2px solid transparent;
+        }
+        
+        .related-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(46, 125, 50, 0.2);
+            border-color: var(--secondary-color);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .related-icon {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .related-card h4 {
+            font-size: 1.1em;
+            line-height: 1.4;
+            color: var(--primary-color);
+            text-align: center;
+            margin: 0;
+        }
+        
+        body.dark-mode .related-card {
+            background: var(--card-bg-dark);
         }
         
         .ad-label {
@@ -516,6 +566,65 @@
                 display: block;
             }
         }
+        /* Related Articles */
+        .related-articles {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.05), rgba(102, 187, 106, 0.08));
+            border-radius: 20px;
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .related-articles h3 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .related-card {
+            display: block;
+            padding: 20px;
+            background: var(--card-bg-light);
+            border-radius: 15px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1);
+            border: 2px solid transparent;
+        }
+        
+        .related-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(46, 125, 50, 0.2);
+            border-color: var(--secondary-color);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .related-icon {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .related-card h4 {
+            font-size: 1.1em;
+            line-height: 1.4;
+            color: var(--primary-color);
+            text-align: center;
+            margin: 0;
+        }
+        
+        body.dark-mode .related-card {
+            background: var(--card-bg-dark);
+        }
     </style>
 </head>
 <body
@@ -596,10 +705,29 @@
                     <span class="lang-en">And he (PBUH) said: "The example of the one who remembers his Lord and the one who does not remember his Lord is like that of the living and the dead." [Narrated by Al-Bukhari]</span>
                 </div>
                 
+                <!-- Related Articles Section -->
+                <section class="related-articles">
+                    <h3><span class="lang-ar">🔗 مقالات ذات صلة</span><span class="lang-en">🔗 Related Articles</span></h3>
+                    <div class="related-grid">
+                        <a href="blog-post-2.html" class="related-card">
+                            <div class="related-icon">🤲</div>
+                            <h4><span class="lang-ar">كيف تجد الطمأنينة في حياتك من خلال الأذكار اليومية؟</span><span class="lang-en">How to Find Tranquility Through Daily Adhkar?</span></h4>
+                        </a>
+                        <a href="blog-post-4.html" class="related-card">
+                            <div class="related-icon">📿</div>
+                            <h4><span class="lang-ar">أذكار الصباح: حصتك الروحية اليومية</span><span class="lang-en">Morning Adhkar: Your Daily Spiritual Portion</span></h4>
+                        </a>
+                        <a href="blog-post-6.html" class="related-card">
+                            <div class="related-icon">🌙</div>
+                            <h4><span class="lang-ar">أذكار النوم من السنة النبوية</span><span class="lang-en">Sleep Adhkar from the Prophetic Tradition</span></h4>
+                        </a>
+                    </div>
+                </section>
+                
     </main>
     
     <footer>
-        <p><span class="lang-ar">جميع الحقوق محفوظة © 2024 - موقع ذِكْرَى</span><span class="lang-en">Copyright © 2024 - Dhikra Website</span></p>
+        <p><span class="lang-ar">جميع الحقوق محفوظة © 2025 - موقع ذِكْرَى</span><span class="lang-en">Copyright © 2025 - Dhikra Website</span></p>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
