@@ -412,6 +412,142 @@
                 display: block;
             }
         }
+
+        /* Progress Bar Styles */
+        .progress-section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        body.dark-mode .progress-section {
+            background: var(--card-bg-dark);
+        }
+        
+        .progress-title {
+            font-size: 1.2em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .progress-container {
+            background-color: #e0e0e0;
+            border-radius: 25px;
+            height: 20px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        
+        body.dark-mode .progress-container {
+            background-color: #444;
+        }
+        
+        .progress-bar {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            height: 100%;
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 25px;
+        }
+        
+        .progress-text {
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        body.dark-mode .progress-text {
+            color: #ccc;
+        }
+        
+        .progress-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 10px;
+        }
+        
+        body.dark-mode .progress-stats {
+            color: #bbb;
+        }
+
+        /* Dhikr Actions */
+        .dhikr-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .dhikr-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .dhikr-actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .action-btn {
+            background-color: #f8f9fa;
+            border: 2px solid #e9ecef;
+            color: #495057;
+            padding: 8px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 500;
+        }
+        
+        body.dark-mode .action-btn {
+            background-color: #495057;
+            border-color: #6c757d;
+            color: #fff;
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .complete-btn.completed {
+            background-color: #28a745;
+            border-color: #28a745;
+            color: white;
+        }
+        
+        .complete-btn.completed:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+        
+        @media (max-width: 576px) {
+            .dhikr-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .action-btn {
+                width: 100%;
+                justify-content: center;
+                max-width: 200px;
+            }
+        }
     </style>
 </head>
 <body
@@ -459,6 +595,30 @@
             <p><span class="lang-ar">حافظ على حماية الله لك أثناء نومك بهذه الأذكار النبوية الصحيحة</span><span class="lang-en">Maintain Allah's protection for you during sleep with these authentic prophetic remembrances</span></p>
         </div>
         
+        <!-- Progress Bar Section -->
+        <div class="progress-section">
+            <div class="progress-title">
+                <span class="lang-ar">📊 تقدم القراءة</span>
+                <span class="lang-en">📊 Reading Progress</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="adhkar-progress"></div>
+            </div>
+            <div class="progress-text">
+                <span class="lang-ar" id="progress-text-ar">لم تبدأ بعد - 0 من 15 ذكر</span>
+                <span class="lang-en" id="progress-text-en">Not started yet - 0 of 15 adhkar</span>
+            </div>
+            <div class="progress-stats">
+                <span>
+                    <span class="lang-ar">🌟 مكتملة: <span id="completed-count">0</span></span>
+                    <span class="lang-en">🌟 Completed: <span id="completed-count">0</span></span>
+                </span>
+                <span>
+                    <span class="lang-ar">⏳ متبقية: <span id="remaining-count">15</span></span>
+                    <span class="lang-en">⏳ Remaining: <span id="remaining-count">15</span></span>
+                </span>
+            </div>
+        </div>
         
         <div class="dhikr-container">
             <!-- 1 -->
@@ -751,8 +911,128 @@
             
             particlesJS('particles-js', particlesConfig);
             applyDarkMode(isInitiallyDark); 
-            setLanguage(localStorage.getItem('language') || 'ar'); 
+            setLanguage(localStorage.getItem('language') || 'ar');
+            
+            // Initialize progress tracking
+            addCompleteButtonsToAllAdhkar();
+            loadProgress();
+            updateProgress();
         });
+
+        // Progress tracking functions
+        function addCompleteButtonsToAllAdhkar() {
+            const dhikrCards = document.querySelectorAll('.dhikr-card');
+            
+            dhikrCards.forEach(card => {
+                const footer = card.querySelector('.dhikr-footer');
+                if (!footer.querySelector('.dhikr-actions')) {
+                    // Re-structure the footer to match the new format
+                    const footerContent = footer.innerHTML;
+                    footer.innerHTML = `
+                        <div class="dhikr-info">
+                            ${footerContent}
+                        </div>
+                        <div class="dhikr-actions">
+                            <button class="action-btn complete-btn" onclick="toggleComplete(this)" title="تم القراءة / Mark as Read">
+                                <i class="fas fa-check"></i>
+                                <span class="lang-ar">تم</span>
+                                <span class="lang-en">Done</span>
+                            </button>
+                        </div>
+                    `;
+                }
+            });
+        }
+
+        function toggleComplete(button) {
+            const card = button.closest('.dhikr-card');
+            const dhikrTitle = card.querySelector('.dhikr-title .lang-ar').textContent;
+            const isCompleted = button.classList.contains('completed');
+            
+            if (isCompleted) {
+                button.classList.remove('completed');
+                removeFromCompleted(dhikrTitle);
+            } else {
+                button.classList.add('completed');
+                addToCompleted(dhikrTitle);
+            }
+            
+            updateProgress();
+        }
+
+        function addToCompleted(dhikrTitle) {
+            let completed = JSON.parse(localStorage.getItem('adhkar-nawm-progress') || '[]');
+            if (!completed.includes(dhikrTitle)) {
+                completed.push(dhikrTitle);
+                localStorage.setItem('adhkar-nawm-progress', JSON.stringify(completed));
+            }
+        }
+
+        function removeFromCompleted(dhikrTitle) {
+            let completed = JSON.parse(localStorage.getItem('adhkar-nawm-progress') || '[]');
+            completed = completed.filter(title => title !== dhikrTitle);
+            localStorage.setItem('adhkar-nawm-progress', JSON.stringify(completed));
+        }
+
+        function loadProgress() {
+            const completed = JSON.parse(localStorage.getItem('adhkar-nawm-progress') || '[]');
+            const buttons = document.querySelectorAll('.complete-btn');
+            
+            buttons.forEach(button => {
+                const card = button.closest('.dhikr-card');
+                const dhikrTitle = card.querySelector('.dhikr-title .lang-ar').textContent;
+                
+                if (completed.includes(dhikrTitle)) {
+                    button.classList.add('completed');
+                }
+            });
+        }
+
+        function updateProgress() {
+            const totalAdhkar = document.querySelectorAll('.dhikr-card').length;
+            const completedButtons = document.querySelectorAll('.complete-btn.completed').length;
+            const remainingCount = totalAdhkar - completedButtons;
+            const progressPercent = totalAdhkar > 0 ? (completedButtons / totalAdhkar) * 100 : 0;
+            
+            // Update progress bar
+            const progressBar = document.getElementById('adhkar-progress');
+            if (progressBar) {
+                progressBar.style.width = progressPercent + '%';
+            }
+            
+            // Update text
+            const htmlEl = document.documentElement;
+            const currentLang = htmlEl.lang;
+            
+            const progressTextAr = document.getElementById('progress-text-ar');
+            const progressTextEn = document.getElementById('progress-text-en');
+            const completedCountSpans = document.querySelectorAll('#completed-count');
+            const remainingCountSpans = document.querySelectorAll('#remaining-count');
+            
+            if (progressTextAr) {
+                progressTextAr.textContent = completedButtons === 0 ? 
+                    'لم تبدأ بعد - 0 من ' + totalAdhkar + ' ذكر' :
+                    completedButtons === totalAdhkar ?
+                        '🎉 تم إنجاز جميع الأذكار! ما شاء الله' :
+                        'جاري القراءة - ' + completedButtons + ' من ' + totalAdhkar + ' ذكر';
+            }
+            
+            if (progressTextEn) {
+                progressTextEn.textContent = completedButtons === 0 ? 
+                    'Not started yet - 0 of ' + totalAdhkar + ' adhkar' :
+                    completedButtons === totalAdhkar ?
+                        '🎉 All adhkar completed! Masha Allah' :
+                        'In progress - ' + completedButtons + ' of ' + totalAdhkar + ' adhkar';
+            }
+            
+            completedCountSpans.forEach(span => {
+                span.textContent = completedButtons;
+            });
+            
+            remainingCountSpans.forEach(span => {
+                span.textContent = remainingCount;
+            });
+        }
     </script>
 </body>
 </html>

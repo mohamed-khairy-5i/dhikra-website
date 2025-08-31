@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    <title>الأذكار الأساسية الثلاث | موقع ذِكْرَى</title>
-    <meta name="description" content="أهم ثلاث أذكار يحتاجها كل مسلم: أذكار الصباح، المساء والنوم. الأذكار الأساسية من القرآن والسنة لحياة مليئة بالبركة والحماية والسكينة.">
-    <meta name="keywords" content="أذكار أساسية, أذكار الصباح, أذكار المساء, أذكار النوم, أذكار يومية, حصن المسلم, ثلاث أذكار مهمة">
+    <title>المدونة الإسلامية | موقع ذِكْرَى</title>
+    <meta name="description" content="مدونة إسلامية تحتوي على مقالات إيمانية ملهمة ونصائح روحانية لتعميق الإيمان وتقوية الصلة بالله.">
+    <meta name="keywords" content="مدونة إسلامية, مقالات إيمانية, نصائح روحانية, الإسلام, القرآن والسنة, تطوير الذات الإسلامي">
     <link rel="icon" href="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
     <style>
         :root { 
             --primary-color: #4CAF50; 
@@ -21,7 +22,6 @@
             --font-color-dark: #e0e0e0; 
             --bg-gradient-dark: linear-gradient(135deg, #1a2a44, #2e4a66); 
             --card-bg-dark: #1f292e;
-
         }
         
         * {
@@ -207,97 +207,70 @@
         }
         
         main { 
-            padding: 30px 15px; 
+            padding: 60px 20px; 
             flex: 1;
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-        }
-        
-        .page-header h1 { 
-            color: #fff; 
-            font-size: clamp(2em, 5vw, 2.8em);
-            margin-bottom: 15px;
-        }
-        
-        .page-header p { 
-            color: #fff; 
-            text-shadow: 1px 1px 3px #000; 
-            font-size: clamp(1em, 2.5vw, 1.2em); 
-            max-width: 700px; 
-            margin: 0 auto 30px; 
-            line-height: 1.6;
-        }
-        
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 25px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-        }
-        
-        .feature-card { 
-            background: var(--card-bg-light); 
-            border-top: 4px solid var(--primary-color); 
-            border-radius: 15px; 
-            padding: 30px; 
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); 
-            transition: transform 0.3s, box-shadow 0.3s; 
-            color: var(--font-color-light);
-            height: 100%;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
+        }
+        
+        .coming-soon-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 50px 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
             text-align: center;
         }
         
-        body.dark-mode .feature-card { 
-            background: var(--card-bg-dark); 
-            color: var(--font-color-dark); 
+        body.dark-mode .coming-soon-container {
+            background: var(--card-bg-dark);
         }
         
-        .feature-card:hover { 
-            transform: translateY(-10px); 
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
+        .coming-soon-icon {
+            font-size: 4em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
         }
         
-        .feature-card i { 
-            font-size: 3em; 
-            color: var(--primary-color); 
-            margin-bottom: 15px; 
-        }
-        
-        .feature-card h2 {
-            font-size: clamp(1.2em, 3vw, 1.5em);
-            margin-bottom: 10px;
-        }
-        
-        .feature-card p {
-            font-size: clamp(0.9em, 2vw, 1em);
-            line-height: 1.5;
+        .coming-soon-title {
+            font-size: clamp(2em, 5vw, 2.5em);
+            color: var(--primary-color);
             margin-bottom: 15px;
-            flex: 1;
         }
         
-        .btn { 
-            display: inline-block; 
-            padding: 12px 28px; 
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); 
-            color: #fff !important; 
-            text-decoration: none; 
-            border-radius: 25px; 
-            font-size: clamp(0.9em, 2vw, 1em); 
-            transition: transform 0.3s, box-shadow 0.3s; 
-            border: none; 
-            margin-top: auto;
+        .coming-soon-text {
+            font-size: clamp(1.1em, 3vw, 1.3em);
+            color: var(--font-color-light);
+            margin-bottom: 25px;
+            line-height: 1.6;
         }
         
-        .btn:hover { 
-            transform: scale(1.05); 
+        body.dark-mode .coming-soon-text {
+            color: var(--font-color-dark);
         }
         
-
+        .back-home-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 10px;
+        }
+        
+        .back-home-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
         
         footer { 
             padding: 20px; 
@@ -311,7 +284,6 @@
             color: var(--font-color-dark); 
         }
         
-        /* Responsive */
         @media (max-width: 576px) {
             .navbar {
                 padding: 8px 12px;
@@ -334,43 +306,18 @@
             }
             
             main {
-                padding: 20px 10px;
+                padding: 40px 15px;
             }
             
-            .feature-card {
-                padding: 20px 15px;
-            }
-            
-            .grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-
-        }
-        
-        @media (min-width: 577px) and (max-width: 768px) {
-            main {
-                padding: 25px 12px;
-            }
-            
-            .grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            .coming-soon-container {
+                padding: 30px 20px;
             }
         }
-        
-        @media (min-width: 769px) and (max-width: 991px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-
     </style>
 </head>
 <body
-    data-title-ar="الأذكار الأساسية الثلاث | موقع ذِكْرَى"
-    data-title-en="The Three Essential Adhkar | Dhikra Website"
+    data-title-ar="المدونة الإسلامية | موقع ذِكْرَى"
+    data-title-en="Islamic Blog | Dhikra Website"
 >
     <div id="particles-js"></div>
     <nav class="navbar">
@@ -378,8 +325,8 @@
         <div class="navbar-right">
             <div class="nav-links">
                 <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
-                <a href="adhkar.html" class="active"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
-                <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+                <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+                <a href="blog.html" class="active"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
                 <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
             </div>
             <div class="nav-controls">
@@ -391,46 +338,29 @@
     </nav>
     <div class="mobile-nav-menu">
         <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
-        <a href="adhkar.html" class="active"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
-        <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+        <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+        <a href="blog.html" class="active"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
         <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
     </div>
     
-
-    
     <main>
-        <div class="page-header">
-            <h1><span class="lang-ar">الأذكار الأساسية الثلاث</span><span class="lang-en">The Three Essential Adhkar</span></h1>
-            <p><span class="lang-ar">أهم ثلاثة أذكار يحتاجها كل مسلم في يومه - من الصباح حتى النوم، لحياة مليئة بالبركة والحماية والسكينة.</span><span class="lang-en">The three most important adhkar every Muslim needs in their day - from morning to sleep, for a life full of blessings, protection and tranquility.</span></p>
+        <div class="coming-soon-container">
+            <div class="coming-soon-icon">
+                <i class="fas fa-feather-alt"></i>
+            </div>
+            <h1 class="coming-soon-title">
+                <span class="lang-ar">قريباً إن شاء الله</span>
+                <span class="lang-en">Coming Soon Insha Allah</span>
+            </h1>
+            <p class="coming-soon-text">
+                <span class="lang-ar">نعمل حالياً على إعداد مدونتنا الإسلامية التي ستحتوي على مقالات إيمانية ملهمة ونصائح روحانية مفيدة. ترقبوا المحتوى الجديد قريباً بإذن الله.</span>
+                <span class="lang-en">We are currently working on preparing our Islamic blog that will contain inspiring faith-based articles and useful spiritual advice. Stay tuned for new content coming soon, God willing.</span>
+            </p>
+            <a href="index.html" class="back-home-btn">
+                <span class="lang-ar">🏠 العودة للرئيسية</span>
+                <span class="lang-en">🏠 Back to Home</span>
+            </a>
         </div>
-        
-
-        
-        <div class="grid">
-            <!-- الأذكار الأساسية الثلاثة فقط -->
-            <div class="feature-card">
-                <i class="fas fa-sun"></i>
-                <h2><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning Adhkar</span></h2>
-                <p><span class="lang-ar">ابدأ يومك ببركة وحفظ من الله. أذكار الصباح تحصنك طوال النهار وتجلب لك الطمأنينة والسكينة.</span><span class="lang-en">Start your day with blessings and protection from Allah. Morning adhkar protect you throughout the day and bring you peace and tranquility.</span></p>
-                <a href="adhkar-sabah.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
-            </div>
-            
-            <div class="feature-card">
-                <i class="fas fa-moon"></i>
-                <h2><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening Adhkar</span></h2>
-                <p><span class="lang-ar">اختم يومك بسكينة وطمأنينة. أذكار المساء تحفظك خلال الليل وتطهر قلبك من هموم اليوم.</span><span class="lang-en">End your day with peace and tranquility. Evening adhkar protect you through the night and purify your heart from daily worries.</span></p>
-                <a href="adhkar-masaa.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
-            </div>
-            
-            <div class="feature-card">
-                <i class="fas fa-bed"></i>
-                <h2><span class="lang-ar">أذكار النوم</span><span class="lang-en">Sleep Adhkar</span></h2>
-                <p><span class="lang-ar">حصّن نفسك قبل النوم واستودع الله أحلامك. أذكار النوم تحميك من الكوابيس وتجلب لك نوماً هانئاً.</span><span class="lang-en">Protect yourself before sleep and entrust your dreams to Allah. Sleep adhkar protect you from nightmares and bring you peaceful rest.</span></p>
-                <a href="adhkar-nawm.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
-            </div>
-        </div>
-        
-
     </main>
     
     <footer>
