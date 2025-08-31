@@ -415,6 +415,80 @@
             font-weight: bold;
         }
 
+        /* Grid and Feature Card Styles (matching adhkar.html) */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        
+        .feature-card { 
+            background: var(--card-bg-light); 
+            border-top: 4px solid var(--primary-color); 
+            border-radius: 15px; 
+            padding: 30px; 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); 
+            transition: transform 0.3s, box-shadow 0.3s; 
+            color: var(--font-color-light);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        body.dark-mode .feature-card { 
+            background: var(--card-bg-dark); 
+            color: var(--font-color-dark); 
+        }
+        
+        .feature-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
+        }
+        
+        .feature-card i { 
+            font-size: 3em; 
+            color: var(--primary-color); 
+            margin-bottom: 15px; 
+        }
+        
+        .feature-card h2 {
+            font-size: clamp(1.2em, 3vw, 1.5em);
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        body.dark-mode .feature-card h2 {
+            color: var(--secondary-color);
+        }
+        
+        .feature-card p {
+            font-size: clamp(0.9em, 2vw, 1em);
+            line-height: 1.5;
+            margin-bottom: 15px;
+            flex: 1;
+        }
+        
+        .btn { 
+            display: inline-block; 
+            padding: 12px 28px; 
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); 
+            color: #fff !important; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            font-size: clamp(0.9em, 2vw, 1em); 
+            transition: transform 0.3s, box-shadow 0.3s; 
+            border: none; 
+            margin-top: auto;
+        }
+        
+        .btn:hover { 
+            transform: scale(1.05); 
+        }
+
         /* Quick Access Styles */
         .quick-access-grid {
             display: grid;
@@ -617,70 +691,35 @@
         </section>
         
         <section class="section-wrapper">
-            <h2 class="section-title"><span class="lang-ar">تصفح أذكارك اليومية</span><span class="lang-en">Browse Your Daily Adhkar</span></h2>
-            <p class="section-subtitle"><span class="lang-ar">اختر من بين مجموعتنا الشاملة من الأذكار والأدعية الصحيحة المأخوذة من القرآن الكريم والسنة النبوية، مع مراجع وتوثيق شرعي لكل ذكر.</span><span class="lang-en">Choose from our comprehensive collection of authentic remembrances and supplications from the Quran and Sunnah, with scholarly references for each dhikr.</span></p>
+            <h2 class="section-title"><span class="lang-ar">الأذكار الأساسية اليومية</span><span class="lang-en">Essential Daily Adhkar</span></h2>
+            <p class="section-subtitle"><span class="lang-ar">أهم ثلاثة أذكار يحتاجها كل مسلم في يومه - من الصباح حتى النوم، لحياة مليئة بالبركة والحماية والسكينة.</span><span class="lang-en">The three most important adhkar every Muslim needs in their day - from morning to sleep, for a life full of blessings, protection and tranquility.</span></p>
             
-            <div class="dhikr-categories">
-                <div class="category-card">
+            <div class="grid">
+                <div class="feature-card">
                     <i class="fas fa-sun"></i>
-                    <h3><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning Adhkar</span></h3>
-                    <p><span class="lang-ar">ابدأ يومك بحصن منيع من الأذكار النبوية</span><span class="lang-en">Start your day with an impenetrable fortress of prophetic remembrances</span></p>
-                    <div class="category-links">
-                        <a href="adhkar-sabah.html" class="primary-link"><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning Adhkar</span></a>
-                        <a href="adhkar-wakeup.html" class="secondary-link"><span class="lang-ar">أذكار الاستيقاظ</span><span class="lang-en">Waking Up</span></a>
-                    </div>
+                    <h2><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning Adhkar</span></h2>
+                    <p><span class="lang-ar">ابدأ يومك ببركة وحفظ من الله. أذكار الصباح تحصنك طوال النهار وتجلب لك الطمأنينة والسكينة من الفجر حتى الظهر.</span><span class="lang-en">Start your day with blessings and protection from Allah. Morning adhkar protect you throughout the day and bring you peace and tranquility from dawn to noon.</span></p>
+                    <a href="adhkar-sabah.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
                 </div>
                 
-                <div class="category-card">
+                <div class="feature-card">
                     <i class="fas fa-moon"></i>
-                    <h3><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening Adhkar</span></h3>
-                    <p><span class="lang-ar">اختم يومك بالسكينة والطمأنينة</span><span class="lang-en">End your day with peace and tranquility</span></p>
-                    <div class="category-links">
-                        <a href="adhkar-masaa.html" class="primary-link"><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening Adhkar</span></a>
-                        <a href="adhkar-nawm.html" class="secondary-link"><span class="lang-ar">أذكار النوم</span><span class="lang-en">Sleep Adhkar</span></a>
-                    </div>
+                    <h2><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening Adhkar</span></h2>
+                    <p><span class="lang-ar">اختم يومك بسكينة وطمأنينة. أذكار المساء تحفظك خلال الليل وتطهر قلبك من هموم اليوم، من العصر حتى المغرب.</span><span class="lang-en">End your day with peace and tranquility. Evening adhkar protect you through the night and purify your heart from daily worries, from afternoon to sunset.</span></p>
+                    <a href="adhkar-masaa.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
                 </div>
                 
-                <div class="category-card">
-                    <i class="fas fa-praying-hands"></i>
-                    <h3><span class="lang-ar">أذكار الصلاة</span><span class="lang-en">Prayer Adhkar</span></h3>
-                    <p><span class="lang-ar">أذكار تقال بعد كل صلاة مكتوبة</span><span class="lang-en">Remembrances said after every obligatory prayer</span></p>
-                    <div class="category-links">
-                        <a href="adhkar-salah.html" class="primary-link"><span class="lang-ar">بعد الصلاة</span><span class="lang-en">Post-Prayer</span></a>
-                        <a href="adhkar-wudu.html" class="secondary-link"><span class="lang-ar">دعاء الوضوء</span><span class="lang-en">Wudu Dua</span></a>
-                    </div>
+                <div class="feature-card">
+                    <i class="fas fa-bed"></i>
+                    <h2><span class="lang-ar">أذكار النوم</span><span class="lang-en">Sleep Adhkar</span></h2>
+                    <p><span class="lang-ar">حصّن نفسك قبل النوم واستودع الله أحلامك. أذكار النوم تحميك من الكوابيس وتجلب لك نوماً هانئاً ومباركاً.</span><span class="lang-en">Protect yourself before sleep and entrust your dreams to Allah. Sleep adhkar protect you from nightmares and bring you peaceful and blessed rest.</span></p>
+                    <a href="adhkar-nawm.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
                 </div>
-                
-                <div class="category-card">
-                    <i class="fas fa-home"></i>
-                    <h3><span class="lang-ar">أذكار المنزل</span><span class="lang-en">Home Adhkar</span></h3>
-                    <p><span class="lang-ar">أذكار دخول وخروج المنزل والمسجد</span><span class="lang-en">Entering and leaving home and mosque</span></p>
-                    <div class="category-links">
-                        <a href="adhkar-home.html" class="primary-link"><span class="lang-ar">المنزل</span><span class="lang-en">Home</span></a>
-                        <a href="adhkar-mosque.html" class="secondary-link"><span class="lang-ar">المسجد</span><span class="lang-en">Mosque</span></a>
-                    </div>
-                </div>
-                
-                <div class="category-card">
-                    <i class="fas fa-route"></i>
-                    <h3><span class="lang-ar">أذكار السفر</span><span class="lang-en">Travel Adhkar</span></h3>
-                    <p><span class="lang-ar">أدعية وأذكار المسافر</span><span class="lang-en">Traveler's supplications and remembrances</span></p>
-                    <div class="category-links">
-                        <a href="adhkar-travel.html" class="primary-link"><span class="lang-ar">أذكار السفر</span><span class="lang-en">Travel Adhkar</span></a>
-                        <a href="adhkar-weather.html" class="secondary-link"><span class="lang-ar">أذكار الطقس</span><span class="lang-en">Weather Adhkar</span></a>
-                    </div>
-                </div>
-                
-                <div class="category-card">
-                    <i class="fas fa-heart-pulse"></i>
-                    <h3><span class="lang-ar">أذكار خاصة</span><span class="lang-en">Special Adhkar</span></h3>
-                    <p><span class="lang-ar">الرقية الشرعية وأذكار الطعام والاستخارة</span><span class="lang-en">Ruqyah, food supplications, and Istikhara</span></p>
-                    <div class="category-links">
-                        <a href="adhkar-healing.html" class="primary-link"><span class="lang-ar">الرقية الشرعية</span><span class="lang-en">Ruqyah</span></a>
-                        <a href="adhkar-food.html" class="secondary-link"><span class="lang-ar">الطعام</span><span class="lang-en">Food</span></a>
-                        <a href="adhkar-istikhara.html" class="secondary-link"><span class="lang-ar">الاستخارة</span><span class="lang-en">Istikhara</span></a>
-                    </div>
-                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="font-size: 1.1em; color: var(--primary-color); margin-bottom: 20px;"><span class="lang-ar">تريد المزيد من الأذكار؟</span><span class="lang-en">Want more adhkar?</span></p>
+                <a href="adhkar.html" class="btn"><span class="lang-ar">تصفح جميع الأذكار</span><span class="lang-en">Browse All Adhkar</span></a>
             </div>
         </section>
         
