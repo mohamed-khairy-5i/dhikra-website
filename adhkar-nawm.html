@@ -6,7 +6,7 @@
     
     
     <title>أذكار النوم | موقع ذِكْرَى</title>
-    <meta name="description" content="اقرأ أذكار النوم كاملة مع الدليل والفضل. حافظ على حماية الله لك أثناء نومك بهذه الأذكار النبوية الصحيحة.">
+    <meta name="description" content="اقرأ أذكار النوم كاملة مع الدليل والفضل. نم بسكينة وحفظ من الله مع هذه الأذكار النبوية الصحيحة.">
     <meta name="keywords" content="أذكار النوم, أدعية النوم, حصن المسلم, أذكار النوم مكتوبة, فضل أذكار النوم">
     <link rel="icon" href="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -332,22 +332,114 @@
             margin-inline-end: 8px; 
         }
         
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            background: none;
-            border: none;
-            color: #999;
-            font-size: 1.2em;
-            cursor: pointer;
-        }
-        
         footer { 
             padding: 20px; 
             color: #fff; 
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); 
             width: 100%;
             font-size: clamp(0.8em, 2vw, 1em);
+        }
+
+        /* Breadcrumb Styles */
+        .breadcrumb {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 0;
+            margin-bottom: 20px;
+        }
+        body.dark-mode .breadcrumb {
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .breadcrumb a:hover {
+            color: var(--secondary-color);
+        }
+        .breadcrumb .current {
+            color: #666;
+            font-weight: 500;
+        }
+        body.dark-mode .breadcrumb .current {
+            color: #ccc;
+        }
+        .breadcrumb-separator {
+            color: #999;
+            font-size: 0.8em;
+        }
+        html[dir="rtl"] .breadcrumb-separator {
+            transform: scaleX(-1);
+        }
+
+        /* Dhikr Actions */
+        .dhikr-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .dhikr-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .dhikr-actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        body.dark-mode .dhikr-actions {
+            border-top-color: #444;
+        }
+        .action-btn {
+            background: none;
+            border: 1px solid #ddd;
+            color: #666;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+        .action-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        .action-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        body.dark-mode .action-btn {
+            border-color: #555;
+            color: #ccc;
+        }
+        body.dark-mode .action-btn:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        @media (max-width: 768px) {
+            .dhikr-actions {
+                gap: 8px;
+            }
+            .action-btn {
+                padding: 6px 10px;
+                font-size: 0.8em;
+            }
         }
         
         body.dark-mode footer { 
@@ -391,11 +483,6 @@
             .dhikr-footer {
                 padding: 12px 15px;
             }
-            
-                width: calc(100% - 40px);
-                left: 20px;
-                right: 20px;
-            }
         }
         
         @media (min-width: 577px) and (max-width: 768px) {
@@ -405,147 +492,6 @@
             
             .dhikr-body {
                 padding: 18px;
-            }
-        }
-        
-        @media (min-width: 769px) {
-                display: block;
-            }
-        }
-
-        /* Progress Bar Styles */
-        .progress-section {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 15px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        body.dark-mode .progress-section {
-            background: var(--card-bg-dark);
-        }
-        
-        .progress-title {
-            font-size: 1.2em;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        
-        .progress-container {
-            background-color: #e0e0e0;
-            border-radius: 25px;
-            height: 20px;
-            overflow: hidden;
-            margin-bottom: 10px;
-        }
-        
-        body.dark-mode .progress-container {
-            background-color: #444;
-        }
-        
-        .progress-bar {
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            height: 100%;
-            width: 0%;
-            transition: width 0.5s ease;
-            border-radius: 25px;
-        }
-        
-        .progress-text {
-            text-align: center;
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 5px;
-        }
-        
-        body.dark-mode .progress-text {
-            color: #ccc;
-        }
-        
-        .progress-stats {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.85em;
-            color: #777;
-            margin-top: 10px;
-        }
-        
-        body.dark-mode .progress-stats {
-            color: #bbb;
-        }
-
-        /* Dhikr Actions */
-        .dhikr-footer {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .dhikr-info {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        
-        .dhikr-actions {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .action-btn {
-            background-color: #f8f9fa;
-            border: 2px solid #e9ecef;
-            color: #495057;
-            padding: 8px 15px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 0.85em;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-weight: 500;
-        }
-        
-        body.dark-mode .action-btn {
-            background-color: #495057;
-            border-color: #6c757d;
-            color: #fff;
-        }
-        
-        .action-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        
-        .complete-btn.completed {
-            background-color: #28a745;
-            border-color: #28a745;
-            color: white;
-        }
-        
-        .complete-btn.completed:hover {
-            background-color: #218838;
-            border-color: #1e7e34;
-        }
-        
-        @media (max-width: 576px) {
-            .dhikr-actions {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .action-btn {
-                width: 100%;
-                justify-content: center;
-                max-width: 200px;
             }
         }
     </style>
@@ -587,99 +533,126 @@
                 <i class="fas fa-chevron-left breadcrumb-separator"></i>
                 <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
                 <i class="fas fa-chevron-left breadcrumb-separator"></i>
-                <span class="current"><span class="lang-ar">أذكار</span><span class="lang-en">Adhkar</span></span>
+                <span class="current"><span class="lang-ar">أذكار النوم</span><span class="lang-en">Sleep Adhkar</span></span>
             </div>
         </nav>
+
         <div class="page-header">
             <h1><span class="lang-ar">أذكار النوم</span><span class="lang-en">Sleep Adhkar</span></h1>
-            <p><span class="lang-ar">حافظ على حماية الله لك أثناء نومك بهذه الأذكار النبوية الصحيحة</span><span class="lang-en">Maintain Allah's protection for you during sleep with these authentic prophetic remembrances</span></p>
+            <p><span class="lang-ar">نم بسكينة وحفظ من الله مع هذه الأذكار النبوية الصحيحة</span><span class="lang-en">Sleep peacefully and under Allah's protection with these authentic prophetic remembrances</span></p>
         </div>
         
-        <!-- Progress Bar Section -->
-        <div class="progress-section">
-            <div class="progress-title">
-                <span class="lang-ar">📊 تقدم القراءة</span>
-                <span class="lang-en">📊 Reading Progress</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" id="adhkar-progress"></div>
-            </div>
-            <div class="progress-text">
-                <span class="lang-ar" id="progress-text-ar">لم تبدأ بعد - 0 من 15 ذكر</span>
-                <span class="lang-en" id="progress-text-en">Not started yet - 0 of 15 adhkar</span>
-            </div>
-            <div class="progress-stats">
-                <span>
-                    <span class="lang-ar">🌟 مكتملة: <span id="completed-count">0</span></span>
-                    <span class="lang-en">🌟 Completed: <span id="completed-count">0</span></span>
-                </span>
-                <span>
-                    <span class="lang-ar">⏳ متبقية: <span id="remaining-count">15</span></span>
-                    <span class="lang-en">⏳ Remaining: <span id="remaining-count">15</span></span>
-                </span>
-            </div>
-        </div>
         
         <div class="dhikr-container">
             <!-- 1 -->
             <div class="dhikr-card">
                 <div class="dhikr-header">
-                    <h3 class="dhikr-title"><span class="lang-ar">آية الكرسي</span><span class="lang-en">Ayat Al-Kursi</span></h3>
+                    <h3 class="dhikr-title"><span class="lang-ar">الوضوء قبل النوم</span><span class="lang-en">Ablution Before Sleep</span></h3>
                     <span class="dhikr-count">1x</span>
                 </div>
                 <div class="dhikr-body">
-                    <p class="dhikr-text-ar">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ</p>
+                    <p class="dhikr-text-ar">من نام على وضوء بات الملائكة يستغفرون له حتى يستيقظ</p>
                 </div>
                 <div class="dhikr-footer">
-                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قرأها عند النوم لم يزل عليه من الله حافظ ولا يقربه شيطان حتى يصبح</span><span class="lang-en"><b>Virtue:</b> Whoever recites it before sleeping, Allah will protect him and no devil will come near him until morning</span></span>
-                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح البخاري</span><span class="lang-en"><b>Source:</b> Sahih Al-Bukhari</span></span>
+                    <div class="dhikr-info">
+                        <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من نام على وضوء بات الملائكة يستغفرون له حتى يستيقظ</span><span class="lang-en"><b>Virtue:</b> Whoever sleeps in a state of ablution, the angels pray for his forgiveness until he wakes up</span></span>
+                        <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> الطبراني</span><span class="lang-en"><b>Source:</b> At-Tabarani</span></span>
+                    </div>
+                    <div class="dhikr-actions">
+                        <button class="action-btn favorite-btn" onclick="toggleFavorite(this, 'الوضوء قبل النوم', 'Ablution Before Sleep')" title="إضافة للمفضلة / Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn share-btn" onclick="shareDhikr('الوضوء قبل النوم', 'Ablution Before Sleep')" title="مشاركة / Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                        <button class="action-btn copy-btn" onclick="copyDhikr(this)" title="نسخ النص / Copy Text">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
             
             <!-- 2 -->
             <div class="dhikr-card">
                 <div class="dhikr-header">
-                    <h3 class="dhikr-title"><span class="lang-ar">سور الإخلاص والفلق والناس</span><span class="lang-en">Al-Ikhlas, Al-Falaq, An-Nas</span></h3>
-                    <span class="dhikr-count">3x</span>
+                    <h3 class="dhikr-title"><span class="lang-ar">آية الكرسي</span><span class="lang-en">Ayat Al-Kursi</span></h3>
+                    <span class="dhikr-count">1x</span>
                 </div>
                 <div class="dhikr-body">
-                    <p class="dhikr-text-ar">قُلْ هُوَ اللَّهُ أَحَدٌ (1) اللَّهُ الصَّمَدُ (2) لَمْ يَلِدْ وَلَمْ يُولَدْ (3) وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ (4)</p>
-                    <p class="dhikr-text-ar">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ (1) مِن شَرِّ مَا خَلَقَ (2) وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ (3) وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ (4) وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ (5)</p>
-                    <p class="dhikr-text-ar">قُلْ أَعُوذُ بِرَبِّ النَّاسِ (1) مَلِكِ النَّاسِ (2) إِلَٰهِ النَّاسِ (3) مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ (4) الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ (5) مِنَ الْجِنَّةِ وَالنَّاسِ (6)</p>
+                    <p class="dhikr-text-ar">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ</p>
                 </div>
                 <div class="dhikr-footer">
-                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قرأهن عند النوم كن له حرساً من كل شيء</span><span class="lang-en"><b>Virtue:</b> Whoever recites them before sleeping, they will be a guard for him from everything</span></span>
-                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> سنن الترمذي</span><span class="lang-en"><b>Source:</b> Sunan At-Tirmidhi</span></span>
+                    <div class="dhikr-info">
+                        <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قرأها عند النوم لم يزل عليه من الله حافظ ولا يقربه شيطان حتى يصبح</span><span class="lang-en"><b>Virtue:</b> Whoever recites it before sleep will have a guardian from Allah and no devil will approach him until morning</span></span>
+                        <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح البخاري</span><span class="lang-en"><b>Source:</b> Sahih Al-Bukhari</span></span>
+                    </div>
+                    <div class="dhikr-actions">
+                        <button class="action-btn favorite-btn" onclick="toggleFavorite(this, 'آية الكرسي', 'Ayat Al-Kursi')" title="إضافة للمفضلة / Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn share-btn" onclick="shareDhikr('آية الكرسي', 'Ayat Al-Kursi')" title="مشاركة / Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                        <button class="action-btn copy-btn" onclick="copyDhikr(this)" title="نسخ النص / Copy Text">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
             
             <!-- 3 -->
             <div class="dhikr-card">
                 <div class="dhikr-header">
-                    <h3 class="dhikr-title"><span class="lang-ar">باسمك ربي وضعت جنبي</span><span class="lang-en">In Your Name My Lord</span></h3>
-                    <span class="dhikr-count">1x</span>
+                    <h3 class="dhikr-title"><span class="lang-ar">المعوذات الثلاث</span><span class="lang-en">The Three Protective Surahs</span></h3>
+                    <span class="dhikr-count">3x</span>
                 </div>
                 <div class="dhikr-body">
-                    <p class="dhikr-text-ar">بِاسْمِكَ رَبِّي وَضَعْتُ جَنْبِي، وَبِكَ أَرْفَعُهُ، فَإِنْ أَمْسَكْتَ نَفْسِي فَارْحَمْهَا، وَإِنْ أَرْسَلْتَهَا فَاحْفَظْهَا بِمَا تَحْفَظُ بِهِ عِبَادَكَ الصَّالِحِينَ</p>
+                    <p class="dhikr-text-ar">قُلْ هُوَ اللَّهُ أَحَدٌ (1) اللَّهُ الصَّمَدُ (2) لَمْ يَلِدْ وَلَمْ يُولَدْ (3) وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ (4)<br><br>قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ (1) مِن شَرِّ مَا خَلَقَ (2) وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ (3) وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ (4) وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ (5)<br><br>قُلْ أَعُوذُ بِرَبِّ النَّاسِ (1) مَلِكِ النَّاسِ (2) إِلَٰهِ النَّاسِ (3) مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ (4) الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ (5) مِنَ الْجِنَّةِ وَالنَّاسِ (6)</p>
                 </div>
                 <div class="dhikr-footer">
-                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها عند النوم لم يزل عليه من الله حافظ</span><span class="lang-en"><b>Virtue:</b> Whoever says this before sleeping, Allah will protect him</span></span>
-                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح البخاري</span><span class="lang-en"><b>Source:</b> Sahih Al-Bukhari</span></span>
+                    <div class="dhikr-info">
+                        <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> كان النبي ينفث في كفيه بهن عند النوم ويمسح بهما جسده</span><span class="lang-en"><b>Virtue:</b> The Prophet used to blow on his palms with these surahs at bedtime and wipe his body with them</span></span>
+                        <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح البخاري</span><span class="lang-en"><b>Source:</b> Sahih Al-Bukhari</span></span>
+                    </div>
+                    <div class="dhikr-actions">
+                        <button class="action-btn favorite-btn" onclick="toggleFavorite(this, 'المعوذات الثلاث', 'The Three Protective Surahs')" title="إضافة للمفضلة / Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn share-btn" onclick="shareDhikr('المعوذات الثلاث', 'The Three Protective Surahs')" title="مشاركة / Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                        <button class="action-btn copy-btn" onclick="copyDhikr(this)" title="نسخ النص / Copy Text">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
             
             <!-- 4 -->
             <div class="dhikr-card">
                 <div class="dhikr-header">
-                    <h3 class="dhikr-title"><span class="lang-ar">اللهم قني عذابك</span><span class="lang-en">O Allah Protect Me</span></h3>
+                    <h3 class="dhikr-title"><span class="lang-ar">اللهم باسمك أموت وأحيا</span><span class="lang-en">Sleep Invocation</span></h3>
                     <span class="dhikr-count">1x</span>
                 </div>
                 <div class="dhikr-body">
-                    <p class="dhikr-text-ar">اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ</p>
+                    <p class="dhikr-text-ar">اللَّهُمَّ بِاسْمِكَ أَمُوتُ وَأَحْيَا</p>
                 </div>
                 <div class="dhikr-footer">
-                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها عند النوم وقاه الله عذابه يوم القيامة</span><span class="lang-en"><b>Virtue:</b> Whoever says this before sleeping, Allah will protect him from His punishment on the Day of Resurrection</span></span>
-                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح مسلم</span><span class="lang-en"><b>Source:</b> Sahih Muslim</span></span>
+                    <div class="dhikr-info">
+                        <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> كان النبي يقولها عند النوم فيستيقظ محفوظاً بحفظ الله</span><span class="lang-en"><b>Virtue:</b> The Prophet used to say this when sleeping and would wake up protected by Allah's protection</span></span>
+                        <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح البخاري</span><span class="lang-en"><b>Source:</b> Sahih Al-Bukhari</span></span>
+                    </div>
+                    <div class="dhikr-actions">
+                        <button class="action-btn favorite-btn" onclick="toggleFavorite(this, 'اللهم باسمك أموت وأحيا', 'Sleep Invocation')" title="إضافة للمفضلة / Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn share-btn" onclick="shareDhikr('اللهم باسمك أموت وأحيا', 'Sleep Invocation')" title="مشاركة / Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                        <button class="action-btn copy-btn" onclick="copyDhikr(this)" title="نسخ النص / Copy Text">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -689,125 +662,112 @@
             <!-- 5 -->
             <div class="dhikr-card">
                 <div class="dhikr-header">
-                    <h3 class="dhikr-title"><span class="lang-ar">الحمد لله الذي أطعمنا</span><span class="lang-en">Praise be to Allah</span></h3>
-                    <span class="dhikr-count">1x</span>
+                    <h3 class="dhikr-title"><span class="lang-ar">التسبيح عند النوم</span><span class="lang-en">Tasbih Before Sleep</span></h3>
+                    <span class="dhikr-count">34 + 33 + 33</span>
                 </div>
                 <div class="dhikr-body">
-                    <p class="dhikr-text-ar">الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا، وَكَفَانَا، وَآوَانَ، فَكَمْ مِمَّنْ لَا كَافِيَ لَهُ وَلَا مُؤْوِيَ</p>
+                    <p class="dhikr-text-ar">سُبْحَانَ اللَّهِ (34 مرة)<br>الْحَمْدُ لِلَّهِ (33 مرة)<br>اللَّهُ أَكْبَرُ (33 مرة)</p>
                 </div>
                 <div class="dhikr-footer">
-                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها عند النوم فقد حمد الله على نعمه</span><span class="lang-en"><b>Virtue:</b> Whoever says this before sleeping has praised Allah for His blessings</span></span>
-                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح مسلم</span><span class="lang-en"><b>Source:</b> Sahih Muslim</span></span>
+                    <div class="dhikr-info">
+                        <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> خير لكم من خادم، ومن قالها لم يصبه في ليلته ضرر</span><span class="lang-en"><b>Virtue:</b> Better for you than a servant, and whoever says it will not be harmed in his night</span></span>
+                        <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح البخاري</span><span class="lang-en"><b>Source:</b> Sahih Al-Bukhari</span></span>
+                    </div>
+                    <div class="dhikr-actions">
+                        <button class="action-btn favorite-btn" onclick="toggleFavorite(this, 'التسبيح عند النوم', 'Tasbih Before Sleep')" title="إضافة للمفضلة / Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn share-btn" onclick="shareDhikr('التسبيح عند النوم', 'Tasbih Before Sleep')" title="مشاركة / Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                        <button class="action-btn copy-btn" onclick="copyDhikr(this)" title="نسخ النص / Copy Text">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
             
             <!-- 6 -->
             <div class="dhikr-card">
                 <div class="dhikr-header">
-                    <h3 class="dhikr-title"><span class="lang-ar">التسبيح والتحميد والتكبير</span><span class="lang-en">Tasbih, Tahmid, Takbir</span></h3>
-                    <span class="dhikr-count">33x, 33x, 34x</span>
+                    <h3 class="dhikr-title"><span class="lang-ar">اللهم أسلمت نفسي إليك</span><span class="lang-en">Night Surrender</span></h3>
+                    <span class="dhikr-count">1x</span>
                 </div>
                 <div class="dhikr-body">
-                    <p class="dhikr-text-ar">سُبْحَانَ اللَّهِ (ثلاثاً وثلاثين مرة)</p>
-                    <p class="dhikr-text-ar">الْحَمْدُ لِلَّهِ (ثلاثاً وثلاثين مرة)</p>
-                    <p class="dhikr-text-ar">اللَّهُ أَكْبَرُ (أربعاً وثلاثين مرة)</p>
+                    <p class="dhikr-text-ar">اللَّهُمَّ أَسْلَمْتُ نَفْسِي إِلَيْكَ، وَفَوَّضْتُ أَمْرِي إِلَيْكَ، وَوَجَّهْتُ وَجْهِي إِلَيْكَ، وَأَلْجَأْتُ ظَهْرِي إِلَيْكَ، رَغْبَةً وَرَهْبَةً إِلَيْكَ، لَا مَلْجَأَ وَلَا مَنْجَا مِنْكَ إِلَّا إِلَيْكَ، آمَنْتُ بِكِتَابِكَ الَّذِي أَنْزَلْتَ، وَبِنَبِيِّكَ الَّذِي أَرْسَلْتَ</p>
                 </div>
                 <div class="dhikr-footer">
-                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها عند النوم خير من خادم</span><span class="lang-en"><b>Virtue:</b> Whoever says this before sleeping, it is better than a servant for him</span></span>
-                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح البخاري</span><span class="lang-en"><b>Source:</b> Sahih Al-Bukhari</span></span>
+                    <div class="dhikr-info">
+                        <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها ثم مات من ليلته مات على الفطرة</span><span class="lang-en"><b>Virtue:</b> Whoever says this and dies that night will die upon the natural faith</span></span>
+                        <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح البخاري</span><span class="lang-en"><b>Source:</b> Sahih Al-Bukhari</span></span>
+                    </div>
+                    <div class="dhikr-actions">
+                        <button class="action-btn favorite-btn" onclick="toggleFavorite(this, 'اللهم أسلمت نفسي إليك', 'Night Surrender')" title="إضافة للمفضلة / Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn share-btn" onclick="shareDhikr('اللهم أسلمت نفسي إليك', 'Night Surrender')" title="مشاركة / Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                        <button class="action-btn copy-btn" onclick="copyDhikr(this)" title="نسخ النص / Copy Text">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
             
             <!-- 7 -->
             <div class="dhikr-card">
                 <div class="dhikr-header">
-                    <h3 class="dhikr-title"><span class="lang-ar">اللهم أسلمت نفسي</span><span class="lang-en">O Allah I Submit Myself</span></h3>
-                    <span class="dhikr-count">1x</span>
+                    <h3 class="dhikr-title"><span class="lang-ar">اللهم قني عذابك</span><span class="lang-en">Protection from Punishment</span></h3>
+                    <span class="dhikr-count">3x</span>
                 </div>
                 <div class="dhikr-body">
-                    <p class="dhikr-text-ar">اللَّهُمَّ أَسْلَمْتُ نَفْسِي إِلَيْكَ، وَفَوَّضْتُ أَمْرِي إِلَيْكَ، وَوَجَّهْتُ وَجْهِي إِلَيْكَ، وَأَلْجَأْتُ ظَهْرِي إِلَيْكَ، رَغْبَةً وَرَهْبَةً إِلَيْكَ، لَا مَلْجَأَ وَلَا مَنْجَا مِنْكَ إِلَّا إِلَيْكَ، آمَنْتُ بِكِتَابِكَ الَّذِي أَنْزَلْتَ، وَبِنَبِيِّكَ الَّذِي أَرْسَلْتَ</p>
+                    <p class="dhikr-text-ar">اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ</p>
                 </div>
                 <div class="dhikr-footer">
-                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها عند النوم ثم مات مات على الفطرة</span><span class="lang-en"><b>Virtue:</b> Whoever says this before sleeping and then dies, dies on the fitrah</span></span>
-                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح البخاري</span><span class="lang-en"><b>Source:</b> Sahih Al-Bukhari</span></span>
+                    <div class="dhikr-info">
+                        <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> كان النبي يقولها عند النوم استعاذة من عذاب الله</span><span class="lang-en"><b>Virtue:</b> The Prophet used to say this at bedtime seeking refuge from Allah's punishment</span></span>
+                        <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> الترمذي</span><span class="lang-en"><b>Source:</b> At-Tirmidhi</span></span>
+                    </div>
+                    <div class="dhikr-actions">
+                        <button class="action-btn favorite-btn" onclick="toggleFavorite(this, 'اللهم قني عذابك', 'Protection from Punishment')" title="إضافة للمفضلة / Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn share-btn" onclick="shareDhikr('اللهم قني عذابك', 'Protection from Punishment')" title="مشاركة / Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                        <button class="action-btn copy-btn" onclick="copyDhikr(this)" title="نسخ النص / Copy Text">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
             
             <!-- 8 -->
             <div class="dhikr-card">
                 <div class="dhikr-header">
-                    <h3 class="dhikr-title"><span class="lang-ar">اللهم اغفر لي ذنوبي</span><span class="lang-en">O Allah Forgive My Sins</span></h3>
+                    <h3 class="dhikr-title"><span class="lang-ar">اللهم أعوذ بوجهك الكريم</span><span class="lang-en">Seeking Refuge</span></h3>
                     <span class="dhikr-count">1x</span>
                 </div>
                 <div class="dhikr-body">
-                    <p class="dhikr-text-ar">اللَّهُمَّ اغْفِرْ لِي ذُنُوبِي وَخَطَايَايَ، وَأَعِذْنِي مِنْ عَذَابِ النَّارِ، وَرِزْقْنِي مِنْ حَيْثُ لَا أَحْتَسِبُ</p>
+                    <p class="dhikr-text-ar">اللَّهُمَّ أَعُوذُ بِوَجْهِكَ الْكَرِيمِ، وَكَلِمَاتِكَ التَّامَّةِ، مِنْ شَرِّ مَا أَنْتَ آخِذٌ بِنَاصِيَتِهِ، اللَّهُمَّ أَنْتَ تَكْشِفُ الْمَأْثَمَ وَالْمَغْرَمَ، اللَّهُمَّ لَا يُهْزَمُ جُنْدُكَ، وَلَا يُخْلَفُ وَعْدُكَ، وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ، سُبْحَانَكَ وَبِحَمْدِكَ</p>
                 </div>
                 <div class="dhikr-footer">
-                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها عند النوم غفر الله له ذنوبه</span><span class="lang-en"><b>Virtue:</b> Whoever says this before sleeping, Allah will forgive his sins</span></span>
-                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> سنن أبي داود</span><span class="lang-en"><b>Source:</b> Sunan Abu Dawud</span></span>
-                </div>
-            </div>
-        </div>
-        
-        
-        <div class="dhikr-container">
-            <!-- 9 -->
-            <div class="dhikr-card">
-                <div class="dhikr-header">
-                    <h3 class="dhikr-title"><span class="lang-ar">اللهم رب السماوات</span><span class="lang-en">O Allah Lord of the Heavens</span></h3>
-                    <span class="dhikr-count">1x</span>
-                </div>
-                <div class="dhikr-body">
-                    <p class="dhikr-text-ar">اللَّهُمَّ رَبَّ السَّمَاوَاتِ وَرَبَّ الْأَرْضِ وَرَبَّ الْعَرْشِ الْعَظِيمِ، رَبَّنَا وَرَبَّ كُلِّ شَيْءٍ، فَالِقَ الْحَبِّ وَالنَّوَى، وَمُنْزِلَ التَّوْرَاةِ وَالْإِنْجِيلِ وَالْفُرْقَانِ، أَعُوذُ بِكَ مِنْ شَرِّ كُلِّ شَيْءٍ أَنْتَ آخِذٌ بِنَاصِيَتِهِ، اللَّهُمَّ أَنْتَ الْأَوَّلُ فَلَيْسَ قَبْلَكَ شَيْءٌ، وَأَنْتَ الْآخِرُ فَلَيْسَ بَعْدَكَ شَيْءٌ، وَأَنْتَ الظَّاهِرُ فَلَيْسَ فَوْقَكَ شَيْءٌ، وَأَنْتَ الْبَاطِنُ فَلَيْسَ دُونَكَ شَيْءٌ، اقْضِ عَنِّي الدَّيْنَ، وَأَغْنِنِي مِنَ الْفَقْرِ</p>
-                </div>
-                <div class="dhikr-footer">
-                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها عند النوم كفي هم الدنيا والآخرة</span><span class="lang-en"><b>Virtue:</b> Whoever says this before sleeping, Allah will suffice him for the worries of this world and the hereafter</span></span>
-                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح مسلم</span><span class="lang-en"><b>Source:</b> Sahih Muslim</span></span>
-                </div>
-            </div>
-            
-            <!-- 10 -->
-            <div class="dhikr-card">
-                <div class="dhikr-header">
-                    <h3 class="dhikr-title"><span class="lang-ar">يا حي يا قيوم</span><span class="lang-en">O Ever Living, O Sustainer</span></h3>
-                    <span class="dhikr-count">1x</span>
-                </div>
-                <div class="dhikr-body">
-                    <p class="dhikr-text-ar">يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ، أَصْلِحْ لِي شَأْنِي كُلَّهُ، وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ</p>
-                </div>
-                <div class="dhikr-footer">
-                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها عند النوم قضى الله حاجته</span><span class="lang-en"><b>Virtue:</b> Whoever says this before sleeping, Allah will fulfill his needs</span></span>
-                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح الترمذي</span><span class="lang-en"><b>Source:</b> Sahih At-Tirmidhi</span></span>
-                </div>
-            </div>
-            
-            <!-- 11 -->
-            <div class="dhikr-card">
-                <div class="dhikr-header">
-                    <h3 class="dhikr-title"><span class="lang-ar">أستغفر الله العظيم</span><span class="lang-en">I Seek Forgiveness</span></h3>
-                    <span class="dhikr-count">3x</span>
-                </div>
-                <div class="dhikr-body">
-                    <p class="dhikr-text-ar">أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ</p>
-                </div>
-                <div class="dhikr-footer">
-                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها عند النوم غفر الله له ذنوبه وإن كانت مثل زبد البحر</span><span class="lang-en"><b>Virtue:</b> Whoever says this before sleeping, Allah will forgive his sins even if they are as much as the foam of the sea</span></span>
-                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> سنن الترمذي</span><span class="lang-en"><b>Source:</b> Sunan At-Tirmidhi</span></span>
-                </div>
-            </div>
-            
-            <!-- 12 -->
-            <div class="dhikr-card">
-                <div class="dhikr-header">
-                    <h3 class="dhikr-title"><span class="lang-ar">لا إله إلا الله وحده</span><span class="lang-en">There is no god but Allah</span></h3>
-                    <span class="dhikr-count">1x</span>
-                </div>
-                <div class="dhikr-body">
-                    <p class="dhikr-text-ar">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</p>
-                </div>
-                <div class="dhikr-footer">
-                    <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها عند النوم مات على الفطرة</span><span class="lang-en"><b>Virtue:</b> Whoever says this before sleeping, dies on the fitrah</span></span>
-                    <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> صحيح مسلم</span><span class="lang-en"><b>Source:</b> Sahih Muslim</span></span>
+                    <div class="dhikr-info">
+                        <span class="dhikr-virtue"><i class="fas fa-star"></i><span class="lang-ar"><b>الفضل:</b> من قالها عند النوم حفظه الله من كل سوء</span><span class="lang-en"><b>Virtue:</b> Whoever says this when sleeping, Allah protects him from all evil</span></span>
+                        <span class="dhikr-source"><i class="fas fa-book"></i><span class="lang-ar"><b>المصدر:</b> أبو داود</span><span class="lang-en"><b>Source:</b> Abu Dawud</span></span>
+                    </div>
+                    <div class="dhikr-actions">
+                        <button class="action-btn favorite-btn" onclick="toggleFavorite(this, 'اللهم أعوذ بوجهك الكريم', 'Seeking Refuge')" title="إضافة للمفضلة / Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn share-btn" onclick="shareDhikr('اللهم أعوذ بوجهك الكريم', 'Seeking Refuge')" title="مشاركة / Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                        <button class="action-btn copy-btn" onclick="copyDhikr(this)" title="نسخ النص / Copy Text">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -911,128 +871,83 @@
             
             particlesJS('particles-js', particlesConfig);
             applyDarkMode(isInitiallyDark); 
-            setLanguage(localStorage.getItem('language') || 'ar');
-            
-            // Initialize progress tracking
-            addCompleteButtonsToAllAdhkar();
-            loadProgress();
-            updateProgress();
+            setLanguage(localStorage.getItem('language') || 'ar'); 
         });
 
-        // Progress tracking functions
-        function addCompleteButtonsToAllAdhkar() {
-            const dhikrCards = document.querySelectorAll('.dhikr-card');
+        // Dhikr Functions
+        function toggleFavorite(button, titleAr, titleEn) {
+            const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+            const dhikr = { titleAr, titleEn, url: window.location.href };
+            const existingIndex = favorites.findIndex(fav => fav.titleAr === titleAr);
             
-            dhikrCards.forEach(card => {
-                const footer = card.querySelector('.dhikr-footer');
-                if (!footer.querySelector('.dhikr-actions')) {
-                    // Re-structure the footer to match the new format
-                    const footerContent = footer.innerHTML;
-                    footer.innerHTML = `
-                        <div class="dhikr-info">
-                            ${footerContent}
-                        </div>
-                        <div class="dhikr-actions">
-                            <button class="action-btn complete-btn" onclick="toggleComplete(this)" title="تم القراءة / Mark as Read">
-                                <i class="fas fa-check"></i>
-                                <span class="lang-ar">تم</span>
-                                <span class="lang-en">Done</span>
-                            </button>
-                        </div>
-                    `;
-                }
-            });
-        }
-
-        function toggleComplete(button) {
-            const card = button.closest('.dhikr-card');
-            const dhikrTitle = card.querySelector('.dhikr-title .lang-ar').textContent;
-            const isCompleted = button.classList.contains('completed');
-            
-            if (isCompleted) {
-                button.classList.remove('completed');
-                removeFromCompleted(dhikrTitle);
+            if (existingIndex > -1) {
+                favorites.splice(existingIndex, 1);
+                button.classList.remove('active');
+                button.querySelector('i').classList.remove('fas');
+                button.querySelector('i').classList.add('far');
             } else {
-                button.classList.add('completed');
-                addToCompleted(dhikrTitle);
+                favorites.push(dhikr);
+                button.classList.add('active');
+                button.querySelector('i').classList.remove('far');
+                button.querySelector('i').classList.add('fas');
             }
             
-            updateProgress();
+            localStorage.setItem('favorites', JSON.stringify(favorites));
         }
 
-        function addToCompleted(dhikrTitle) {
-            let completed = JSON.parse(localStorage.getItem('adhkar-nawm-progress') || '[]');
-            if (!completed.includes(dhikrTitle)) {
-                completed.push(dhikrTitle);
-                localStorage.setItem('adhkar-nawm-progress', JSON.stringify(completed));
+        function shareDhikr(titleAr, titleEn) {
+            const title = htmlEl.lang === 'ar' ? titleAr : titleEn;
+            const text = htmlEl.lang === 'ar' ? `${titleAr} - من موقع ذِكْرَى` : `${titleEn} - From Dhikra Website`;
+            
+            if (navigator.share) {
+                navigator.share({ title, text, url: window.location.href });
+            } else {
+                const shareText = `${text}\n${window.location.href}`;
+                navigator.clipboard.writeText(shareText).then(() => {
+                    alert(htmlEl.lang === 'ar' ? 'تم نسخ رابط المشاركة' : 'Share link copied');
+                });
             }
         }
 
-        function removeFromCompleted(dhikrTitle) {
-            let completed = JSON.parse(localStorage.getItem('adhkar-nawm-progress') || '[]');
-            completed = completed.filter(title => title !== dhikrTitle);
-            localStorage.setItem('adhkar-nawm-progress', JSON.stringify(completed));
-        }
-
-        function loadProgress() {
-            const completed = JSON.parse(localStorage.getItem('adhkar-nawm-progress') || '[]');
-            const buttons = document.querySelectorAll('.complete-btn');
+        function copyDhikr(button) {
+            const card = button.closest('.dhikr-card');
+            const dhikrText = card.querySelector('.dhikr-text-ar').textContent;
+            const title = card.querySelector('.dhikr-title span.lang-' + htmlEl.lang).textContent;
+            const copyText = `${title}\n\n${dhikrText}`;
             
-            buttons.forEach(button => {
-                const card = button.closest('.dhikr-card');
-                const dhikrTitle = card.querySelector('.dhikr-title .lang-ar').textContent;
+            navigator.clipboard.writeText(copyText).then(() => {
+                const originalIcon = button.querySelector('i');
+                originalIcon.classList.remove('fa-copy');
+                originalIcon.classList.add('fa-check');
+                button.style.background = '#28a745';
+                button.style.color = 'white';
                 
-                if (completed.includes(dhikrTitle)) {
-                    button.classList.add('completed');
+                setTimeout(() => {
+                    originalIcon.classList.remove('fa-check');
+                    originalIcon.classList.add('fa-copy');
+                    button.style.background = '';
+                    button.style.color = '';
+                }, 2000);
+            });
+        }
+
+        // Initialize favorites on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+            const favoriteButtons = document.querySelectorAll('.favorite-btn');
+            
+            favoriteButtons.forEach(button => {
+                const card = button.closest('.dhikr-card');
+                const titleAr = card.querySelector('.dhikr-title .lang-ar').textContent;
+                const isFavorite = favorites.some(fav => fav.titleAr === titleAr);
+                
+                if (isFavorite) {
+                    button.classList.add('active');
+                    button.querySelector('i').classList.remove('far');
+                    button.querySelector('i').classList.add('fas');
                 }
             });
-        }
-
-        function updateProgress() {
-            const totalAdhkar = document.querySelectorAll('.dhikr-card').length;
-            const completedButtons = document.querySelectorAll('.complete-btn.completed').length;
-            const remainingCount = totalAdhkar - completedButtons;
-            const progressPercent = totalAdhkar > 0 ? (completedButtons / totalAdhkar) * 100 : 0;
-            
-            // Update progress bar
-            const progressBar = document.getElementById('adhkar-progress');
-            if (progressBar) {
-                progressBar.style.width = progressPercent + '%';
-            }
-            
-            // Update text
-            const htmlEl = document.documentElement;
-            const currentLang = htmlEl.lang;
-            
-            const progressTextAr = document.getElementById('progress-text-ar');
-            const progressTextEn = document.getElementById('progress-text-en');
-            const completedCountSpans = document.querySelectorAll('#completed-count');
-            const remainingCountSpans = document.querySelectorAll('#remaining-count');
-            
-            if (progressTextAr) {
-                progressTextAr.textContent = completedButtons === 0 ? 
-                    'لم تبدأ بعد - 0 من ' + totalAdhkar + ' ذكر' :
-                    completedButtons === totalAdhkar ?
-                        '🎉 تم إنجاز جميع الأذكار! ما شاء الله' :
-                        'جاري القراءة - ' + completedButtons + ' من ' + totalAdhkar + ' ذكر';
-            }
-            
-            if (progressTextEn) {
-                progressTextEn.textContent = completedButtons === 0 ? 
-                    'Not started yet - 0 of ' + totalAdhkar + ' adhkar' :
-                    completedButtons === totalAdhkar ?
-                        '🎉 All adhkar completed! Masha Allah' :
-                        'In progress - ' + completedButtons + ' of ' + totalAdhkar + ' adhkar';
-            }
-            
-            completedCountSpans.forEach(span => {
-                span.textContent = completedButtons;
-            });
-            
-            remainingCountSpans.forEach(span => {
-                span.textContent = remainingCount;
-            });
-        }
+        });
     </script>
 </body>
 </html>
