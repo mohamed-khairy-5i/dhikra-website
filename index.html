@@ -68,45 +68,68 @@
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root { 
-            --primary-color: #2E7D32;
-            --secondary-color: #4CAF50;
+            --primary-color: #4CAF50; 
+            --secondary-color: #81c784; 
             --accent-color: #66BB6A;
-            --font-color-light: #1B5E20;
+            --font-color-light: #333; 
             --font-secondary: #2E7D32;
-            --bg-gradient-light: linear-gradient(135deg, #E8F5E8, #C8E6C9);
-            --hero-gradient: linear-gradient(135deg, #2E7D32, #388E3C, #4CAF50);
-            --card-bg-light: #FFFFFF;
+            --bg-gradient-light: linear-gradient(135deg, #e0f7fa, #80deea); 
+            --hero-gradient: linear-gradient(135deg, #4CAF50, #81c784, #66BB6A);
+            --card-bg-light: #ffffff; 
             --card-shadow: 0 8px 32px rgba(46, 125, 50, 0.12);
             --card-hover-shadow: 0 12px 48px rgba(46, 125, 50, 0.2);
-            --font-color-dark: #E0E0E0;
-            --bg-gradient-dark: linear-gradient(135deg, #1B5E20, #2E7D32);
-            --card-bg-dark: #263238;
+            --font-color-dark: #e0e0e0; 
+            --bg-gradient-dark: linear-gradient(135deg, #1a2a44, #2e4a66); 
+            --card-bg-dark: #1f292e;
         }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
         html[lang="ar"] { font-family: 'Cairo', sans-serif; }
         html[lang="en"] { font-family: 'Poppins', sans-serif; }
         html[lang="ar"] .lang-en { display: none; }
         html[lang="en"] .lang-ar { display: none; }
-        body { margin: 0; padding-top: 70px; background: var(--bg-gradient-light); color: var(--font-color-light); text-align: center; transition: all 0.3s ease; }
-        body.dark-mode { background: var(--bg-gradient-dark); color: var(--font-color-dark); }
+        
+        body { 
+            margin: 0; 
+            padding-top: 60px; 
+            background: var(--bg-gradient-light); 
+            color: var(--font-color-light); 
+            text-align: center; 
+            transition: background 0.5s ease, color 0.5s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        body.dark-mode { 
+            background: var(--bg-gradient-dark); 
+            color: var(--font-color-dark); 
+        }
         #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
         h1, h2, h3 { font-family: 'Amiri', serif; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); }
         html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3 { font-family: 'Poppins', sans-serif; font-weight: 700; }
         .navbar { 
-            background: rgba(46, 125, 50, 0.95); 
-            padding: 12px 25px; 
+            background: rgba(0, 0, 0, 0.75); 
+            padding: 10px 15px; 
             position: fixed; 
-            width: calc(100% - 50px); 
+            width: 100%; 
             top: 0; 
             z-index: 1000; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
-            backdrop-filter: blur(10px);
-            border-radius: 0 0 20px 20px;
-            box-shadow: 0 4px 20px rgba(46, 125, 50, 0.3);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         .navbar-brand { display: flex; align-items: center; text-decoration: none; }
-        .navbar-brand img { height: 48px; border-radius: 50%; }
+        .navbar-brand img { 
+            height: 40px; 
+            width: auto;
+        }
         .navbar-brand .site-name { 
             font-family: 'Amiri', serif; 
             font-size: 1.8em; 
@@ -667,7 +690,6 @@
             <div class="nav-links">
                 <a href="index.html" class="active"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
                 <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
-                <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
                 <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
             </div>
             <div class="nav-controls">
@@ -680,7 +702,6 @@
     <div class="mobile-nav-menu">
         <a href="index.html" class="active"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
         <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
-        <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
         <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
     </div>
     <main>
@@ -691,34 +712,102 @@
         </section>
         
         <section class="section-wrapper">
-            <h2 class="section-title"><span class="lang-ar">الأذكار الأساسية اليومية</span><span class="lang-en">Essential Daily Adhkar</span></h2>
-            <p class="section-subtitle"><span class="lang-ar">أهم ثلاثة أذكار يحتاجها كل مسلم في يومه - من الصباح حتى النوم، لحياة مليئة بالبركة والحماية والسكينة.</span><span class="lang-en">The three most important adhkar every Muslim needs in their day - from morning to sleep, for a life full of blessings, protection and tranquility.</span></p>
+            <h2 class="section-title"><span class="lang-ar">الأذكار اليومية الشاملة</span><span class="lang-en">Comprehensive Daily Adhkar</span></h2>
+            <p class="section-subtitle"><span class="lang-ar">مجموعة شاملة من الأذكار الإسلامية الصحيحة من القرآن والسنة النبوية لرفيق المسلم في الحياة اليومية.</span><span class="lang-en">A comprehensive collection of authentic Islamic adhkar from the Quran and Sunnah to accompany the Muslim in daily life.</span></p>
             
             <div class="grid">
                 <div class="feature-card">
                     <i class="fas fa-sun"></i>
                     <h2><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning Adhkar</span></h2>
-                    <p><span class="lang-ar">ابدأ يومك ببركة وحفظ من الله. أذكار الصباح تحصنك طوال النهار وتجلب لك الطمأنينة والسكينة من الفجر حتى الظهر.</span><span class="lang-en">Start your day with blessings and protection from Allah. Morning adhkar protect you throughout the day and bring you peace and tranquility from dawn to noon.</span></p>
+                    <p><span class="lang-ar">ابدأ يومك ببركة وحفظ من الله. أذكار الصباح تحصنك طوال النهار</span><span class="lang-en">Start your day with blessings and protection from Allah. Morning adhkar protect you throughout the day</span></p>
                     <a href="adhkar-sabah.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
                 </div>
                 
                 <div class="feature-card">
                     <i class="fas fa-moon"></i>
                     <h2><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening Adhkar</span></h2>
-                    <p><span class="lang-ar">اختم يومك بسكينة وطمأنينة. أذكار المساء تحفظك خلال الليل وتطهر قلبك من هموم اليوم، من العصر حتى المغرب.</span><span class="lang-en">End your day with peace and tranquility. Evening adhkar protect you through the night and purify your heart from daily worries, from afternoon to sunset.</span></p>
+                    <p><span class="lang-ar">اختم يومك بسكينة وطمأنينة. أذكار المساء تحفظك خلال الليل</span><span class="lang-en">End your day with peace and tranquility. Evening adhkar protect you through the night</span></p>
                     <a href="adhkar-masaa.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
                 </div>
                 
                 <div class="feature-card">
                     <i class="fas fa-bed"></i>
                     <h2><span class="lang-ar">أذكار النوم</span><span class="lang-en">Sleep Adhkar</span></h2>
-                    <p><span class="lang-ar">حصّن نفسك قبل النوم واستودع الله أحلامك. أذكار النوم تحميك من الكوابيس وتجلب لك نوماً هانئاً ومباركاً.</span><span class="lang-en">Protect yourself before sleep and entrust your dreams to Allah. Sleep adhkar protect you from nightmares and bring you peaceful and blessed rest.</span></p>
+                    <p><span class="lang-ar">حصّن نفسك قبل النوم واستودع الله أحلامك</span><span class="lang-en">Protect yourself before sleep and entrust your dreams to Allah</span></p>
                     <a href="adhkar-nawm.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-praying-hands"></i>
+                    <h2><span class="lang-ar">أذكار بعد الصلاة</span><span class="lang-en">Post-Prayer Adhkar</span></h2>
+                    <p><span class="lang-ar">أذكار موثقة يقولها المسلم بعد الانتهاء من الصلاة</span><span class="lang-en">Authentic adhkar recited after completing prayers</span></p>
+                    <a href="adhkar-salah.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-road"></i>
+                    <h2><span class="lang-ar">أذكار السفر</span><span class="lang-en">Travel Adhkar</span></h2>
+                    <p><span class="lang-ar">أدعية وأذكار خاصة بالسفر والانتقال من مكان إلى آخر</span><span class="lang-en">Special supplications and adhkar for travel and moving from place to place</span></p>
+                    <a href="adhkar-travel.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-hands"></i>
+                    <h2><span class="lang-ar">الرقية الشرعية</span><span class="lang-en">Ruqyah</span></h2>
+                    <p><span class="lang-ar">آيات قرآنية وأدعية نبوية للشفاء والحماية من السحر والعين</span><span class="lang-en">Quranic verses and prophetic prayers for healing and protection from magic and evil eye</span></p>
+                    <a href="adhkar-healing.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-tint"></i>
+                    <h2><span class="lang-ar">أذكار الوضوء</span><span class="lang-en">Wudu Adhkar</span></h2>
+                    <p><span class="lang-ar">أدعية وأذكار قبل وبعد الوضوء وفي أثناء الطهارة</span><span class="lang-en">Supplications and adhkar before, during, and after wudu</span></p>
+                    <a href="adhkar-wudu.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-home"></i>
+                    <h2><span class="lang-ar">أذكار المنزل</span><span class="lang-en">Home Adhkar</span></h2>
+                    <p><span class="lang-ar">أذكار دخول وخروج المنزل وأدعية بركة البيت</span><span class="lang-en">Adhkar for entering and leaving home and prayers for home blessings</span></p>
+                    <a href="adhkar-home.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-mosque"></i>
+                    <h2><span class="lang-ar">أذكار المسجد</span><span class="lang-en">Mosque Adhkar</span></h2>
+                    <p><span class="lang-ar">أدعية دخول وخروج المسجد وآدابه في بيوت الله</span><span class="lang-en">Supplications for entering and leaving the mosque and etiquette in Allah's houses</span></p>
+                    <a href="adhkar-mosque.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-utensils"></i>
+                    <h2><span class="lang-ar">أذكار الطعام</span><span class="lang-en">Food Adhkar</span></h2>
+                    <p><span class="lang-ar">أدعية وأذكار قبل وبعد الطعام والشراب</span><span class="lang-en">Supplications and adhkar before and after eating and drinking</span></p>
+                    <a href="adhkar-food.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-sun"></i>
+                    <h2><span class="lang-ar">أذكار الاستيقاظ</span><span class="lang-en">Waking Adhkar</span></h2>
+                    <p><span class="lang-ar">أدعية وأذكار عند الاستيقاظ من النوم</span><span class="lang-en">Supplications and adhkar upon waking from sleep</span></p>
+                    <a href="adhkar-wakeup.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-cloud-rain"></i>
+                    <h2><span class="lang-ar">أذكار الطقس</span><span class="lang-en">Weather Adhkar</span></h2>
+                    <p><span class="lang-ar">أدعية وأذكار عند رؤية المطر والعواصف والرياح</span><span class="lang-en">Supplications and adhkar when seeing rain, storms, and wind</span></p>
+                    <a href="adhkar-weather.html" class="btn"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read Now</span></a>
                 </div>
             </div>
             
-            <div style="text-align: center; margin-top: 30px;">
-                <p style="font-size: 1.1em; color: var(--primary-color); margin-bottom: 20px;"><span class="lang-ar">تريد المزيد من الأذكار؟</span><span class="lang-en">Want more adhkar?</span></p>
+            <div style="text-align: center; margin-top: 40px;">
+                <div class="dhikr-highlight" style="background: rgba(76, 175, 80, 0.1); border-color: #4CAF50;">
+                    <h3 class="dhikr-title"><span class="lang-ar">تسبيح الفاطمي</span><span class="lang-en">Tasbih Fatimi</span></h3>
+                    <p class="dhikr-text"><span class="lang-ar">الله أكبر (34 مرة) + الحمد لله (33 مرة) + سبحان الله (33 مرة)</span><span class="lang-en">Allahu Akbar (34 times) + Alhamdulillah (33 times) + Subhan Allah (33 times)</span></p>
+                    <p style="font-size: 0.9em; margin-top: 15px; opacity: 0.8;"><span class="lang-ar">قال رسول الله ﷺ: "من سبح الله دبر كل صلاة ثلاثاً وثلاثين، وحمد الله ثلاثاً وثلاثين، وكبر الله أربعاً وثلاثين، غُفرت ذنوبه وإن كانت مثل زبد البحر"</span><span class="lang-en">The Prophet (PBUH) said: "Whoever glorifies Allah after every prayer thirty-three times, praises Allah thirty-three times, and magnifies Allah thirty-four times, his sins will be forgiven even if they are like the foam of the sea."</span></p>
+                </div>
+                <p style="font-size: 1.1em; color: var(--primary-color); margin: 30px 0 20px;"><span class="lang-ar">تصفّح جميع الأذكار لتجد المزيد من الفوائد والتوثيق</span><span class="lang-en">Browse all adhkar to find more benefits and documentation</span></p>
                 <a href="adhkar.html" class="btn"><span class="lang-ar">تصفح جميع الأذكار</span><span class="lang-en">Browse All Adhkar</span></a>
             </div>
         </section>
@@ -780,24 +869,13 @@
         </section>
         
         <section class="section-wrapper bg-light">
-            <h2 class="section-title"><span class="lang-ar">مقالات مميزة من مدونتنا الإسلامية</span><span class="lang-en">Featured Articles From Our Islamic Blog</span></h2>
-            <div class="grid">
-                <div class="blog-card">
-                    <img loading="lazy" src="https://thumbs.dreamstime.com/b/opened-mushaf-al-quran-green-background-free-royalty-stock-photo-194246089.jpg" alt="رجل يقرأ القرآن بخشوع - فضل الذكر">
-                    <div class="blog-card-content">
-                        <h3><span class="lang-ar">فضل الذكر وأثره العظيم في حياة المسلم</span><span class="lang-en">The Great Virtue of Dhikr and Its Impact on a Muslim's Life</span></h3>
-                        <p><span class="lang-ar">اكتشف كيف يمكن لذكر الله أن يغير حياتك ويجلب لك السكينة والطمأنينة في عالم مليء بالضغوط.</span><span class="lang-en">Discover how the remembrance of Allah can change your life and bring you peace and tranquility in a world full of pressures.</span></p>
-                        <a href="blog-post-1.html" class="btn"><span class="lang-ar">اقرأ المقال</span><span class="lang-en">Read Article</span></a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img loading="lazy" src="https://img.freepik.com/premium-photo/close-up-holy-book-alquran-green-prayer-rug-islamic-photo-concept_992019-1329.jpg" alt="شخص يدعو في الطبيعة - الطمأنينة في الإسلام">
-                    <div class="blog-card-content">
-                        <h3><span class="lang-ar">كيف تجد الطمأنينة في حياتك من خلال الأذكار اليومية؟</span><span class="lang-en">How to Find Tranquility in Your Life Through Daily Adhkar?</span></h3>
-                        <p><span class="lang-ar">دليل عملي لدمج الأذكار في روتينك اليومي لتحقيق السكينة والقرب من الله عز وجل.</span><span class="lang-en">A practical guide to incorporating adhkar into your daily routine to achieve peace and closeness to Allah.</span></p>
-                        <a href="blog-post-2.html" class="btn"><span class="lang-ar">اقرأ المقال</span><span class="lang-en">Read Article</span></a>
-                    </div>
-                </div>
+            <h2 class="section-title"><span class="lang-ar">دعاء الاستخارة - الخير بيد الله</span><span class="lang-en">Istikhara Prayer - Good is in Allah's Hands</span></h2>
+            <p class="section-subtitle"><span class="lang-ar">قال رسول الله ﷺ: "إذا هم أحدكم بالأمر فليركع ركعتين من غير الفريضة ثم ليقل: اللهم إني أستخيرك بعلمك...". هذا الدعاء العظيم يعينك على اختيار الخير في أمور الدنيا والآخرة.</span><span class="lang-en">The Messenger of Allah (PBUH) said: "When one of you intends to do something, let him pray two rak'ahs other than the obligatory prayer, then say: O Allah, I seek Your guidance through Your knowledge..." This great supplication helps you choose what is best in worldly and religious matters.</span></p>
+            <div class="feature-card" style="max-width: 800px; margin: 0 auto;">
+                <i class="fas fa-hands"></i>
+                <h3><span class="lang-ar">دعاء الاستخارة</span><span class="lang-en">Istikhara Prayer</span></h3>
+                <p><span class="lang-ar">تعلّم كيفية أداء صلاة الاستخارة والدعاء الصحيح مع الترجمة والتوثيق</span><span class="lang-en">Learn how to perform Istikhara prayer and the authentic supplication with translation and documentation</span></p>
+                <a href="adhkar-istikhara.html" class="btn"><span class="lang-ar">تعلّم الآن</span><span class="lang-en">Learn Now</span></a>
             </div>
         </section>
         
