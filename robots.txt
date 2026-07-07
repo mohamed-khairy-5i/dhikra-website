@@ -1,7 +1,7 @@
 # =============================================
 # ROBOTS.TXT FOR DHIKRA WEBSITE
 # =============================================
-# Last Updated: 2025-08-30
+# Last Updated: 2026-07-07
 # Website: dhikra.netlify.app
 # Contact: mohamedkhairy0887@gmail.com
 
@@ -95,7 +95,35 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
-# Block unwanted bots
+# AI assistants & answer engines — explicitly welcomed for discovery
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Block unwanted SEO scraper bots
 User-agent: SemrushBot
 Disallow: /
 

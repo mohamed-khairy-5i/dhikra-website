@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1b5e4a">
+<title>المفضلة | ذِكْرَى — أذكارك وأدعيتك المحفوظة</title>
+<meta name="description" content="صفحة المفضلة في ذِكْرَى: كل الأذكار والأدعية التي حفظتها في مكان واحد لتصل إليها بسرعة. تُحفظ على جهازك وتعمل بدون إنترنت.">
+<meta name="robots" content="noindex,follow">
+<meta name="author" content="محمد خيري">
+<link rel="canonical" href="https://dhikra.netlify.app/favourites.html">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.fav-empty{text-align:center;padding:60px 20px;max-width:460px;margin:0 auto}
+.fav-empty .ico{font-size:3.2rem;color:var(--gold);opacity:.7;margin-bottom:16px}
+.fav-empty h2{font-family:var(--font-ar-display);color:var(--ink);margin:0 0 8px}
+body.dark-mode .fav-empty h2{color:var(--ivory)}
+.fav-empty p{color:var(--muted);margin:0 0 22px}
+</style>
+</head>
+<body data-title-ar="المفضلة | ذِكْرَى" data-title-en="Favourites | Dhikra">
+<div class="page-aura"></div>
+<div class="read-progress"></div>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand" aria-label="ذِكْرَى">
+    <span class="brand-mark"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M40 16a16 16 0 1 0 0 32 13 13 0 1 1 0-32z" fill="#f7f4ec"/><circle cx="45" cy="32" r="4.5" fill="#c6a15b"/></svg></span>
+    <span><span class="site-name">ذِكْرَى</span><span class="site-tag">DHIKRA</span></span>
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+      <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+      <a href="tasbih.html"><span class="lang-ar">المسبحة</span><span class="lang-en">Tasbih</span></a>
+      <a href="tools.html"><span class="lang-ar">الأدوات</span><span class="lang-en">Tools</span></a>
+      <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+      <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
+    </div>
+    <button class="lang-toggle-btn" data-lang-toggle title="Language"></button>
+    <button class="icon-btn" data-theme-toggle aria-label="Toggle theme"><i class="fas fa-moon" data-theme-icon></i></button>
+    <button class="icon-btn nav-toggle" data-nav-toggle aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+<div class="mobile-nav"><div class="inner">
+  <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+  <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+  <a href="tasbih.html"><span class="lang-ar">المسبحة الرقمية</span><span class="lang-en">Digital Tasbih</span></a>
+  <a href="tools.html"><span class="lang-ar">الأدوات</span><span class="lang-en">Tools</span></a>
+  <a href="favourites.html" class="active"><span class="lang-ar">المفضلة</span><span class="lang-en">Favourites</span></a>
+  <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+  <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
+</div></div>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+        <i class="fas fa-chevron-left"></i>
+        <span><span class="lang-ar">المفضلة</span><span class="lang-en">Favourites</span></span>
+      </nav>
+      <span class="page-kicker"><i class="fas fa-heart"></i><span class="lang-ar">أذكارك القريبة من قلبك</span><span class="lang-en">Your dearest adhkar</span></span>
+      <h1 class="page-title"><span class="lang-ar">المفضلة</span><span class="lang-en">Favourites</span></h1>
+      <p class="page-sub"><span class="lang-ar">كل ما حفظته من أذكار وأدعية — محفوظ على جهازك ويعمل بدون إنترنت.</span><span class="lang-en">Everything you saved — stored on your device and available offline.</span></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div data-fav-list class="dhikr-list"></div>
+      <div data-fav-empty class="fav-empty" style="display:none">
+        <div class="ico"><i class="far fa-heart"></i></div>
+        <h2><span class="lang-ar">لا توجد مفضلة بعد</span><span class="lang-en">No favourites yet</span></h2>
+        <p><span class="lang-ar">اضغط على أيقونة القلب بجانب أي ذِكر لتحفظه هنا وتصل إليه بسرعة.</span><span class="lang-en">Tap the heart icon next to any dhikr to save it here for quick access.</span></p>
+        <a href="adhkar.html" class="btn btn-primary"><i class="fas fa-layer-group"></i><span class="lang-ar">تصفّح الأذكار</span><span class="lang-en">Browse adhkar</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="site-name">ذِكْرَى</div>
+        <p><span class="lang-ar">حصنك اليومي من الأذكار والأدعية الصحيحة من القرآن والسنّة. مجاني، بدون إعلانات، ويعمل بدون إنترنت.</span><span class="lang-en">Your daily fortress of authentic adhkar and duas from the Qur'an and Sunnah. Free, ad-free, works offline.</span></p>
+        <div class="footer-social">
+          <a href="contact.html" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="tasbih.html" aria-label="Tasbih"><i class="fas fa-circle-notch"></i></a>
+          <a href="tools.html" aria-label="Tools"><i class="fas fa-toolbox"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></h4>
+        <a href="adhkar-sabah.html"><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning</span></a>
+        <a href="adhkar-masaa.html"><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening</span></a>
+        <a href="adhkar-nawm.html"><span class="lang-ar">أذكار النوم</span><span class="lang-en">Sleep</span></a>
+        <a href="adhkar.html"><span class="lang-ar">كل الفئات</span><span class="lang-en">All categories</span></a>
+      </div>
+      <div class="footer-col">
+        <h4><span class="lang-ar">أدوات</span><span class="lang-en">Tools</span></h4>
+        <a href="tasbih.html"><span class="lang-ar">المسبحة الرقمية</span><span class="lang-en">Digital Tasbih</span></a>
+        <a href="tools.html"><span class="lang-ar">القبلة ومواقيت الصلاة</span><span class="lang-en">Qibla & Prayer times</span></a>
+        <a href="favourites.html"><span class="lang-ar">المفضلة</span><span class="lang-en">Favourites</span></a>
+        <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><span class="lang-ar">جميع الحقوق محفوظة © 2025 · موقع ذِكْرَى</span><span class="lang-en">All rights reserved © 2025 · Dhikra</span></p>
+      <p><span class="lang-ar">تصميم وبرمجة: محمد خيري</span><span class="lang-en">Designed & built by Mohamed Khairy</span></p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/assistant.js" defer></script>
+<script>if ('serviceWorker' in navigator) { window.addEventListener('load', ()=> navigator.serviceWorker.register('sw.js').catch(()=>{})); }</script>
+</body>
+</html>

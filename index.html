@@ -1,175 +1,401 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    
-    <title>موقع ذِكْرَى - أذكار يومية، أدعية، ومقالات إسلامية موثوقة</title>
-    <meta name="description" content="موقع ذِكْرَى هو حصنك اليومي لتلاوة أذكار الصباح والمساء، وقراءة مقالات إسلامية ملهمة. ابدأ يومك ببركة وطمأنينة من خلال مصدرك الموثوق من القرآن والسنة.">
-    <meta name="keywords" content="أذكار, اذكار الصباح, اذكار المساء, دعاء, إسلام, حصن المسلم, سيد الاستغفار, فضل الذكر, مدونة إسلامية, القرآن والسنة, أدعية يومية">
-    <link rel="icon" href="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1b5e4a">
+<title>ذِكْرَى | أذكار الصباح والمساء وأدعية صحيحة مع مسبحة رقمية</title>
+<meta name="description" content="ذِكْرَى حصنك اليومي: أذكار الصباح والمساء، أذكار النوم والاستيقاظ، أدعية صحيحة من القرآن والسنة، مسبحة رقمية تفاعلية، تتبّع لتقدّمك، ومدونة إسلامية ملهمة. مجاني، بدون إعلانات، ويعمل بدون إنترنت.">
+<meta name="keywords" content="أذكار, أذكار الصباح, أذكار المساء, أذكار النوم, حصن المسلم, دعاء, مسبحة رقمية, تسبيح, أدعية صحيحة, القرآن والسنة, أذكار المسلم">
+<meta name="author" content="محمد خيري">
+<link rel="canonical" href="https://dhikra.netlify.app/index.html">
 
-    <style>
-        :root { --primary-color: #4CAF50; --secondary-color: #81c784; --font-color-light: #333; --bg-gradient-light: linear-gradient(135deg, #e0f7fa, #80deea); --card-bg-light: #ffffff; --font-color-dark: #e0e0e0; --bg-gradient-dark: linear-gradient(135deg, #1a2a44, #2e4a66); --card-bg-dark: #1f292e; }
-        html[lang="ar"] { font-family: 'Cairo', sans-serif; }
-        html[lang="en"] { font-family: 'Poppins', sans-serif; }
-        html[lang="ar"] .lang-en { display: none; }
-        html[lang="en"] .lang-ar { display: none; }
-        body { margin: 0; padding-top: 70px; background: var(--bg-gradient-light); color: var(--font-color-light); text-align: center; transition: background 0.5s ease, color 0.5s ease; }
-        body.dark-mode { background: var(--bg-gradient-dark); color: var(--font-color-dark); }
-        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
-        h1, h2, h3 { font-family: 'Amiri', serif; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); }
-        html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3 { font-family: 'Poppins', sans-serif; font-weight: 700; }
-        .navbar { background: rgba(0, 0, 0, 0.75); padding: 10px 20px; position: fixed; width: calc(100% - 40px); top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(5px); }
-        .navbar-brand { display: flex; align-items: center; text-decoration: none; }
-        .navbar-brand img { height: 45px; }
-        .navbar-brand .site-name { font-family: 'Amiri', serif; font-size: 1.6em; color: #fff; }
-        html[dir="rtl"] .navbar-brand .site-name { margin-right: 15px; }
-        html[dir="ltr"] .navbar-brand .site-name { margin-left: 15px; }
-        .navbar-right { display: flex; align-items: center; gap: 15px; }
-        .nav-links { display: none; }
-        .nav-controls { display: flex; align-items: center; gap: 10px; }
-        .lang-toggle-btn { background-color: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.5); color: #fff; padding: 6px 12px; border-radius: 20px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.8em; }
-        #dark-mode-toggle { background: none; border: none; color: #fff; font-size: 1.4em; cursor: pointer; }
-        .nav-toggle { display: block; background: none; border: none; color: #fff; font-size: 1.8em; cursor: pointer; }
-        @media (min-width: 992px) { .nav-toggle { display: none; } .nav-links { display: flex; align-items: center; gap: 25px; margin: 0 20px; } .nav-links a { color: #fff; font-size: 1.1em; text-decoration: none; transition: color 0.3s; } .nav-links a:hover, .nav-links a.active { color: var(--primary-color); } }
-        .mobile-nav-menu { display: none; position: fixed; top: 70px; left: 0; width: 100%; background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(10px); flex-direction: column; padding: 10px 0; border-top: 1px solid rgba(255,255,255,0.2); }
-        .mobile-nav-menu.active { display: flex; }
-        .mobile-nav-menu a { color: #fff; text-decoration: none; font-size: 1.2em; padding: 15px 0; width: 100%; }
-        .mobile-nav-menu a:hover { background-color: rgba(255,255,255,0.1); color: var(--primary-color); }
-        .hero { padding: 80px 20px; color: #fff; }
-        .hero h1 { font-size: clamp(2.5em, 6vw, 3.2em); margin: 0; }
-        .hero p { font-size: clamp(1.1em, 3vw, 1.4em); margin: 20px 0 30px; }
-        .btn { display: inline-block; padding: 15px 35px; background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); color: #fff !important; text-decoration: none; border-radius: 30px; font-size: 1.2em; transition: transform 0.3s, box-shadow 0.3s; border: none; }
-        .btn:hover { transform: scale(1.05); box-shadow: 0 5px 20px rgba(76, 175, 80, 0.4); }
-        .section-wrapper { padding: 60px 20px; }
-        .section-wrapper.bg-light { background: rgba(255,255,255,0.8); }
-        body.dark-mode .section-wrapper.bg-light { background: rgba(0,0,0,0.3); }
-        .section-title { font-size: clamp(2em, 5vw, 2.5em); margin-bottom: 10px; color: var(--font-color-light); text-shadow: none; }
-        body.dark-mode .section-title { color: var(--font-color-dark); }
-        .section-subtitle { font-size: 1.1em; color: #555; margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.8; }
-        body.dark-mode .section-subtitle { color: #ccc; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .feature-card, .blog-card { background: var(--card-bg-light); border-top: 4px solid var(--primary-color); border-radius: 15px; padding: 25px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); transition: transform 0.3s, box-shadow 0.3s; color: var(--font-color-light); }
-        body.dark-mode .feature-card, body.dark-mode .blog-card { background: var(--card-bg-dark); color: var(--font-color-dark); }
-        .feature-card:hover, .blog-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); }
-        .feature-card i { font-size: 2.5em; color: var(--primary-color); margin-bottom: 15px; }
-        .blog-card { padding: 0; overflow: hidden; }
-        .blog-card img { width: 100%; height: 200px; object-fit: cover; }
-        .blog-card-content { padding: 25px; }
-        .dhikr-highlight { background: rgba(255, 255, 255, 0.9); border-radius: 15px; padding: 25px; max-width: 800px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        body.dark-mode .dhikr-highlight { background: var(--card-bg-dark); }
-        .dhikr-highlight .dhikr-title { font-size: 1.8em; color: var(--primary-color); }
-        .dhikr-highlight .dhikr-text { font-family: 'Amiri', serif; font-size: 1.5em; line-height: 2; }
-        .cta-section { padding: 60px 20px; background-color: var(--primary-color); color: #fff; }
-        .cta-section h2 { font-size: 2.2em; margin: 0 0 20px 0; }
-        footer { padding: 30px; color: #fff; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
-        body.dark-mode footer { color: var(--font-color-dark); }
-    </style>
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ذِكْرَى">
+<meta property="og:title" content="ذِكْرَى | حصنك اليومي من الأذكار والأدعية الصحيحة">
+<meta property="og:description" content="أذكار الصباح والمساء وأدعية صحيحة مع مسبحة رقمية تفاعلية وتتبّع لتقدّمك. مجاني وبدون إعلانات.">
+<meta property="og:image" content="https://dhikra.netlify.app/assets/img/og-image.jpg">
+<meta property="og:url" content="https://dhikra.netlify.app/">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ذِكْرَى",
+  "url": "https://dhikra.netlify.app/",
+  "inLanguage": "ar",
+  "description": "أذكار الصباح والمساء وأدعية صحيحة من القرآن والسنة مع مسبحة رقمية تفاعلية.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://dhikra.netlify.app/adhkar.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<style>
+/* ---- Home-only styles ---- */
+.hero {
+  position: relative; min-height: min(88vh, 760px);
+  display: grid; place-items: center; text-align: center; overflow: hidden;
+  padding: 60px 0;
+}
+.hero-bg { position: absolute; inset: 0; z-index: -1; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+.hero-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(8,18,14,0.55), rgba(8,18,14,0.78));
+}
+.hero-inner { max-width: 860px; padding-inline: 20px; }
+.hero .verse {
+  font-family: 'Amiri', serif; color: #fff; font-weight: 700;
+  font-size: clamp(2rem, 1.2rem + 4vw, 4rem); line-height: 1.5; margin-bottom: 20px;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+}
+.hero .verse-src { color: var(--gold-soft); font-family: 'Sora', sans-serif; font-size: 0.9rem; letter-spacing: 0.1em; display: block; margin-bottom: 26px; }
+.hero p.lead { color: rgba(255,255,255,0.9); font-size: var(--step-1); max-width: 620px; margin: 0 auto 34px; line-height: 1.9; }
+.hero .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.hero-pill {
+  display: inline-flex; align-items: center; gap: 9px; margin-bottom: 26px;
+  background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+  color: #fff; padding: 9px 18px; border-radius: 999px; font-size: 0.85rem; backdrop-filter: blur(6px);
+}
+.hero-pill i { color: var(--gold-soft); }
+.scroll-cue {
+  position: absolute; bottom: 22px; inset-inline: 0; margin-inline: auto; width: max-content;
+  color: rgba(255,255,255,0.7); font-size: 1.3rem; animation: bob 2.4s var(--ease-out) infinite;
+}
+@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+@media (prefers-reduced-motion: reduce) { .scroll-cue { animation: none; } }
+
+/* live time-aware suggestion */
+.smart-strip {
+  margin-top: -46px; position: relative; z-index: 5;
+}
+.smart-card {
+  background: var(--surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
+  border: 1px solid var(--line); padding: 26px 30px; display: flex; align-items: center; gap: 22px; flex-wrap: wrap;
+  justify-content: space-between;
+}
+.smart-card .left { display: flex; align-items: center; gap: 18px; }
+.smart-card .clock-icon {
+  width: 58px; height: 58px; border-radius: 16px; display: grid; place-items: center; font-size: 1.5rem;
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold)); color: var(--ink);
+}
+.smart-card h3 { font-size: var(--step-1); margin-bottom: 4px; }
+.smart-card p { color: var(--text-muted); font-size: 0.92rem; }
+
+/* stat band */
+.stat-band { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 18px; }
+.stat { text-align: center; padding: 22px; }
+.stat .num { font-family: 'Sora', sans-serif; font-weight: 700; font-size: var(--step-3); color: var(--emerald); line-height: 1; }
+.stat .lbl { color: var(--text-muted); margin-top: 8px; font-size: 0.9rem; }
+
+/* signature: mini tasbih preview */
+.tasbih-demo {
+  background: linear-gradient(150deg, var(--ink-2), var(--ink)); color: #fff;
+  border-radius: var(--radius-lg); padding: clamp(30px, 5vw, 56px); position: relative; overflow: hidden;
+}
+.tasbih-demo::before {
+  content: ''; position: absolute; inset-inline-end: -80px; top: -80px; width: 260px; height: 260px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(198,161,91,0.25), transparent 70%);
+}
+.tasbih-grid { display: grid; gap: 34px; align-items: center; grid-template-columns: 1fr; }
+@media (min-width: 860px) { .tasbih-grid { grid-template-columns: 1fr 320px; } }
+.tasbih-demo h2 { color: #fff; font-size: var(--step-3); margin-bottom: 14px; }
+.tasbih-demo p { color: rgba(255,255,255,0.75); margin-bottom: 22px; max-width: 480px; }
+.tasbih-widget { text-align: center; }
+.tasbih-btn {
+  width: 200px; height: 200px; border-radius: 50%; border: none; cursor: pointer; margin-inline: auto;
+  background: radial-gradient(circle at 35% 30%, var(--emerald-soft), var(--emerald));
+  color: #fff; font-family: 'Sora', sans-serif; box-shadow: 0 20px 50px rgba(0,0,0,0.4), inset 0 2px 12px rgba(255,255,255,0.2);
+  display: grid; place-items: center; transition: transform 0.12s var(--ease-spring);
+  position: relative;
+}
+.tasbih-btn:active { transform: scale(0.94); }
+.tasbih-btn .count { font-size: 3.4rem; font-weight: 700; line-height: 1; }
+.tasbih-btn .word { font-family: 'Amiri', serif; font-size: 1.2rem; margin-top: 6px; color: var(--gold-soft); }
+.tasbih-hint { color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 16px; }
+
+/* feature list */
+.feat { display: flex; gap: 16px; align-items: flex-start; }
+.feat .fi { width: 46px; height: 46px; flex:0 0 46px; border-radius: 13px; display: grid; place-items: center; background: var(--emerald-tint); color: var(--emerald); font-size: 1.1rem; }
+.feat h4 { font-size: 1.1rem; margin-bottom: 4px; }
+.feat p { color: var(--text-muted); font-size: 0.92rem; }
+
+/* verse of the day */
+.dua-feature {
+  background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--line);
+  box-shadow: var(--shadow-md); padding: clamp(28px, 5vw, 52px); text-align: center; position: relative; overflow: hidden;
+}
+.dua-feature .quote-mark { font-family: 'Amiri', serif; font-size: 5rem; color: var(--gold); opacity: 0.25; line-height: 0.6; }
+.dua-feature .dua-text { font-family: 'Amiri', serif; font-size: clamp(1.35rem, 1rem + 1.7vw, 2rem); line-height: 2.1; color: var(--ink); margin: 10px auto 20px; max-width: 760px; }
+.dua-feature .dua-src { color: var(--emerald); font-weight: 600; }
+
+/* final CTA */
+.final-cta { background: linear-gradient(135deg, var(--emerald), var(--ink-2)); color: #fff; border-radius: var(--radius-lg); text-align: center; padding: clamp(40px, 7vw, 80px) 24px; position: relative; overflow: hidden; }
+.final-cta h2 { color: #fff; font-size: var(--step-3); margin-bottom: 14px; }
+.final-cta p { color: rgba(255,255,255,0.82); max-width: 520px; margin: 0 auto 28px; }
+</style>
 </head>
-<body
-    data-title-ar="موقع ذِكْرَى - الرئيسية"
-    data-title-en="Dhikra Website - Home"
->
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVWLF8DK"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<body data-title-ar="ذِكْرَى | أذكار وأدعية صحيحة" data-title-en="Dhikra | Authentic Adhkar & Duas">
+<div class="page-aura"></div>
+<div class="read-progress"></div>
 
-    <div id="particles-js"></div>
-    <nav class="navbar">
-        <a href="index.html" class="navbar-brand"><img src="https://www.dropbox.com/scl/fi/zbkvv3ee5tlp9teqitygb/20250808_230743_.png?rlkey=ofgj5aasf6kuechp5e2ri4vh4&st=8hrmp1p8&dl=1" alt="Dhikra Logo"><span class="site-name"><span class="lang-ar">ذِكْرَى</span><span class="lang-en">Dhikra</span></span></a>
-        <div class="navbar-right">
-            <div class="nav-links">
-                <a href="index.html" class="active"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
-                <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
-                <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
-                <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
-            </div>
-            <div class="nav-controls">
-                <button id="lang-toggle" class="lang-toggle-btn" title="Change Language"></button>
-                <button id="dark-mode-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
-        </div>
-    </nav>
-    <div class="mobile-nav-menu">
-        <a href="index.html" class="active"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
-        <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
-        <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
-        <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
+<!-- ===== Navbar ===== -->
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand" aria-label="ذِكْرَى">
+    <span class="brand-mark"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M40 16a16 16 0 1 0 0 32 13 13 0 1 1 0-32z" fill="#f7f4ec"/><circle cx="45" cy="32" r="4.5" fill="#c6a15b"/></svg></span>
+    <span><span class="site-name">ذِكْرَى</span><span class="site-tag">DHIKRA</span></span>
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="index.html" class="active"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+      <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+      <a href="tasbih.html"><span class="lang-ar">المسبحة</span><span class="lang-en">Tasbih</span></a>
+      <a href="tools.html"><span class="lang-ar">الأدوات</span><span class="lang-en">Tools</span></a>
+      <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+      <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
     </div>
-    <main>
-        <section class="hero">
-            <h1><span class="lang-ar">أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ</span><span class="lang-en">Verily, in the remembrance of Allah do hearts find rest.</span></h1>
-            <p><span class="lang-ar">حصنك اليومي للسكينة والطمأنينة في عالم سريع الخطى</span><span class="lang-en">Your daily fortress of peace and tranquility in a fast-paced world</span></p>
-            <a href="adhkar.html" class="btn"><span class="lang-ar">ابدأ رحلتك مع الذكر</span><span class="lang-en">Start Your Journey with Dhikr</span></a>
-        </section>
+    <button class="lang-toggle-btn" data-lang-toggle title="Language"></button>
+    <button class="icon-btn" data-theme-toggle aria-label="Toggle theme"><i class="fas fa-moon" data-theme-icon></i></button>
+    <button class="icon-btn nav-toggle" data-nav-toggle aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+<div class="mobile-nav"><div class="inner">
+  <a href="index.html" class="active"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+  <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+  <a href="tasbih.html"><span class="lang-ar">المسبحة الرقمية</span><span class="lang-en">Digital Tasbih</span></a>
+  <a href="tools.html"><span class="lang-ar">الأدوات</span><span class="lang-en">Tools</span></a>
+  <a href="favourites.html"><span class="lang-ar">المفضلة</span><span class="lang-en">Favourites</span></a>
+  <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+  <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
+</div></div>
 
-        <section class="section-wrapper bg-light">
-            <h2 class="section-title"><span class="lang-ar">بوابتك إلى الطمأنينة اليومية</span><span class="lang-en">Your Gateway to Daily Tranquility</span></h2>
-            <p class="section-subtitle"><span class="lang-ar">موقع "ذِكْرَى" هو مصدرك الموثوق للأذكار والأدعية الصحيحة من القرآن والسنة النبوية. نحن نؤمن بأن ذكر الله هو مفتاح السعادة والسكينة، وهدفنا هو أن نكون رفيقك اليومي في هذه الرحلة الإيمانية، من خلال تقديم محتوى دقيق وتصميم يريح العين والنفس.</span><span class="lang-en">"Dhikra" is your trusted source for authentic remembrances and supplications from the Qur'an and Sunnah. We believe that the remembrance of Allah is the key to happiness and peace, and our goal is to be your daily companion on this spiritual journey by providing accurate content and a soothing design.</span></p>
-            <div class="grid">
-                <div class="feature-card"><i class="fas fa-sun"></i><h3><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning Adhkar</span></h3><p><span class="lang-ar">ابدأ يومك بحصن منيع يحفظك ويبارك لك في يومك.</span><span class="lang-en">Start your day with an impenetrable fortress that protects you.</span></p><a href="adhkar-sabah.html" class="btn"><span class="lang-ar">ابدأ القراءة</span><span class="lang-en">Start Reading</span></a></div>
-                <div class="feature-card"><i class="fas fa-moon"></i><h3><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening Adhkar</span></h3><p><span class="lang-ar">اختم نهارك بسكينة وطمأنينة وحماية من كل سوء.</span><span class="lang-en">End your day with peace, tranquility, and protection from all harm.</span></p><a href="adhkar-masaa.html" class="btn"><span class="lang-ar">ابدأ القراءة</span><span class="lang-en">Start Reading</span></a></div>
-                <div class="feature-card"><i class="fas fa-feather-alt"></i><h3><span class="lang-ar">المدونة الإسلامية</span><span class="lang-en">Islamic Blog</span></h3><p><span class="lang-ar">مقالات إيمانية لزيادة قربك من الله وفهم دينك بشكل أعمق.</span><span class="lang-en">Spiritual articles to increase your closeness to Allah.</span></p><a href="blog.html" class="btn"><span class="lang-ar">تصفح المقالات</span><span class="lang-en">Browse Articles</span></a></div>
-            </div>
-        </section>
-        
-        <section class="section-wrapper">
-            <h2 class="section-title"><span class="lang-ar">كنز اليوم: سيد الاستغفار</span><span class="lang-en">Treasure of the Day: Sayyid al-Istighfar</span></h2>
-            <p class="section-subtitle"><span class="lang-ar">قال رسول الله ﷺ: "سَيِّدُ الاِسْتِغْفَارِ أَنْ تَقُولَ...". من قاله موقنا به حين يمسي فمات من ليلته دخل الجنة، وكذلك إذا أصبح.</span><span class="lang-en">The Messenger of Allah (PBUH) said: "The master of seeking forgiveness is to say...". Whoever says it with certainty in the evening and dies that night will enter Paradise, and likewise in the morning.</span></p>
-            <div class="dhikr-highlight">
-                <p class="dhikr-text"><span class="lang-ar">"اللَّهُمَّ أَنْتَ رَبِّ لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ".</span><span class="lang-en">"O Allah, You are my Lord, none has the right to be worshiped except You. You created me and I am Your servant, and I abide by Your covenant and promise as best I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favor upon me and I acknowledge my sin, so forgive me, for none forgives sins except You."</span></p>
-            </div>
-        </section>
+<main>
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="assets/img/hero.webp" alt="" fetchpriority="high" width="1600" height="900">
+    </div>
+    <div class="hero-inner">
+      <span class="hero-pill"><i class="fas fa-shield-heart"></i><span class="lang-ar">مجاني · بدون إعلانات · يعمل بدون إنترنت</span><span class="lang-en">Free · Ad-free · Works offline</span></span>
+      <p class="verse">
+        <span class="lang-ar">أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ</span>
+        <span class="lang-en">Verily, in the remembrance of Allah do hearts find rest.</span>
+        <span class="verse-src"><span class="lang-ar">الرعد ٢٨</span><span class="lang-en">Ar-Ra'd 28</span></span>
+      </p>
+      <p class="lead"><span class="lang-ar">حصنك اليومي للسكينة — أذكار صحيحة مُوثّقة، مسبحة رقمية تُحصي لك، وتتبّع يرافقك خطوة بخطوة.</span><span class="lang-en">Your daily fortress of tranquility — authentic sourced adhkar, a digital tasbih that counts for you, and progress that walks with you.</span></p>
+      <div class="cta-row">
+        <a href="adhkar.html" class="btn btn-gold"><i class="fas fa-book-open"></i><span class="lang-ar">ابدأ أذكارك</span><span class="lang-en">Start your adhkar</span></a>
+        <a href="tasbih.html" class="btn btn-ghost"><i class="fas fa-circle-notch"></i><span class="lang-ar">المسبحة الرقمية</span><span class="lang-en">Digital Tasbih</span></a>
+      </div>
+    </div>
+    <a href="#smart" class="scroll-cue" aria-label="scroll"><i class="fas fa-chevron-down"></i></a>
+  </section>
 
-        <section class="section-wrapper bg-light">
-            <h2 class="section-title"><span class="lang-ar">مقالات مميزة من مدونتنا</span><span class="lang-en">Featured Articles From Our Blog</span></h2>
-            <div class="grid">
-                <div class="blog-card">
-                    <img src="https://www.dropbox.com/scl/fi/8l6o1okm93mi7d4g5jltg/IMG-20250809-WA0001.jpg?rlkey=daf1x4syvmdl4rohdopy64m6y&st=s041xs3s&dl=1" alt="رجل يقرأ القرآن بخشوع - فضل الذكر">
-                    <div class="blog-card-content"><h3><span class="lang-ar">فضل الذكر وأثره العظيم</span><span class="lang-en">The Great Virtue of Dhikr</span></h3><a href="blog-post-1.html" class="btn"><span class="lang-ar">اقرأ المقال</span><span class="lang-en">Read Article</span></a></div>
-                </div>
-                <div class="blog-card">
-                    <img src="https://www.dropbox.com/scl/fi/1csshgsgozajpyukiabkm/IMG-20250809-WA0002.jpg?rlkey=t8w44saqvc8gy0opjs490ijdz&st=zc36y3kj&dl=1" alt="شخص يدعو في الطبيعة - الطمأنينة في الإسلام">
-                    <div class="blog-card-content"><h3><span class="lang-ar">كيف تجد الطمأنينة في حياتك؟</span><span class="lang-en">How to Find Tranquility in Your Life?</span></h3><a href="blog-post-2.html" class="btn"><span class="lang-ar">اقرأ المقال</span><span class="lang-en">Read Article</span></a></div>
-                </div>
-            </div>
-        </section>
+  <!-- ===== Smart time-aware strip ===== -->
+  <div class="container smart-strip" id="smart">
+    <div class="smart-card" data-reveal>
+      <div class="left">
+        <div class="clock-icon"><i class="fas fa-clock" id="smart-icon"></i></div>
+        <div>
+          <h3 id="smart-title"><span class="lang-ar">أذكار الصباح</span></h3>
+          <p id="smart-sub"><span class="lang-ar">حسب وقتك الآن، هذه أنسب الأذكار لتبدأ بها.</span><span class="lang-en">Based on your time now, this is the best set to begin with.</span></p>
+        </div>
+      </div>
+      <a id="smart-link" href="adhkar-sabah.html" class="btn btn-primary btn-sm"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read now</span></a>
+    </div>
+  </div>
 
-        <section class="cta-section">
-            <h2><span class="lang-ar">هل أنت مستعد لتبدأ رحلة السكينة؟</span><span class="lang-en">Are You Ready to Begin the Journey of Peace?</span></h2>
-            <a href="adhkar.html" class="btn"><span class="lang-ar">تصفح جميع الأذكار</span><span class="lang-en">Browse All Adhkar</span></a>
-        </section>
-    </main>
-    <footer>
-        <p><span class="lang-ar">جميع الحقوق محفوظة © 2024 - موقع ذِكْرَى</span><span class="lang-en">Copyright © 2024 - Dhikra Website</span></p>
-        <p><span class="lang-ar">برمجة وتصميم: محمد خيري | للتواصل: mohamedkhairy0887@gmail.com</span><span class="lang-en">Developed by: Mohamed Khairy | Contact: mohamedkhairy0887@gmail.com</span></p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        const particlesConfig = { particles: { number: { value: 60 }, color: { value: "#ffffff" }, shape: { type: "circle" }, opacity: { value: 0.4, random: true }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.3, width: 1 }, move: { enable: true, speed: 2, direction: "none", out_mode: "out" } }, interactivity: { events: { onhover: { enable: true, mode: "repulse" } } }, retina_detect: true };
-        document.addEventListener('DOMContentLoaded', () => {
-            const htmlEl = document.documentElement; const darkModeToggle = document.getElementById('dark-mode-toggle'); const langToggleBtn = document.getElementById('lang-toggle'); const navToggle = document.querySelector('.nav-toggle'); const mobileNavMenu = document.querySelector('.mobile-nav-menu');
-            const applyDarkMode = (isDark) => {
-                const icon = darkModeToggle.querySelector('i');
-                if (isDark) { document.body.classList.add('dark-mode'); if(icon) icon.classList.replace('fa-moon', 'fa-sun'); particlesConfig.particles.color.value = ["#ffffff", "#81c784", "#4caf50"]; } 
-                else { document.body.classList.remove('dark-mode'); if(icon) icon.classList.replace('fa-sun', 'fa-moon'); particlesConfig.particles.color.value = "#ffffff"; }
-                if (window.pJSDom && window.pJSDom[0]) { window.pJSDom[0].pJS.fn.particlesRefresh(); }
-            };
-            const setLanguage = (lang) => { htmlEl.lang = lang; htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr'; langToggleBtn.textContent = lang === 'ar' ? 'EN' : 'AR'; document.title = lang === 'ar' ? document.body.getAttribute('data-title-ar') : document.body.getAttribute('data-title-en'); localStorage.setItem('language', lang); };
-            darkModeToggle.addEventListener('click', () => { const isDarkMode = !document.body.classList.contains('dark-mode'); applyDarkMode(isDarkMode); localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); });
-            langToggleBtn.addEventListener('click', () => { const newLang = htmlEl.lang === 'ar' ? 'en' : 'ar'; setLanguage(newLang); });
-            navToggle.addEventListener('click', () => { mobileNavMenu.classList.toggle('active'); });
-            const isInitiallyDark = localStorage.getItem('theme') === 'dark';
-            if (isInitiallyDark) { particlesConfig.particles.color.value = ["#ffffff", "#81c784", "#4caf50"]; }
-            particlesJS('particles-js', particlesConfig);
-            applyDarkMode(isInitiallyDark); setLanguage(localStorage.getItem('language') || 'ar'); 
-        });
-    </script>
+  <!-- ===== Narrative: the problem ===== -->
+  <section class="section">
+    <div class="container center">
+      <span class="eyebrow" data-reveal><i class="fas fa-heart-pulse"></i><span class="lang-ar">لماذا ذِكْرَى</span><span class="lang-en">Why Dhikra</span></span>
+      <h2 class="section-title" data-reveal><span class="lang-ar">القلب المشغول ينسى أن يذكر</span><span class="lang-en">A busy heart forgets to remember</span></h2>
+      <p class="section-sub" data-reveal><span class="lang-ar">في زحمة اليوم نُضيّع الطمأنينة التي وعدنا الله بها في الذكر. صمّمنا ذِكْرَى ليعيدك إلى حصنك: أذكار صحيحة موثّقة المصدر، بلا تشتيت، بلا إعلانات، وبأدوات تجعل المداومة سهلة وممتعة.</span><span class="lang-en">In the rush of the day we lose the peace Allah promised in remembrance. We built Dhikra to bring you back to your fortress: authentic, sourced adhkar — no clutter, no ads, and tools that make consistency easy and rewarding.</span></p>
+      <div class="grid grid-3">
+        <div class="feat" data-reveal><span class="fi"><i class="fas fa-shield-halved"></i></span><div><h4><span class="lang-ar">مصادر موثّقة</span><span class="lang-en">Verified sources</span></h4><p><span class="lang-ar">كل ذكر مقرون بفضله ومصدره من القرآن والسنّة الصحيحة.</span><span class="lang-en">Every dhikr paired with its virtue and authentic source.</span></p></div></div>
+        <div class="feat" data-reveal data-delay="1"><span class="fi"><i class="fas fa-bolt"></i></span><div><h4><span class="lang-ar">سريع وخفيف</span><span class="lang-en">Fast & light</span></h4><p><span class="lang-ar">يفتح فوراً ويعمل حتى بدون إنترنت — بدون إعلانات ولا تتبّع.</span><span class="lang-en">Opens instantly and works offline — no ads, no tracking.</span></p></div></div>
+        <div class="feat" data-reveal data-delay="2"><span class="fi"><i class="fas fa-list-check"></i></span><div><h4><span class="lang-ar">يتتبّع تقدّمك</span><span class="lang-en">Tracks your progress</span></h4><p><span class="lang-ar">اضغط لتُحصي، وشاهد تقدّمك في كل جلسة يُحفظ تلقائياً.</span><span class="lang-en">Tap to count and watch your session progress — saved automatically.</span></p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Signature: interactive tasbih ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="tasbih-demo" data-reveal>
+        <div class="tasbih-grid">
+          <div>
+            <span class="eyebrow" style="background:rgba(255,255,255,0.12);color:var(--gold-soft)"><i class="fas fa-hand-pointer"></i><span class="lang-ar">جرّبها الآن</span><span class="lang-en">Try it now</span></span>
+            <h2><span class="lang-ar">المسبحة التي تُحصي معك</span><span class="lang-en">The tasbih that counts with you</span></h2>
+            <p><span class="lang-ar">اضغط على الدائرة لتسبّح. تحفظ عدّاتك، تهتزّ برفق عند كل ضغطة، وتحتفل معك عند بلوغ هدفك. هذه القلب النابض لكل أذكار ذِكْرَى.</span><span class="lang-en">Tap the circle to make tasbih. It remembers your counts, gives a gentle haptic tap, and celebrates when you reach your goal. This is the beating heart of every page in Dhikra.</span></p>
+            <a href="tasbih.html" class="btn btn-gold"><i class="fas fa-arrow-left" style="transform:scaleX(-1)"></i><span class="lang-ar">افتح المسبحة كاملة</span><span class="lang-en">Open full Tasbih</span></a>
+          </div>
+          <div class="tasbih-widget">
+            <button class="tasbih-btn" id="demo-tasbih" aria-label="Tasbih counter">
+              <span class="count" id="demo-count">0</span>
+              <span class="word">سُبْحَانَ اللَّه</span>
+            </button>
+            <p class="tasbih-hint"><span class="lang-ar">اضغط في أي مكان على الدائرة</span><span class="lang-en">Tap anywhere on the circle</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Categories preview ===== -->
+  <section class="section section-tinted">
+    <div class="container">
+      <div class="center">
+        <span class="eyebrow" data-reveal><i class="fas fa-layer-group"></i><span class="lang-ar">تصفّح حسب لحظتك</span><span class="lang-en">Browse by your moment</span></span>
+        <h2 class="section-title" data-reveal><span class="lang-ar">لكل وقتٍ ذِكرُه</span><span class="lang-en">For every moment, its remembrance</span></h2>
+        <p class="section-sub" data-reveal><span class="lang-ar">من أول استيقاظك حتى نومك — أذكار مرتّبة حسب وقتك وحالك.</span><span class="lang-en">From the moment you wake until you sleep — adhkar organised by your time and state.</span></p>
+      </div>
+      <div class="grid grid-4">
+        <a class="card cat-card" href="adhkar-sabah.html" data-reveal><span class="cat-icon"><i class="fas fa-sun"></i></span><h3><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning</span></h3><p><span class="lang-ar">حصن يحفظك طوال نهارك.</span><span class="lang-en">A fortress for your whole day.</span></p><span class="card-link"><span class="lang-ar">اقرأ</span><span class="lang-en">Read</span> <i class="fas fa-arrow-left"></i></span></a>
+        <a class="card cat-card" href="adhkar-masaa.html" data-reveal data-delay="1"><span class="cat-icon"><i class="fas fa-moon"></i></span><h3><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening</span></h3><p><span class="lang-ar">اختم يومك بسكينة وحماية.</span><span class="lang-en">End your day in peace.</span></p><span class="card-link"><span class="lang-ar">اقرأ</span><span class="lang-en">Read</span> <i class="fas fa-arrow-left"></i></span></a>
+        <a class="card cat-card" href="adhkar-nawm.html" data-reveal data-delay="2"><span class="cat-icon"><i class="fas fa-bed"></i></span><h3><span class="lang-ar">أذكار النوم</span><span class="lang-en">Sleep</span></h3><p><span class="lang-ar">استودع الله ليلتك.</span><span class="lang-en">Entrust your night to Allah.</span></p><span class="card-link"><span class="lang-ar">اقرأ</span><span class="lang-en">Read</span> <i class="fas fa-arrow-left"></i></span></a>
+        <a class="card cat-card" href="adhkar-istighfar.html" data-reveal data-delay="3"><span class="cat-icon"><i class="fas fa-hands-praying"></i></span><h3><span class="lang-ar">الاستغفار</span><span class="lang-en">Istighfar</span></h3><p><span class="lang-ar">طهّر قلبك وامحُ ذنبك.</span><span class="lang-en">Purify your heart.</span></p><span class="card-link"><span class="lang-ar">اقرأ</span><span class="lang-en">Read</span> <i class="fas fa-arrow-left"></i></span></a>
+      </div>
+      <div class="center" style="margin-top:34px"><a href="adhkar.html" class="btn btn-primary"><span class="lang-ar">كل الأذكار (١٥ فئة)</span><span class="lang-en">All adhkar (15 sets)</span></a></div>
+    </div>
+  </section>
+
+  <!-- ===== Dua of the day ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="center">
+        <span class="eyebrow" data-reveal><i class="fas fa-gem"></i><span class="lang-ar">كنز اليوم</span><span class="lang-en">Treasure of the day</span></span>
+        <h2 class="section-title" data-reveal><span class="lang-ar">سيّد الاستغفار</span><span class="lang-en">The Master of Seeking Forgiveness</span></h2>
+      </div>
+      <div class="dua-feature" data-reveal>
+        <div class="quote-mark">﴿</div>
+        <p class="dua-text">اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ</p>
+        <p class="dua-src"><i class="fas fa-book"></i> <span class="lang-ar">صحيح البخاري — من قالها موقناً بها فمات دخل الجنة</span><span class="lang-en">Sahih al-Bukhari — whoever says it with certainty and dies will enter Paradise</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Blog teaser ===== -->
+  <section class="section section-tinted">
+    <div class="container">
+      <div class="center">
+        <span class="eyebrow" data-reveal><i class="fas fa-feather-pointed"></i><span class="lang-ar">من المدونة</span><span class="lang-en">From the blog</span></span>
+        <h2 class="section-title" data-reveal><span class="lang-ar">تأمّلات تُنير قلبك</span><span class="lang-en">Reflections to light your heart</span></h2>
+      </div>
+      <div class="grid grid-3">
+        <a class="card" style="padding:0;overflow:hidden" href="blog-fadl-dhikr.html" data-reveal>
+          <img src="assets/img/blog-dhikr.webp" alt="فضل الذكر" width="900" height="506" loading="lazy" style="height:190px;object-fit:cover">
+          <div style="padding:24px"><h3 style="font-size:var(--step-1);margin-bottom:8px"><span class="lang-ar">فضل الذكر وأثره العظيم</span><span class="lang-en">The great virtue of Dhikr</span></h3><p style="color:var(--text-muted);font-size:0.92rem"><span class="lang-ar">كيف يُحيي الذكرُ القلوبَ ويُطمئنها.</span><span class="lang-en">How remembrance revives and calms hearts.</span></p></div>
+        </a>
+        <a class="card" style="padding:0;overflow:hidden" href="blog-tumaninah.html" data-reveal data-delay="1">
+          <img src="assets/img/blog-dawn.webp" alt="الطمأنينة" width="900" height="506" loading="lazy" style="height:190px;object-fit:cover">
+          <div style="padding:24px"><h3 style="font-size:var(--step-1);margin-bottom:8px"><span class="lang-ar">كيف تجد الطمأنينة؟</span><span class="lang-en">How to find tranquility</span></h3><p style="color:var(--text-muted);font-size:0.92rem"><span class="lang-ar">خطوات عملية للسكينة في زمن القلق.</span><span class="lang-en">Practical steps for calm in anxious times.</span></p></div>
+        </a>
+        <a class="card" style="padding:0;overflow:hidden" href="blog-morning-routine.html" data-reveal data-delay="2">
+          <img src="assets/img/blog-dua.webp" alt="روتين الصباح" width="900" height="506" loading="lazy" style="height:190px;object-fit:cover">
+          <div style="padding:24px"><h3 style="font-size:var(--step-1);margin-bottom:8px"><span class="lang-ar">روتين صباحي مبارك</span><span class="lang-en">A blessed morning routine</span></h3><p style="color:var(--text-muted);font-size:0.92rem"><span class="lang-ar">ابدأ يومك بعادات تقرّبك من الله.</span><span class="lang-en">Start your day closer to Allah.</span></p></div>
+        </a>
+      </div>
+      <div class="center" style="margin-top:34px"><a href="blog.html" class="btn btn-ghost"><span class="lang-ar">كل المقالات</span><span class="lang-en">All articles</span></a></div>
+    </div>
+  </section>
+
+  <!-- ===== Final CTA ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="final-cta" data-reveal>
+        <h2><span class="lang-ar">ابدأ رحلة السكينة اليوم</span><span class="lang-en">Begin the journey of peace today</span></h2>
+        <p><span class="lang-ar">دقائق من الذكر تُغيّر يومك. لا حساب، لا إعلانات — فقط أنت وربّك.</span><span class="lang-en">Minutes of remembrance change your day. No account, no ads — just you and your Lord.</span></p>
+        <a href="adhkar.html" class="btn btn-gold"><i class="fas fa-book-open"></i><span class="lang-ar">تصفّح جميع الأذكار</span><span class="lang-en">Browse all adhkar</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="site-name">ذِكْرَى</div>
+        <p><span class="lang-ar">حصنك اليومي من الأذكار والأدعية الصحيحة من القرآن والسنّة. مجاني، بدون إعلانات، ويعمل بدون إنترنت.</span><span class="lang-en">Your daily fortress of authentic adhkar and duas from the Qur'an and Sunnah. Free, ad-free, works offline.</span></p>
+        <div class="footer-social">
+          <a href="contact.html" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="tasbih.html" aria-label="Tasbih"><i class="fas fa-circle-notch"></i></a>
+          <a href="tools.html" aria-label="Tools"><i class="fas fa-toolbox"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></h4>
+        <a href="adhkar-sabah.html"><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning</span></a>
+        <a href="adhkar-masaa.html"><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening</span></a>
+        <a href="adhkar-nawm.html"><span class="lang-ar">أذكار النوم</span><span class="lang-en">Sleep</span></a>
+        <a href="adhkar.html"><span class="lang-ar">كل الفئات</span><span class="lang-en">All categories</span></a>
+      </div>
+      <div class="footer-col">
+        <h4><span class="lang-ar">أدوات</span><span class="lang-en">Tools</span></h4>
+        <a href="tasbih.html"><span class="lang-ar">المسبحة الرقمية</span><span class="lang-en">Digital Tasbih</span></a>
+        <a href="tools.html"><span class="lang-ar">القبلة ومواقيت الصلاة</span><span class="lang-en">Qibla & Prayer times</span></a>
+        <a href="favourites.html"><span class="lang-ar">المفضلة</span><span class="lang-en">Favourites</span></a>
+        <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><span class="lang-ar">جميع الحقوق محفوظة © 2025 · موقع ذِكْرَى</span><span class="lang-en">All rights reserved © 2025 · Dhikra</span></p>
+      <p><span class="lang-ar">تصميم وبرمجة: محمد خيري</span><span class="lang-en">Designed & built by Mohamed Khairy</span></p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/assistant.js" defer></script>
+<script>
+// Time-aware suggestion
+(function(){
+  const h = new Date().getHours();
+  const map = {
+    morning: { icon:'fa-sun', ar:'أذكار الصباح', en:'Morning Adhkar', link:'adhkar-sabah.html' },
+    evening: { icon:'fa-moon', ar:'أذكار المساء', en:'Evening Adhkar', link:'adhkar-masaa.html' },
+    night:   { icon:'fa-bed', ar:'أذكار النوم', en:'Sleep Adhkar', link:'adhkar-nawm.html' }
+  };
+  let k = 'morning';
+  if (h >= 4 && h < 12) k='morning'; else if (h>=12 && h<20) k='evening'; else k='night';
+  const s = map[k];
+  const ti = document.getElementById('smart-title');
+  ti.innerHTML = `<span class="lang-ar">${s.ar}</span><span class="lang-en">${s.en}</span>`;
+  document.getElementById('smart-icon').className = 'fas '+s.icon;
+  document.getElementById('smart-link').setAttribute('href', s.link);
+})();
+// Demo tasbih
+(function(){
+  let n = 0; const btn = document.getElementById('demo-tasbih'); const c = document.getElementById('demo-count');
+  const words = ['سُبْحَانَ اللَّه','الْحَمْدُ لِلَّه','اللَّهُ أَكْبَر'];
+  btn.addEventListener('click', ()=>{
+    n++; c.textContent = n;
+    btn.querySelector('.word').textContent = words[n % 3];
+    if ('vibrate' in navigator) navigator.vibrate(12);
+  });
+})();
+// Register service worker
+if ('serviceWorker' in navigator) { window.addEventListener('load', ()=> navigator.serviceWorker.register('sw.js').catch(()=>{})); }
+</script>
 </body>
 </html>

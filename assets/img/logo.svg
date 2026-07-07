@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ذِكْرَى">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f8f76"/>
+      <stop offset="1" stop-color="#1b5e4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#g)"/>
+  <!-- crescent + tasbeeh bead motif -->
+  <path d="M40 16a16 16 0 1 0 0 32 13 13 0 1 1 0-32z" fill="#f7f4ec"/>
+  <circle cx="45" cy="32" r="4.5" fill="#c6a15b"/>
+</svg>

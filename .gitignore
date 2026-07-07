@@ -1,0 +1,11 @@
+# Build / migration helper scripts (not part of the published site)
+build_adhkar.py
+build_articles.py
+build_index.py
+inject.py
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+node_modules/

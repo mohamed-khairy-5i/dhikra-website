@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1b5e4a">
+<title>أدوات المسلم | ذِكْرَى — اتجاه القبلة ومواقيت الصلاة والتاريخ الهجري</title>
+<meta name="description" content="أدوات إسلامية مجانية من ذِكْرَى: بوصلة اتجاه القبلة بدقّة اعتماداً على موقعك، مواقيت الصلاة الخمس لليوم، والتاريخ الهجري اليوم. كل ذلك في مكان واحد، بدون إعلانات.">
+<meta name="keywords" content="اتجاه القبلة, مواقيت الصلاة, بوصلة القبلة, التاريخ الهجري, أوقات الصلاة, القبلة, أدوات إسلامية">
+<meta name="author" content="محمد خيري">
+<link rel="canonical" href="https://dhikra.netlify.app/tools.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ذِكْرَى">
+<meta property="og:title" content="أدوات المسلم | ذِكْرَى">
+<meta property="og:description" content="اتجاه القبلة ومواقيت الصلاة والتاريخ الهجري في مكان واحد.">
+<meta property="og:image" content="https://dhikra.netlify.app/assets/img/og-image.jpg">
+<meta property="og:url" content="https://dhikra.netlify.app/tools.html">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.tool-panel{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:var(--shadow-sm)}
+.tool-panel h2{display:flex;align-items:center;gap:10px;font-family:var(--font-ar-display);font-size:1.35rem;margin:0 0 4px;color:var(--ink)}
+body.dark-mode .tool-panel h2{color:var(--ivory)}
+.tool-panel h2 i{color:var(--gold)}
+.tool-panel .muted{color:var(--muted);font-size:.9rem;margin:0 0 18px}
+/* Qibla */
+.compass{position:relative;width:220px;height:220px;margin:10px auto;border-radius:50%;
+  background:radial-gradient(circle at 50% 40%,var(--sand),var(--surface));
+  border:2px solid var(--line);display:grid;place-items:center}
+body.dark-mode .compass{background:radial-gradient(circle at 50% 40%,rgba(63,143,118,.12),var(--surface))}
+.compass .n{position:absolute;top:8px;font-weight:700;color:var(--muted);font-family:var(--font-en)}
+.needle{width:0;height:0;border-left:14px solid transparent;border-right:14px solid transparent;
+  border-bottom:90px solid var(--emerald);transform-origin:50% 100%;transition:transform .4s var(--ease-out);position:relative;top:-45px}
+.kaaba{position:absolute;top:14px;font-size:1.4rem;transform-origin:50% 96px;transition:transform .4s var(--ease-out)}
+.qibla-deg{text-align:center;font-family:var(--font-en);font-size:1.6rem;font-weight:700;color:var(--emerald);margin-top:8px}
+body.dark-mode .qibla-deg{color:var(--emerald-soft)}
+/* Prayer times */
+.prayer-list{list-style:none;margin:0;padding:0}
+.prayer-list li{display:flex;justify-content:space-between;align-items:center;padding:13px 4px;border-bottom:1px solid var(--line)}
+.prayer-list li:last-child{border-bottom:none}
+.prayer-list .pn{display:flex;align-items:center;gap:10px;font-family:var(--font-ar-display);font-size:1.1rem;color:var(--ink)}
+body.dark-mode .prayer-list .pn{color:var(--ivory)}
+.prayer-list .pn i{color:var(--gold);width:20px;text-align:center}
+.prayer-list .pt{font-family:var(--font-en);font-weight:600;color:var(--emerald-soft)}
+.prayer-list li.next{background:rgba(198,161,91,.12);border-radius:12px;padding-inline:12px}
+.prayer-list li.next .pt{color:var(--gold)}
+/* Hijri */
+.hijri-big{font-family:var(--font-ar-display);font-size:2rem;color:var(--emerald);text-align:center;margin:6px 0}
+body.dark-mode .hijri-big{color:var(--emerald-soft)}
+.hijri-greg{text-align:center;color:var(--muted);font-family:var(--font-en)}
+.loc-note{font-size:.82rem;color:var(--muted);margin-top:14px;text-align:center}
+</style>
+</head>
+<body data-title-ar="أدوات المسلم | ذِكْرَى" data-title-en="Muslim Tools | Dhikra">
+<div class="page-aura"></div>
+<div class="read-progress"></div>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand" aria-label="ذِكْرَى">
+    <span class="brand-mark"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M40 16a16 16 0 1 0 0 32 13 13 0 1 1 0-32z" fill="#f7f4ec"/><circle cx="45" cy="32" r="4.5" fill="#c6a15b"/></svg></span>
+    <span><span class="site-name">ذِكْرَى</span><span class="site-tag">DHIKRA</span></span>
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+      <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+      <a href="tasbih.html"><span class="lang-ar">المسبحة</span><span class="lang-en">Tasbih</span></a>
+      <a href="tools.html" class="active"><span class="lang-ar">الأدوات</span><span class="lang-en">Tools</span></a>
+      <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+      <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
+    </div>
+    <button class="lang-toggle-btn" data-lang-toggle title="Language"></button>
+    <button class="icon-btn" data-theme-toggle aria-label="Toggle theme"><i class="fas fa-moon" data-theme-icon></i></button>
+    <button class="icon-btn nav-toggle" data-nav-toggle aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+<div class="mobile-nav"><div class="inner">
+  <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+  <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+  <a href="tasbih.html"><span class="lang-ar">المسبحة الرقمية</span><span class="lang-en">Digital Tasbih</span></a>
+  <a href="tools.html" class="active"><span class="lang-ar">الأدوات</span><span class="lang-en">Tools</span></a>
+  <a href="favourites.html"><span class="lang-ar">المفضلة</span><span class="lang-en">Favourites</span></a>
+  <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+  <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
+</div></div>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+        <i class="fas fa-chevron-left"></i>
+        <span><span class="lang-ar">الأدوات</span><span class="lang-en">Tools</span></span>
+      </nav>
+      <span class="page-kicker"><i class="fas fa-compass"></i><span class="lang-ar">أدوات تعينك على العبادة</span><span class="lang-en">Tools to aid your worship</span></span>
+      <h1 class="page-title"><span class="lang-ar">أدوات المسلم</span><span class="lang-en">Muslim Tools</span></h1>
+      <p class="page-sub"><span class="lang-ar">اتجاه القبلة، مواقيت الصلاة، والتاريخ الهجري — بالاعتماد على موقعك.</span><span class="lang-en">Qibla direction, prayer times and the Hijri date — based on your location.</span></p>
+      <button class="btn btn-primary btn-sm" id="locate"><i class="fas fa-location-crosshairs"></i><span class="lang-ar">حدّد موقعي</span><span class="lang-en">Detect my location</span></button>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="tools-grid">
+        <div class="tool-panel" data-reveal>
+          <h2><i class="fas fa-kaaba"></i><span class="lang-ar">اتجاه القبلة</span><span class="lang-en">Qibla Direction</span></h2>
+          <p class="muted"><span class="lang-ar">وجّه أعلى البوصلة نحو الشمال ثم اتبع السهم الأخضر.</span><span class="lang-en">Point the top of the compass North, then follow the green arrow.</span></p>
+          <div class="compass">
+            <span class="n">N</span>
+            <span class="kaaba" id="kaaba">🕋</span>
+            <div class="needle" id="needle"></div>
+          </div>
+          <div class="qibla-deg" id="qibla-deg">—°</div>
+          <p class="loc-note" id="qibla-note"><span class="lang-ar">فعّل تحديد الموقع لعرض اتجاه القبلة.</span><span class="lang-en">Enable location to show the Qibla direction.</span></p>
+        </div>
+
+        <div class="tool-panel" data-reveal>
+          <h2><i class="fas fa-mosque"></i><span class="lang-ar">مواقيت الصلاة</span><span class="lang-en">Prayer Times</span></h2>
+          <p class="muted" id="prayer-loc"><span class="lang-ar">مواقيت اليوم حسب موقعك.</span><span class="lang-en">Today's times for your location.</span></p>
+          <ul class="prayer-list" id="prayer-list">
+            <li><span class="pn"><i class="fas fa-dawn"></i><span class="lang-ar">الفجر</span><span class="lang-en">Fajr</span></span><span class="pt" data-p="Fajr">—</span></li>
+            <li><span class="pn"><i class="fas fa-sun"></i><span class="lang-ar">الشروق</span><span class="lang-en">Sunrise</span></span><span class="pt" data-p="Sunrise">—</span></li>
+            <li><span class="pn"><i class="fas fa-sun"></i><span class="lang-ar">الظهر</span><span class="lang-en">Dhuhr</span></span><span class="pt" data-p="Dhuhr">—</span></li>
+            <li><span class="pn"><i class="fas fa-cloud-sun"></i><span class="lang-ar">العصر</span><span class="lang-en">Asr</span></span><span class="pt" data-p="Asr">—</span></li>
+            <li><span class="pn"><i class="fas fa-mountain-sun"></i><span class="lang-ar">المغرب</span><span class="lang-en">Maghrib</span></span><span class="pt" data-p="Maghrib">—</span></li>
+            <li><span class="pn"><i class="fas fa-moon"></i><span class="lang-ar">العشاء</span><span class="lang-en">Isha</span></span><span class="pt" data-p="Isha">—</span></li>
+          </ul>
+        </div>
+
+        <div class="tool-panel" data-reveal>
+          <h2><i class="fas fa-calendar-day"></i><span class="lang-ar">التاريخ الهجري</span><span class="lang-en">Hijri Date</span></h2>
+          <p class="muted"><span class="lang-ar">التاريخ الهجري والميلادي لليوم.</span><span class="lang-en">Today's Hijri and Gregorian date.</span></p>
+          <div class="hijri-big" id="hijri">—</div>
+          <div class="hijri-greg" id="greg">—</div>
+          <p class="loc-note"><span class="lang-ar">يُحسب بتقويم أم القرى (تقريبي).</span><span class="lang-en">Based on the Umm al-Qura calendar (approximate).</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="cta-band">
+        <h2><span class="lang-ar">حافظ على أذكارك بعد كل صلاة</span><span class="lang-en">Keep your adhkar after every prayer</span></h2>
+        <p><span class="lang-ar">أذكار ما بعد الصلاة كاملة مع عدّاد لكل ذِكر.</span><span class="lang-en">Complete after-prayer adhkar with a counter for each.</span></p>
+        <a href="adhkar-salah.html" class="btn btn-gold"><span class="lang-ar">أذكار بعد الصلاة</span><span class="lang-en">After-prayer adhkar</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="site-name">ذِكْرَى</div>
+        <p><span class="lang-ar">حصنك اليومي من الأذكار والأدعية الصحيحة من القرآن والسنّة. مجاني، بدون إعلانات، ويعمل بدون إنترنت.</span><span class="lang-en">Your daily fortress of authentic adhkar and duas from the Qur'an and Sunnah. Free, ad-free, works offline.</span></p>
+        <div class="footer-social">
+          <a href="contact.html" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="tasbih.html" aria-label="Tasbih"><i class="fas fa-circle-notch"></i></a>
+          <a href="tools.html" aria-label="Tools"><i class="fas fa-toolbox"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></h4>
+        <a href="adhkar-sabah.html"><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning</span></a>
+        <a href="adhkar-masaa.html"><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening</span></a>
+        <a href="adhkar-nawm.html"><span class="lang-ar">أذكار النوم</span><span class="lang-en">Sleep</span></a>
+        <a href="adhkar.html"><span class="lang-ar">كل الفئات</span><span class="lang-en">All categories</span></a>
+      </div>
+      <div class="footer-col">
+        <h4><span class="lang-ar">أدوات</span><span class="lang-en">Tools</span></h4>
+        <a href="tasbih.html"><span class="lang-ar">المسبحة الرقمية</span><span class="lang-en">Digital Tasbih</span></a>
+        <a href="tools.html"><span class="lang-ar">القبلة ومواقيت الصلاة</span><span class="lang-en">Qibla & Prayer times</span></a>
+        <a href="favourites.html"><span class="lang-ar">المفضلة</span><span class="lang-en">Favourites</span></a>
+        <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><span class="lang-ar">جميع الحقوق محفوظة © 2025 · موقع ذِكْرَى</span><span class="lang-en">All rights reserved © 2025 · Dhikra</span></p>
+      <p><span class="lang-ar">تصميم وبرمجة: محمد خيري</span><span class="lang-en">Designed & built by Mohamed Khairy</span></p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/assistant.js" defer></script>
+<script>
+(function(){
+  var KAABA={lat:21.4225,lng:39.8262};
+  function toRad(d){return d*Math.PI/180;}
+  function qiblaBearing(lat,lng){
+    var dLng=toRad(KAABA.lng-lng);
+    var y=Math.sin(dLng)*Math.cos(toRad(KAABA.lat));
+    var x=Math.cos(toRad(lat))*Math.sin(toRad(KAABA.lat))-Math.sin(toRad(lat))*Math.cos(toRad(KAABA.lat))*Math.cos(dLng);
+    var b=Math.atan2(y,x)*180/Math.PI; return (b+360)%360;
+  }
+  // Hijri via Intl
+  function renderHijri(){
+    try{
+      var f=new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura',{day:'numeric',month:'long',year:'numeric',weekday:'long'});
+      document.getElementById('hijri').textContent=f.format(new Date());
+    }catch(e){document.getElementById('hijri').textContent='—';}
+    var g=new Intl.DateTimeFormat(document.documentElement.lang==='en'?'en-GB':'ar-EG',{day:'numeric',month:'long',year:'numeric'});
+    document.getElementById('greg').textContent=g.format(new Date());
+  }
+  renderHijri();
+  window.addEventListener('langchange',renderHijri);
+
+  function setQibla(lat,lng){
+    var b=qiblaBearing(lat,lng);
+    document.getElementById('qibla-deg').textContent=Math.round(b)+'°';
+    document.getElementById('needle').style.transform='rotate('+b+'deg)';
+    document.getElementById('kaaba').style.transform='rotate('+b+'deg)';
+    document.getElementById('qibla-note').innerHTML=(document.documentElement.lang==='en')
+      ? '<span class="lang-en">The green arrow points toward the Kaaba from your location.</span>'
+      : '<span class="lang-ar">يشير السهم الأخضر نحو الكعبة من موقعك.</span>';
+  }
+  // device orientation to rotate compass housing
+  function handleOrient(e){
+    var heading = e.webkitCompassHeading!=null ? e.webkitCompassHeading : (e.alpha!=null?360-e.alpha:null);
+    if(heading==null) return;
+    var c=document.querySelector('.compass'); if(c) c.style.transform='rotate('+(-heading)+'deg)';
+  }
+  function fetchPrayer(lat,lng){
+    document.getElementById('prayer-loc').innerHTML='<span class="lang-ar">جارٍ التحميل…</span><span class="lang-en">Loading…</span>';
+    var url='https://api.aladhan.com/v1/timings?latitude='+lat+'&longitude='+lng+'&method=4';
+    fetch(url).then(r=>r.json()).then(function(j){
+      var t=j.data.timings;
+      var order=['Fajr','Sunrise','Dhuhr','Asr','Maghrib','Isha'];
+      var now=new Date(); var nowMin=now.getHours()*60+now.getMinutes(); var nextSet=false;
+      order.forEach(function(p){
+        var el=document.querySelector('[data-p="'+p+'"]'); if(!el)return;
+        el.textContent=t[p];
+        el.closest('li').classList.remove('next');
+        var parts=t[p].split(':'); var m=parseInt(parts[0])*60+parseInt(parts[1]);
+        if(!nextSet && p!=='Sunrise' && m>nowMin){ el.closest('li').classList.add('next'); nextSet=true; }
+      });
+      document.getElementById('prayer-loc').innerHTML='<span class="lang-ar">مواقيت اليوم حسب موقعك.</span><span class="lang-en">Today\u2019s times for your location.</span>';
+    }).catch(function(){
+      document.getElementById('prayer-loc').innerHTML='<span class="lang-ar">تعذّر جلب المواقيت. تحقّق من اتصالك بالإنترنت.</span><span class="lang-en">Could not load times. Check your connection.</span>';
+    });
+  }
+  function useCoords(lat,lng){ setQibla(lat,lng); fetchPrayer(lat,lng); }
+  // restore last location
+  var last=localStorage.getItem('geo:last');
+  if(last){ try{var o=JSON.parse(last); useCoords(o.lat,o.lng);}catch(e){} }
+
+  document.getElementById('locate').addEventListener('click',function(){
+    if(!navigator.geolocation){ if(window.dhikraToast)window.dhikraToast('المتصفح لا يدعم تحديد الموقع'); return; }
+    if(window.dhikraToast)window.dhikraToast(document.documentElement.lang==='en'?'Locating…':'جارٍ تحديد الموقع…');
+    navigator.geolocation.getCurrentPosition(function(pos){
+      var lat=pos.coords.latitude,lng=pos.coords.longitude;
+      localStorage.setItem('geo:last',JSON.stringify({lat:lat,lng:lng}));
+      useCoords(lat,lng);
+      // ask orientation permission (iOS 13+)
+      if(typeof DeviceOrientationEvent!=='undefined' && DeviceOrientationEvent.requestPermission){
+        DeviceOrientationEvent.requestPermission().then(function(s){ if(s==='granted') window.addEventListener('deviceorientation',handleOrient,true); }).catch(function(){});
+      } else { window.addEventListener('deviceorientationabsolute',handleOrient,true); window.addEventListener('deviceorientation',handleOrient,true); }
+    },function(){ if(window.dhikraToast)window.dhikraToast(document.documentElement.lang==='en'?'Location denied':'تم رفض الوصول للموقع'); });
+  });
+})();
+if ('serviceWorker' in navigator) { window.addEventListener('load', ()=> navigator.serviceWorker.register('sw.js').catch(()=>{})); }
+</script>
+</body>
+</html>

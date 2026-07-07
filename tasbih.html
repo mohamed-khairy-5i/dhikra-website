@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1b5e4a">
+<title>المسبحة الرقمية | ذِكْرَى — عدّاد تسبيح تفاعلي مع تتبّع وأهداف</title>
+<meta name="description" content="مسبحة رقمية تفاعلية من ذِكْرَى: عدّاد تسبيح أنيق مع اهتزاز ذكي، أهداف قابلة للتخصيص (٣٣ / ٩٩ / ١٠٠)، حفظ تلقائي لتقدّمك، وأذكار جاهزة (سبحان الله، الحمد لله، الله أكبر، لا إله إلا الله). تعمل بدون إنترنت.">
+<meta name="keywords" content="مسبحة رقمية, عداد تسبيح, تسبيح إلكتروني, سبحان الله, الحمد لله, الله أكبر, تسبيح, مسبحة إلكترونية">
+<meta name="author" content="محمد خيري">
+<link rel="canonical" href="https://dhikra.netlify.app/tasbih.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ذِكْرَى">
+<meta property="og:title" content="المسبحة الرقمية | ذِكْرَى">
+<meta property="og:description" content="عدّاد تسبيح تفاعلي مع أهداف وتتبّع وحفظ تلقائي. يعمل بدون إنترنت.">
+<meta property="og:image" content="https://dhikra.netlify.app/assets/img/og-image.jpg">
+<meta property="og:url" content="https://dhikra.netlify.app/tasbih.html">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"المسبحة الرقمية — ذِكْرَى","url":"https://dhikra.netlify.app/tasbih.html","applicationCategory":"LifestyleApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"inLanguage":"ar"}
+</script>
+<style>
+.tasbih-wrap{max-width:560px;margin:0 auto;text-align:center}
+.tasbih-stage{position:relative;display:grid;place-items:center;margin:30px auto 10px}
+.tasbih-ring{transform:rotate(-90deg)}
+.tasbih-ring circle{fill:none;stroke-width:10;stroke-linecap:round}
+.tasbih-ring .track{stroke:rgba(198,161,91,.18)}
+body.dark-mode .tasbih-ring .track{stroke:rgba(198,161,91,.14)}
+.tasbih-ring .prog{stroke:var(--gold);transition:stroke-dashoffset .35s var(--ease-out)}
+.tasbih-center{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:2px}
+.tasbih-count{font-family:var(--font-en);font-size:clamp(2.8rem,10vw,4.4rem);font-weight:700;line-height:1;color:var(--ink)}
+body.dark-mode .tasbih-count{color:var(--ivory)}
+.tasbih-word{font-family:var(--font-ar-display);font-size:clamp(1.2rem,4vw,1.6rem);color:var(--emerald)}
+body.dark-mode .tasbih-word{color:var(--emerald-soft)}
+.tasbih-cycle{font-size:.8rem;color:var(--muted);letter-spacing:.04em}
+.tap-zone{width:min(88vw,340px);height:min(88vw,340px);border-radius:50%;border:none;cursor:pointer;
+  background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.85),rgba(247,244,236,.4));
+  box-shadow:0 20px 50px -18px rgba(15,42,34,.5),inset 0 0 0 1px rgba(198,161,91,.35);
+  position:absolute;z-index:2;transition:transform .12s var(--ease-spring)}
+body.dark-mode .tap-zone{background:radial-gradient(circle at 30% 25%,rgba(63,143,118,.28),rgba(15,42,34,.5))}
+.tap-zone:active{transform:scale(.95)}
+.tasbih-controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+.dhikr-select{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:18px 0}
+.dhikr-select button{border:1px solid var(--line);background:var(--surface);color:var(--ink);
+  padding:8px 14px;border-radius:999px;cursor:pointer;font-family:var(--font-ar-display);font-size:1.05rem;transition:.2s}
+body.dark-mode .dhikr-select button{color:var(--ivory)}
+.dhikr-select button.active{background:var(--emerald);color:#fff;border-color:var(--emerald)}
+.goal-select{display:flex;gap:8px;justify-content:center;margin:6px 0 4px}
+.goal-select button{border:1px solid var(--line);background:transparent;color:var(--muted);
+  padding:6px 16px;border-radius:999px;cursor:pointer;font-family:var(--font-en);font-weight:600;transition:.2s}
+.goal-select button.active{background:var(--gold);color:#20160a;border-color:var(--gold)}
+.tasbih-stats{display:flex;gap:14px;justify-content:center;margin-top:24px}
+.tasbih-stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 20px;min-width:110px}
+.tasbih-stat b{display:block;font-family:var(--font-en);font-size:1.6rem;color:var(--emerald)}
+body.dark-mode .tasbih-stat b{color:var(--emerald-soft)}
+.tasbih-stat span{font-size:.8rem;color:var(--muted)}
+.round-flash{animation:roundPulse .6s var(--ease-out)}
+@keyframes roundPulse{0%{box-shadow:0 0 0 0 rgba(198,161,91,.5)}100%{box-shadow:0 0 0 40px rgba(198,161,91,0)}}
+@media (prefers-reduced-motion:reduce){.tap-zone:active{transform:none}.round-flash{animation:none}}
+</style>
+</head>
+<body data-title-ar="المسبحة الرقمية | ذِكْرَى" data-title-en="Digital Tasbih | Dhikra">
+<div class="page-aura"></div>
+<div class="read-progress"></div>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand" aria-label="ذِكْرَى">
+    <span class="brand-mark"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M40 16a16 16 0 1 0 0 32 13 13 0 1 1 0-32z" fill="#f7f4ec"/><circle cx="45" cy="32" r="4.5" fill="#c6a15b"/></svg></span>
+    <span><span class="site-name">ذِكْرَى</span><span class="site-tag">DHIKRA</span></span>
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+      <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+      <a href="tasbih.html" class="active"><span class="lang-ar">المسبحة</span><span class="lang-en">Tasbih</span></a>
+      <a href="tools.html"><span class="lang-ar">الأدوات</span><span class="lang-en">Tools</span></a>
+      <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+      <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
+    </div>
+    <button class="lang-toggle-btn" data-lang-toggle title="Language"></button>
+    <button class="icon-btn" data-theme-toggle aria-label="Toggle theme"><i class="fas fa-moon" data-theme-icon></i></button>
+    <button class="icon-btn nav-toggle" data-nav-toggle aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+<div class="mobile-nav"><div class="inner">
+  <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+  <a href="adhkar.html"><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></a>
+  <a href="tasbih.html" class="active"><span class="lang-ar">المسبحة الرقمية</span><span class="lang-en">Digital Tasbih</span></a>
+  <a href="tools.html"><span class="lang-ar">الأدوات</span><span class="lang-en">Tools</span></a>
+  <a href="favourites.html"><span class="lang-ar">المفضلة</span><span class="lang-en">Favourites</span></a>
+  <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+  <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
+</div></div>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+        <i class="fas fa-chevron-left"></i>
+        <span><span class="lang-ar">المسبحة الرقمية</span><span class="lang-en">Digital Tasbih</span></span>
+      </nav>
+      <span class="page-kicker"><i class="fas fa-circle-notch"></i><span class="lang-ar">اذكر الله على كل حال</span><span class="lang-en">Remember Allah always</span></span>
+      <h1 class="page-title"><span class="lang-ar">المسبحة الرقمية</span><span class="lang-en">Digital Tasbih</span></h1>
+      <p class="page-sub"><span class="lang-ar">سبّح بلمسة واحدة — مع أهداف وحفظ تلقائي واهتزاز ذكي. تعمل بدون إنترنت.</span><span class="lang-en">Count with a single tap — goals, autosave and gentle haptics. Works offline.</span></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="tasbih-wrap">
+        <div class="dhikr-select" id="dhikr-select">
+          <button data-word="سُبْحَانَ اللَّه" class="active">سُبْحَانَ اللَّه</button>
+          <button data-word="الْحَمْدُ لِلَّه">الْحَمْدُ لِلَّه</button>
+          <button data-word="اللَّهُ أَكْبَر">اللَّهُ أَكْبَر</button>
+          <button data-word="لَا إِلَٰهَ إِلَّا اللَّه">لَا إِلَٰهَ إِلَّا اللَّه</button>
+          <button data-word="أَسْتَغْفِرُ اللَّه">أَسْتَغْفِرُ اللَّه</button>
+        </div>
+
+        <div class="goal-select" id="goal-select">
+          <button data-goal="33" class="active">33</button>
+          <button data-goal="99">99</button>
+          <button data-goal="100">100</button>
+          <button data-goal="0">∞</button>
+        </div>
+
+        <div class="tasbih-stage" style="width:min(88vw,340px);height:min(88vw,340px)">
+          <svg class="tasbih-ring" width="100%" height="100%" viewBox="0 0 340 340">
+            <circle class="track" cx="170" cy="170" r="160"></circle>
+            <circle class="prog" id="ring" cx="170" cy="170" r="160" stroke-dasharray="1005" stroke-dashoffset="1005"></circle>
+          </svg>
+          <button class="tap-zone" id="tap" aria-label="Tap to count"></button>
+          <div class="tasbih-center">
+            <div class="tasbih-count" id="count">0</div>
+            <div class="tasbih-word" id="word">سُبْحَانَ اللَّه</div>
+            <div class="tasbih-cycle" id="cycle"><span class="lang-ar">الجولة</span><span class="lang-en">Round</span> <span id="rounds">0</span></div>
+          </div>
+        </div>
+
+        <div class="tasbih-controls">
+          <button class="btn btn-ghost btn-sm" id="minus"><i class="fas fa-minus"></i><span class="lang-ar">تراجع</span><span class="lang-en">Undo</span></button>
+          <button class="btn btn-primary btn-sm" id="tap2"><i class="fas fa-hand-pointer"></i><span class="lang-ar">تسبيح</span><span class="lang-en">Count</span></button>
+          <button class="btn btn-ghost btn-sm" id="reset"><i class="fas fa-rotate-left"></i><span class="lang-ar">تصفير</span><span class="lang-en">Reset</span></button>
+        </div>
+
+        <div class="tasbih-stats">
+          <div class="tasbih-stat"><b id="stat-total">0</b><span><span class="lang-ar">إجمالي اليوم</span><span class="lang-en">Today total</span></span></div>
+          <div class="tasbih-stat"><b id="stat-rounds">0</b><span><span class="lang-ar">جولات مكتملة</span><span class="lang-en">Rounds done</span></span></div>
+          <div class="tasbih-stat"><b id="stat-all">0</b><span><span class="lang-ar">الإجمالي الكلي</span><span class="lang-en">All-time</span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="cta-band">
+        <h2><span class="lang-ar">جرّب الأذكار المأثورة كاملة</span><span class="lang-en">Explore the full authentic adhkar</span></h2>
+        <p><span class="lang-ar">لكل ذِكر عدّاده الخاص وحفظ تلقائي لتقدّمك.</span><span class="lang-en">Every dhikr has its own counter and saves your progress.</span></p>
+        <a href="adhkar.html" class="btn btn-gold"><span class="lang-ar">تصفّح كل الأذكار</span><span class="lang-en">Browse all adhkar</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="site-name">ذِكْرَى</div>
+        <p><span class="lang-ar">حصنك اليومي من الأذكار والأدعية الصحيحة من القرآن والسنّة. مجاني، بدون إعلانات، ويعمل بدون إنترنت.</span><span class="lang-en">Your daily fortress of authentic adhkar and duas from the Qur'an and Sunnah. Free, ad-free, works offline.</span></p>
+        <div class="footer-social">
+          <a href="contact.html" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="tasbih.html" aria-label="Tasbih"><i class="fas fa-circle-notch"></i></a>
+          <a href="tools.html" aria-label="Tools"><i class="fas fa-toolbox"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4><span class="lang-ar">الأذكار</span><span class="lang-en">Adhkar</span></h4>
+        <a href="adhkar-sabah.html"><span class="lang-ar">أذكار الصباح</span><span class="lang-en">Morning</span></a>
+        <a href="adhkar-masaa.html"><span class="lang-ar">أذكار المساء</span><span class="lang-en">Evening</span></a>
+        <a href="adhkar-nawm.html"><span class="lang-ar">أذكار النوم</span><span class="lang-en">Sleep</span></a>
+        <a href="adhkar.html"><span class="lang-ar">كل الفئات</span><span class="lang-en">All categories</span></a>
+      </div>
+      <div class="footer-col">
+        <h4><span class="lang-ar">أدوات</span><span class="lang-en">Tools</span></h4>
+        <a href="tasbih.html"><span class="lang-ar">المسبحة الرقمية</span><span class="lang-en">Digital Tasbih</span></a>
+        <a href="tools.html"><span class="lang-ar">القبلة ومواقيت الصلاة</span><span class="lang-en">Qibla & Prayer times</span></a>
+        <a href="favourites.html"><span class="lang-ar">المفضلة</span><span class="lang-en">Favourites</span></a>
+        <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><span class="lang-ar">جميع الحقوق محفوظة © 2025 · موقع ذِكْرَى</span><span class="lang-en">All rights reserved © 2025 · Dhikra</span></p>
+      <p><span class="lang-ar">تصميم وبرمجة: محمد خيري</span><span class="lang-en">Designed & built by Mohamed Khairy</span></p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/assistant.js" defer></script>
+<script>
+(function(){
+  var KEY='tasbih:v1';
+  var state = JSON.parse(localStorage.getItem(KEY)||'null') || {count:0,rounds:0,goal:33,word:'سُبْحَانَ اللَّه',total:0,all:0,day:new Date().toDateString()};
+  if(state.day!==new Date().toDateString()){state.total=0;state.rounds=0;state.day=new Date().toDateString();}
+  var ring=document.getElementById('ring'), C=2*Math.PI*160;
+  ring.setAttribute('stroke-dasharray',C.toFixed(0));
+  var $=function(id){return document.getElementById(id);};
+  function save(){localStorage.setItem(KEY,JSON.stringify(state));}
+  function render(){
+    $('count').textContent=state.count;
+    $('word').textContent=state.word;
+    $('rounds').textContent=state.rounds;
+    $('stat-total').textContent=state.total;
+    $('stat-rounds').textContent=state.rounds;
+    $('stat-all').textContent=state.all;
+    var g=state.goal||33;
+    var frac=g?Math.min(state.count/g,1):(state.count%33)/33;
+    ring.setAttribute('stroke-dashoffset',(C*(1-frac)).toFixed(1));
+  }
+  function tap(){
+    state.count++; state.total++; state.all++;
+    if('vibrate' in navigator) navigator.vibrate(12);
+    var g=state.goal;
+    if(g && state.count>=g){
+      state.rounds++; state.count=0;
+      if('vibrate' in navigator) navigator.vibrate([20,40,20]);
+      var tz=document.getElementById('tap'); tz.classList.remove('round-flash'); void tz.offsetWidth; tz.classList.add('round-flash');
+      if(window.dhikraToast) window.dhikraToast(document.documentElement.lang==='en'?'Round complete!':'أتممت جولة! ما شاء الله');
+    }
+    save(); render();
+  }
+  $('tap').addEventListener('click',tap);
+  $('tap2').addEventListener('click',tap);
+  $('minus').addEventListener('click',function(){ if(state.count>0){state.count--;state.total=Math.max(0,state.total-1);state.all=Math.max(0,state.all-1);save();render();}});
+  $('reset').addEventListener('click',function(){ state.count=0;save();render();});
+  document.querySelectorAll('#dhikr-select button').forEach(function(b){
+    if(b.dataset.word===state.word) {document.querySelectorAll('#dhikr-select button').forEach(x=>x.classList.remove('active'));b.classList.add('active');}
+    b.addEventListener('click',function(){
+      document.querySelectorAll('#dhikr-select button').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active'); state.word=b.dataset.word; state.count=0; save(); render();
+    });
+  });
+  document.querySelectorAll('#goal-select button').forEach(function(b){
+    if(parseInt(b.dataset.goal)===state.goal){document.querySelectorAll('#goal-select button').forEach(x=>x.classList.remove('active'));b.classList.add('active');}
+    b.addEventListener('click',function(){
+      document.querySelectorAll('#goal-select button').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active'); state.goal=parseInt(b.dataset.goal); state.count=0; save(); render();
+    });
+  });
+  // keyboard: space to count
+  document.addEventListener('keydown',function(e){ if(e.code==='Space' && e.target.tagName!=='BUTTON'){e.preventDefault();tap();}});
+  render();
+})();
+if ('serviceWorker' in navigator) { window.addEventListener('load', ()=> navigator.serviceWorker.register('sw.js').catch(()=>{})); }
+</script>
+</body>
+</html>
