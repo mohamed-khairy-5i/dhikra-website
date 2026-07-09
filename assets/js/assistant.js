@@ -108,8 +108,8 @@
       return '<button class="asst-chip" data-q="' + c + '">' + c + '</button>';
     }).join('');
 
-    function open() { panel.classList.add('open'); fab.classList.add('active'); load(function () { }); setTimeout(function () { var i = document.getElementById('asst-input'); if (i) i.focus(); }, 200); }
-    function close() { panel.classList.remove('open'); fab.classList.remove('active'); }
+    function open() { panel.classList.add('open'); fab.classList.add('active'); document.body.classList.add('asst-open'); load(function () { }); setTimeout(function () { var i = document.getElementById('asst-input'); if (i) i.focus(); }, 200); }
+    function close() { panel.classList.remove('open'); fab.classList.remove('active'); document.body.classList.remove('asst-open'); }
     fab.addEventListener('click', function () { panel.classList.contains('open') ? close() : open(); });
     panel.querySelector('.asst-close').addEventListener('click', close);
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });

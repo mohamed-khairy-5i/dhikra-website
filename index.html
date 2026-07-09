@@ -149,6 +149,12 @@
 .final-cta { background: linear-gradient(135deg, var(--emerald), var(--ink-2)); color: #fff; border-radius: var(--radius-lg); text-align: center; padding: clamp(40px, 7vw, 80px) 24px; position: relative; overflow: hidden; }
 .final-cta h2 { color: #fff; font-size: var(--step-3); margin-bottom: 14px; }
 .final-cta p { color: rgba(255,255,255,0.82); max-width: 520px; margin: 0 auto 28px; }
+/* Dark-mode: keep the deep decorative surfaces DARK (the --ink tokens flip
+   to light tints in night mode, so pin explicit dark greens here). */
+body.dark-mode .tasbih-demo { background: linear-gradient(150deg, #10241d, #0a1913); }
+body.dark-mode .final-cta { background: linear-gradient(135deg, #14453a, #0d201a); }
+body.dark-mode .smart-card .clock-icon,
+body.dark-mode .final-cta .btn-gold { color: #10241d; }
 </style>
 </head>
 <body data-title-ar="ذِكْرَى | أذكار وأدعية صحيحة" data-title-en="Dhikra | Authentic Adhkar & Duas">
