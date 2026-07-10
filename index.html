@@ -21,6 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
@@ -34,16 +35,71 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "ذِكْرَى",
-  "url": "https://dhikra.netlify.app/",
-  "inLanguage": "ar",
-  "description": "أذكار الصباح والمساء وأدعية صحيحة من القرآن والسنة مع مسبحة رقمية تفاعلية.",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://dhikra.netlify.app/adhkar.html?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://dhikra.netlify.app/#organization",
+      "name": "ذِكْرَى",
+      "alternateName": "Dhikra",
+      "url": "https://dhikra.netlify.app/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://dhikra.netlify.app/assets/img/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "description": "منصّة أذكار وأدعية صحيحة من القرآن والسنّة مع مسبحة رقمية وأدوات إسلامية — بدون إعلانات ومجانية.",
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dhikra.netlify.app/#website",
+      "name": "ذِكْرَى",
+      "alternateName": "Dhikra — أذكار وأدعية",
+      "url": "https://dhikra.netlify.app/",
+      "inLanguage": "ar",
+      "publisher": { "@id": "https://dhikra.netlify.app/#organization" },
+      "description": "أذكار الصباح والمساء وأدعية صحيحة من القرآن والسنة مع مسبحة رقمية تفاعلية وأدوات القبلة ومواقيت الصلاة.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://dhikra.netlify.app/adhkar.html?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://dhikra.netlify.app/#navigation",
+      "name": [
+        "الأذكار",
+        "أذكار الصباح",
+        "أذكار المساء",
+        "المسبحة الرقمية",
+        "الأدوات الإسلامية",
+        "المفضلة",
+        "المدوّنة",
+        "عن الموقع",
+        "الأسئلة الشائعة",
+        "الخصوصية",
+        "اتصل بنا"
+      ],
+      "url": [
+        "https://dhikra.netlify.app/adhkar.html",
+        "https://dhikra.netlify.app/adhkar-sabah.html",
+        "https://dhikra.netlify.app/adhkar-masaa.html",
+        "https://dhikra.netlify.app/tasbih.html",
+        "https://dhikra.netlify.app/tools.html",
+        "https://dhikra.netlify.app/favourites.html",
+        "https://dhikra.netlify.app/blog.html",
+        "https://dhikra.netlify.app/about.html",
+        "https://dhikra.netlify.app/faq.html",
+        "https://dhikra.netlify.app/privacy.html",
+        "https://dhikra.netlify.app/contact.html"
+      ]
+    }
+  ]
 }
 </script>
 <style>
@@ -149,6 +205,34 @@
 .final-cta { background: linear-gradient(135deg, var(--emerald), var(--ink-2)); color: #fff; border-radius: var(--radius-lg); text-align: center; padding: clamp(40px, 7vw, 80px) 24px; position: relative; overflow: hidden; }
 .final-cta h2 { color: #fff; font-size: var(--step-3); margin-bottom: 14px; }
 .final-cta p { color: rgba(255,255,255,0.82); max-width: 520px; margin: 0 auto 28px; }
+
+/* ===== Site index (crawlable section map for users + sitelinks) ===== */
+.site-index { display: grid; gap: 14px; grid-template-columns: 1fr; max-width: 860px; margin-inline: auto; }
+.site-index .idx-row {
+  display: flex; align-items: center; gap: 18px; padding: 20px 24px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow-sm); transition: transform .25s var(--ease-spring), box-shadow .25s, border-color .25s;
+  text-decoration: none;
+}
+.site-index .idx-row:hover { transform: translateX(-6px); box-shadow: var(--shadow-md); border-color: var(--emerald-soft); }
+html[lang="en"] .site-index .idx-row:hover { transform: translateX(6px); }
+.site-index .idx-ico {
+  width: 54px; height: 54px; flex: 0 0 54px; border-radius: 15px; display: grid; place-items: center;
+  font-size: 1.35rem; background: var(--emerald-tint); color: var(--emerald);
+}
+.site-index .idx-body { flex: 1; min-width: 0; }
+.site-index .idx-body h3 { font-size: var(--step-1); margin-bottom: 3px; color: var(--ink); }
+.site-index .idx-body p { color: var(--text-muted); font-size: 0.92rem; margin: 0; }
+.site-index .idx-arrow { color: var(--gold); font-size: 1.1rem; flex: 0 0 auto; opacity: .6; transition: opacity .25s, transform .25s; }
+.site-index .idx-row:hover .idx-arrow { opacity: 1; transform: translateX(-4px); }
+html[lang="en"] .site-index .idx-arrow { transform: scaleX(-1); }
+html[lang="en"] .site-index .idx-row:hover .idx-arrow { transform: scaleX(-1) translateX(-4px); }
+.idx-domain {
+  text-align: center; margin-bottom: 26px; padding: 16px 22px; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 10px; background: var(--emerald-tint);
+  color: var(--emerald); font-family: 'Sora', sans-serif; font-weight: 600; font-size: 0.95rem;
+}
+
 /* Dark-mode: keep the deep decorative surfaces DARK (the --ink tokens flip
    to light tints in night mode, so pin explicit dark greens here). */
 body.dark-mode .tasbih-demo { background: linear-gradient(150deg, #10241d, #0a1913); }
@@ -164,7 +248,7 @@ body.dark-mode .final-cta .btn-gold { color: #10241d; }
 <!-- ===== Navbar ===== -->
 <nav class="navbar">
   <a href="index.html" class="navbar-brand" aria-label="ذِكْرَى">
-    <span class="brand-mark"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M40 16a16 16 0 1 0 0 32 13 13 0 1 1 0-32z" fill="#f7f4ec"/><circle cx="45" cy="32" r="4.5" fill="#c6a15b"/></svg></span>
+    <span class="brand-mark"><img src="assets/img/logo-mark-white.png" alt="شعار ذِكْرَى" width="42" height="42"></span>
     <span><span class="site-name">ذِكْرَى</span><span class="site-tag">DHIKRA</span></span>
   </a>
   <div class="nav-right">
@@ -188,6 +272,9 @@ body.dark-mode .final-cta .btn-gold { color: #10241d; }
   <a href="tools.html"><span class="lang-ar">الأدوات</span><span class="lang-en">Tools</span></a>
   <a href="favourites.html"><span class="lang-ar">المفضلة</span><span class="lang-en">Favourites</span></a>
   <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
+  <a href="faq.html"><span class="lang-ar">الأسئلة الشائعة</span><span class="lang-en">FAQ</span></a>
+  <a href="about.html"><span class="lang-ar">عن الموقع</span><span class="lang-en">About</span></a>
+  <a href="privacy.html"><span class="lang-ar">الخصوصية</span><span class="lang-en">Privacy</span></a>
   <a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a>
 </div></div>
 
@@ -322,6 +409,91 @@ body.dark-mode .final-cta .btn-gold { color: #10241d; }
     </div>
   </section>
 
+  <!-- ===== Site index / important sections (crawlable, supports sitelinks) ===== -->
+  <section class="section section-tinted" id="sections" aria-labelledby="sections-title">
+    <div class="container">
+      <div class="center">
+        <span class="eyebrow" data-reveal><i class="fas fa-sitemap"></i><span class="lang-ar">أقسام الموقع</span><span class="lang-en">Site sections</span></span>
+        <h2 class="section-title" id="sections-title" data-reveal><span class="lang-ar">كل ما تحتاجه في مكان واحد</span><span class="lang-en">Everything you need in one place</span></h2>
+        <div class="idx-domain" data-reveal><i class="fas fa-globe"></i><span dir="ltr">dhikra.netlify.app</span></div>
+      </div>
+
+      <nav class="site-index" aria-label="أقسام ذِكْرَى">
+        <a class="idx-row" href="adhkar.html" data-reveal>
+          <span class="idx-ico"><i class="fas fa-book-open"></i></span>
+          <span class="idx-body">
+            <h3><span class="lang-ar">الأذكار والأدعية</span><span class="lang-en">Adhkar &amp; Duas</span></h3>
+            <p><span class="lang-ar">أذكار الصباح والمساء والنوم وبعد الصلاة — صحيحة من القرآن والسنّة.</span><span class="lang-en">Morning, evening, sleep &amp; post-prayer adhkar — authentic.</span></p>
+          </span>
+          <i class="fas fa-arrow-left idx-arrow"></i>
+        </a>
+
+        <a class="idx-row" href="tasbih.html" data-reveal data-delay="1">
+          <span class="idx-ico"><i class="fas fa-circle-notch"></i></span>
+          <span class="idx-body">
+            <h3><span class="lang-ar">المسبحة الرقمية</span><span class="lang-en">Digital Tasbih</span></h3>
+            <p><span class="lang-ar">سبّح بلمسة واحدة مع حفظ تلقائي وأهداف — تعمل بدون إنترنت.</span><span class="lang-en">Tap to count with auto-save &amp; goals — works offline.</span></p>
+          </span>
+          <i class="fas fa-arrow-left idx-arrow"></i>
+        </a>
+
+        <a class="idx-row" href="tools.html" data-reveal data-delay="2">
+          <span class="idx-ico"><i class="fas fa-compass"></i></span>
+          <span class="idx-body">
+            <h3><span class="lang-ar">الأدوات الإسلامية</span><span class="lang-en">Islamic Tools</span></h3>
+            <p><span class="lang-ar">اتجاه القبلة، مواقيت الصلاة، والتاريخ الهجري — بدقّة وحسب موقعك.</span><span class="lang-en">Qibla, prayer times &amp; Hijri date — by your location.</span></p>
+          </span>
+          <i class="fas fa-arrow-left idx-arrow"></i>
+        </a>
+
+        <a class="idx-row" href="favourites.html" data-reveal>
+          <span class="idx-ico"><i class="fas fa-heart"></i></span>
+          <span class="idx-body">
+            <h3><span class="lang-ar">المفضّلة</span><span class="lang-en">Favourites</span></h3>
+            <p><span class="lang-ar">احفظ أذكارك المفضّلة للوصول السريع في أي وقت.</span><span class="lang-en">Save your favourite adhkar for quick access.</span></p>
+          </span>
+          <i class="fas fa-arrow-left idx-arrow"></i>
+        </a>
+
+        <a class="idx-row" href="blog.html" data-reveal data-delay="1">
+          <span class="idx-ico"><i class="fas fa-feather-pointed"></i></span>
+          <span class="idx-body">
+            <h3><span class="lang-ar">المدوّنة</span><span class="lang-en">Blog</span></h3>
+            <p><span class="lang-ar">مقالات وتأمّلات تُنير قلبك وتُعمّق فهمك للذكر والدعاء.</span><span class="lang-en">Reflections that deepen your understanding.</span></p>
+          </span>
+          <i class="fas fa-arrow-left idx-arrow"></i>
+        </a>
+
+        <a class="idx-row" href="about.html" data-reveal data-delay="1">
+          <span class="idx-ico"><i class="fas fa-circle-info"></i></span>
+          <span class="idx-body">
+            <h3><span class="lang-ar">عن الموقع</span><span class="lang-en">About Dhikra</span></h3>
+            <p><span class="lang-ar">رسالتنا ومصادرنا الموثوقة ومنهجنا في نشر الذكر الصحيح.</span><span class="lang-en">Our mission, trusted sources, and methodology.</span></p>
+          </span>
+          <i class="fas fa-arrow-left idx-arrow"></i>
+        </a>
+
+        <a class="idx-row" href="faq.html" data-reveal data-delay="2">
+          <span class="idx-ico"><i class="fas fa-circle-question"></i></span>
+          <span class="idx-body">
+            <h3><span class="lang-ar">الأسئلة الشائعة</span><span class="lang-en">FAQ</span></h3>
+            <p><span class="lang-ar">إجابات عن المصادر والخصوصية والعمل بدون إنترنت والأدوات.</span><span class="lang-en">Answers on sources, privacy, offline use &amp; tools.</span></p>
+          </span>
+          <i class="fas fa-arrow-left idx-arrow"></i>
+        </a>
+
+        <a class="idx-row" href="contact.html" data-reveal data-delay="2">
+          <span class="idx-ico"><i class="fas fa-envelope"></i></span>
+          <span class="idx-body">
+            <h3><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></h3>
+            <p><span class="lang-ar">اقتراح، تصحيح، أو سؤال؟ يسعدنا تواصلك معنا.</span><span class="lang-en">A suggestion, correction or question? Reach out.</span></p>
+          </span>
+          <i class="fas fa-arrow-left idx-arrow"></i>
+        </a>
+      </nav>
+    </div>
+  </section>
+
   <!-- ===== Final CTA ===== -->
   <section class="section">
     <div class="container">
@@ -360,7 +532,7 @@ body.dark-mode .final-cta .btn-gold { color: #10241d; }
         <a href="tools.html"><span class="lang-ar">القبلة ومواقيت الصلاة</span><span class="lang-en">Qibla & Prayer times</span></a>
         <a href="favourites.html"><span class="lang-ar">المفضلة</span><span class="lang-en">Favourites</span></a>
         <a href="blog.html"><span class="lang-ar">المدونة</span><span class="lang-en">Blog</span></a>
-      </div>
+      </div><div class="footer-col"><h4><span class="lang-ar">الموقع</span><span class="lang-en">Site</span></h4><a href="about.html"><span class="lang-ar">عن الموقع</span><span class="lang-en">About</span></a><a href="faq.html"><span class="lang-ar">الأسئلة الشائعة</span><span class="lang-en">FAQ</span></a><a href="privacy.html"><span class="lang-ar">الخصوصية</span><span class="lang-en">Privacy</span></a><a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact</span></a></div>
     </div>
     <div class="footer-bottom">
       <p><span class="lang-ar">جميع الحقوق محفوظة © 2025 · موقع ذِكْرَى</span><span class="lang-en">All rights reserved © 2025 · Dhikra</span></p>

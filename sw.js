@@ -1,5 +1,5 @@
 /* ذِكْرَى service worker — offline-first for a fast, ad-free, private experience */
-const CACHE = 'dhikra-v3';
+const CACHE = 'dhikra-v4';
 const CORE = [
   './',
   './index.html',
@@ -8,11 +8,16 @@ const CORE = [
   './tools.html',
   './favourites.html',
   './blog.html',
+  './about.html',
+  './faq.html',
+  './privacy.html',
+  './contact.html',
   './assets/css/style.css',
   './assets/js/app.js',
   './assets/js/assistant.js',
   './assets/js/index.json',
   './assets/img/logo.svg',
+  './assets/img/logo-mark-white.png',
   './assets/img/hero.webp',
   './manifest.webmanifest'
 ];

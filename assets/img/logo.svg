@@ -1,12 +1,19 @@
-<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ذِكْرَى">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#3f8f76"/>
-      <stop offset="1" stop-color="#1b5e4a"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="16" fill="url(#g)"/>
-  <!-- crescent + tasbeeh bead motif -->
-  <path d="M40 16a16 16 0 1 0 0 32 13 13 0 1 1 0-32z" fill="#f7f4ec"/>
-  <circle cx="45" cy="32" r="4.5" fill="#c6a15b"/>
+<svg width="64" height="64" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ذِكْرَى">
+  <circle cx="256" cy="256" r="230" fill="none" stroke="#1b5e4a" stroke-width="34"/>
+  <g fill="#1b5e4a">
+    <!-- center top petal -->
+    <path d="M256 138c22 26 22 66 0 92-22-26-22-66 0-92z"/>
+    <!-- upper side petals -->
+    <path d="M188 170c30 14 44 51 34 84-31-13-45-50-34-84z"/>
+    <path d="M324 170c-30 14-44 51-34 84 31-13 45-50 34-84z"/>
+    <!-- lower side petals -->
+    <path d="M150 228c33 6 57 37 55 72-33-6-57-37-55-72z"/>
+    <path d="M362 228c-33 6-57 37-55 72 33-6 57-37 55-72z"/>
+    <!-- bud / bead center -->
+    <ellipse cx="256" cy="258" rx="40" ry="50"/>
+    <!-- stem + leaves -->
+    <path d="M256 300c-6 34-6 60 0 92 6-32 6-58 0-92z"/>
+    <path d="M256 358c-26-22-58-30-92-26 22 26 58 34 92 26z"/>
+    <path d="M256 358c26-22 58-30 92-26-22 26-58 34-92 26z"/>
+  </g>
 </svg>
