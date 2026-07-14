@@ -1,0 +1,53 @@
+# ===================================================
+# netlify.toml — إعدادات نشر موقع ذِكْرَى
+# ===================================================
+
+[build]
+  publish = "."
+
+# رؤوس عامة لكل الملفات: أمان + خصوصية
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(self), camera=(), microphone=(), payment=()"
+    X-XSS-Protection = "1; mode=block"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# تخزين مؤقت طويل للأصول الثابتة (CSS/JS/صور/خطوط)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# صفحات HTML: لا تخزين طويل حتى يصل التحديث فوراً
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# service worker يجب ألّا يُخزَّن حتى تصل الإصدارات الجديدة
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# manifest
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+    Cache-Control = "public, max-age=604800"
+
+# صفحة الخطأ المخصّصة
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

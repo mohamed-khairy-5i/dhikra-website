@@ -1,5 +1,5 @@
 /* ذِكْرَى service worker — offline-first for a fast, ad-free, private experience */
-const CACHE = 'dhikra-v4';
+const CACHE = 'dhikra-v6';
 const CORE = [
   './',
   './index.html',
@@ -12,8 +12,14 @@ const CORE = [
   './faq.html',
   './privacy.html',
   './contact.html',
+  './asma-allah.html',
+  './duas-quran.html',
+  './duas-nabawiyah.html',
+  './offline.html',
+  './404.html',
   './assets/css/style.css',
   './assets/js/app.js',
+  './assets/js/modern.js',
   './assets/js/assistant.js',
   './assets/js/index.json',
   './assets/img/logo.svg',
@@ -42,7 +48,7 @@ self.addEventListener('fetch', (e) => {
   if (req.mode === 'navigate' || (req.headers.get('accept') || '').includes('text/html')) {
     e.respondWith(
       fetch(req).then(res => { const copy = res.clone(); caches.open(CACHE).then(c => c.put(req, copy)); return res; })
-        .catch(() => caches.match(req).then(r => r || caches.match('./index.html')))
+        .catch(() => caches.match(req).then(r => r || caches.match('./offline.html')))
     );
     return;
   }

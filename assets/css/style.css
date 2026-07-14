@@ -531,3 +531,80 @@ body.asst-open .to-top{opacity:0;pointer-events:none;transform:translateY(16px) 
   .asst-fab{width:52px;height:52px;bottom:16px;inset-inline-end:16px}
   .to-top{bottom:80px;inset-inline-end:19px;width:42px;height:42px}
 }
+
+/* ==========================================================================
+   ذِكْرَى — Modern web-platform layer (2024/2025)
+   Progressive enhancement only: every feature is guarded by @supports or is
+   inert on browsers that don't understand it. Nothing here is load-bearing.
+   ========================================================================== */
+
+/* ---- View Transitions API: smooth cross-document page navigation ---- */
+@view-transition { navigation: auto; }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: .32s;
+  animation-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation: none; }
+}
+/* Give the brand + hero a stable identity across transitions */
+.navbar-brand { view-transition-name: dhikra-brand; }
+
+/* ---- @property: typed custom property for a truly animatable gold sweep ---- */
+@property --dhikra-sweep {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* ---- text-wrap: balance / pretty — tighter, more elegant headings ---- */
+h1, h2, .section-title, .page-title, .dua-ar, .name-ar {
+  text-wrap: balance;
+}
+p, .dua-en, .page-sub { text-wrap: pretty; }
+
+/* ---- :has() — parent-aware styling without extra JS/classes ---- */
+/* Dim the whole card grid subtly while a search box has a value */
+.duas-search:has(input:not(:placeholder-shown)) + .duas-count { color: var(--emerald); font-weight: 600; }
+/* Highlight a dua card that is being hovered within a focused list */
+.duas-list:has(.dua-card:hover) .dua-card:not(:hover) { opacity: .72; transition: opacity .25s ease; }
+.asma-grid:has(.name-card:hover) .name-card:not(:hover) { opacity: .78; transition: opacity .25s ease; }
+
+/* ---- Container queries — cards adapt to their container, not the viewport ---- */
+.duas-list, .asma-grid { container-type: inline-size; }
+@container (max-width: 420px) {
+  .dua-ar { font-size: var(--step-0); }
+  .dua-top { gap: .4rem; }
+}
+
+/* ---- Modern focus ring (::focus-visible + accent-color) ---- */
+:root { accent-color: var(--emerald); }
+a:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--emerald);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---- Scroll-driven reveal (native, no IntersectionObserver) where supported ---- */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    [data-reveal]:not(.in) {
+      opacity: 0;
+      animation: dhikra-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 22%;
+    }
+  }
+}
+@keyframes dhikra-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- color-mix() — derive tints from tokens instead of hand-picking ---- */
+@supports (background: color-mix(in srgb, red, blue)) {
+  .dua-tag, .dua-num { background: color-mix(in srgb, var(--emerald) 12%, transparent); }
+}

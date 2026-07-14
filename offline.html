@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1b5e4a">
+<title>غير متصل | ذِكْرَى</title>
+<meta name="description" content="أنت غير متصل بالإنترنت حالياً. يمكنك تصفّح الصفحات التي زرتها سابقاً في ذِكْرَى.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.off-wrap{min-height:82vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 20px}
+.off-inner{max-width:600px;margin:0 auto}
+.off-icon{width:110px;height:110px;margin:0 auto 26px;border-radius:50%;display:grid;place-items:center;
+  background:var(--surface);border:1px solid var(--line);color:var(--emerald);font-size:2.6rem;box-shadow:var(--shadow-sm)}
+body.dark-mode .off-icon{color:var(--emerald-soft)}
+.off-inner h1{font-size:var(--step-3);margin-bottom:12px;color:var(--ink)}
+body.dark-mode .off-inner h1{color:var(--ivory)}
+.off-inner p{color:var(--text-muted);font-size:var(--step-0);line-height:1.9;margin-bottom:22px}
+.off-dhikr{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 24px;margin:0 auto 28px;max-width:460px}
+.off-dhikr .ar{font-family:'Amiri',serif;font-size:1.4rem;color:var(--emerald);line-height:2}
+body.dark-mode .off-dhikr .ar{color:var(--emerald-soft)}
+.off-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+</style>
+</head>
+<body data-title-ar="غير متصل | ذِكْرَى" data-title-en="Offline | Dhikra">
+<div class="page-aura"></div>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand" aria-label="ذِكْرَى">
+    <span class="brand-mark"><img src="assets/img/logo-mark-white.png" alt="شعار ذِكْرَى" width="42" height="42"></span>
+    <span><span class="site-name">ذِكْرَى</span><span class="site-tag">DHIKRA</span></span>
+  </a>
+  <div class="nav-right">
+    <button class="lang-toggle-btn" data-lang-toggle title="Language"></button>
+    <button class="icon-btn" data-theme-toggle aria-label="Toggle theme"><i class="fas fa-moon" data-theme-icon></i></button>
+  </div>
+</nav>
+
+<main>
+  <div class="off-wrap">
+    <div class="off-inner">
+      <div class="off-icon"><i class="fas fa-wifi"></i></div>
+      <h1><span class="lang-ar">أنت غير متصل بالإنترنت</span><span class="lang-en">You're offline</span></h1>
+      <p><span class="lang-ar">لا يوجد اتصال بالإنترنت حالياً. يمكنك تصفّح الصفحات التي فتحتها من قبل، فهي محفوظة على جهازك.</span><span class="lang-en">There's no internet connection right now. You can still browse pages you've opened before — they're saved on your device.</span></p>
+
+      <div class="off-dhikr">
+        <div class="ar">حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ</div>
+      </div>
+
+      <div class="off-actions">
+        <button class="btn btn-primary" onclick="location.reload()"><i class="fas fa-rotate-right"></i><span class="lang-ar">إعادة المحاولة</span><span class="lang-en">Try again</span></button>
+        <a href="index.html" class="btn btn-ghost"><i class="fas fa-house"></i><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/modern.js" defer></script>
+<script>
+window.addEventListener('online', ()=> location.reload());
+</script>
+</body>
+</html>
