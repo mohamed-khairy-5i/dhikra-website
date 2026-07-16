@@ -608,3 +608,44 @@ a:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-vis
 @supports (background: color-mix(in srgb, red, blue)) {
   .dua-tag, .dua-num { background: color-mix(in srgb, var(--emerald) 12%, transparent); }
 }
+
+/* ==========================================================================
+   Developer credit (rendered by assets/js/credit.js — single source of truth)
+   ========================================================================== */
+.dev-credit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: .5rem;
+  font-size: .82rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.dev-credit .dev-credit-line a {
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dotted color-mix(in srgb, var(--gold) 55%, transparent);
+  transition: color .2s ease, border-color .2s ease;
+}
+.dev-credit .dev-credit-line a:hover { color: var(--gold-soft); border-color: var(--gold-soft); }
+.dev-credit-links { display: inline-flex; gap: .55rem; align-items: center; }
+.dev-credit-links a {
+  width: 30px; height: 30px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  color: var(--text-muted);
+  background: color-mix(in srgb, var(--emerald) 8%, transparent);
+  border: 1px solid var(--line);
+  transition: color .2s ease, background .2s ease, transform .2s ease, border-color .2s ease;
+  font-size: .85rem;
+}
+.dev-credit-links a:hover {
+  color: var(--emerald);
+  background: color-mix(in srgb, var(--emerald) 16%, transparent);
+  border-color: var(--emerald-soft);
+  transform: translateY(-2px);
+}
+body.dark-mode .dev-credit-links a:hover { color: var(--emerald-soft); }

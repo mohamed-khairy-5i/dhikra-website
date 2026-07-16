@@ -1,5 +1,5 @@
 /* ذِكْرَى service worker — offline-first for a fast, ad-free, private experience */
-const CACHE = 'dhikra-v6';
+const CACHE = 'dhikra-v7';
 const CORE = [
   './',
   './index.html',
@@ -20,6 +20,7 @@ const CORE = [
   './assets/css/style.css',
   './assets/js/app.js',
   './assets/js/modern.js',
+  './assets/js/credit.js',
   './assets/js/assistant.js',
   './assets/js/index.json',
   './assets/img/logo.svg',
