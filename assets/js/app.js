@@ -87,8 +87,43 @@
     window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
     if (top) top.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }));
 
+    initStreak();
     initDhikr();
   });
+
+  /* ==========================================================================
+     Daily streak — pure client-side habit tracker (privacy-first, offline).
+     Counts consecutive days the visitor opened Dhikra. No server, no cookies.
+     Renders into any [data-streak] element; safely no-ops if none present.
+     ========================================================================== */
+  function initStreak() {
+    const KEY = 'streak';
+    const today = new Date().toISOString().slice(0, 10);          // YYYY-MM-DD (local-ish)
+    let s = store.get(KEY, { last: null, count: 0, best: 0 });
+
+    if (s.last !== today) {
+      const y = new Date(); y.setDate(y.getDate() - 1);
+      const yesterday = y.toISOString().slice(0, 10);
+      s.count = (s.last === yesterday) ? (s.count + 1) : 1;       // continue or reset
+      s.last = today;
+      s.best = Math.max(s.best || 0, s.count);
+      store.set(KEY, s);
+    }
+
+    const targets = document.querySelectorAll('[data-streak]');
+    if (!targets.length) return;
+    const n = s.count;
+    targets.forEach(el => {
+      el.hidden = false;
+      el.innerHTML =
+        '<i class="fas fa-fire" aria-hidden="true"></i>' +
+        '<b>' + n + '</b>' +
+        '<span class="lang-ar">' + (n === 1 ? 'يوم' : 'يوم متتالٍ') + '</span>' +
+        '<span class="lang-en">day' + (n === 1 ? '' : 's') + ' streak</span>';
+      el.title = t('أيام متتالية من الذكر — أطول سلسلة: ' + (s.best || n),
+                   'Consecutive days of dhikr — best: ' + (s.best || n));
+    });
+  }
 
   /* ==========================================================================
      Dhikr interactivity: tap counters, favourites, share, copy, progress ring

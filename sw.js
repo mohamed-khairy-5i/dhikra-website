@@ -1,5 +1,5 @@
 /* ذِكْرَى service worker — offline-first for a fast, ad-free, private experience */
-const CACHE = 'dhikra-v7';
+const CACHE = 'dhikra-v8';
 const CORE = [
   './',
   './index.html',

@@ -16,9 +16,13 @@
 <meta property="og:title" content="ذِكْرَى | حصنك اليومي من الأذكار والأدعية الصحيحة">
 <meta property="og:description" content="أذكار الصباح والمساء وأدعية صحيحة مع مسبحة رقمية تفاعلية وتتبّع لتقدّمك. مجاني وبدون إعلانات.">
 <meta property="og:image" content="https://dhikra.netlify.app/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ذِكْرَى — أذكار وأدعية صحيحة">
 <meta property="og:url" content="https://dhikra.netlify.app/">
 <meta property="og:locale" content="ar_AR">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dhikra.netlify.app/assets/img/og-image.jpg">
 
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
@@ -160,6 +164,16 @@
 }
 .smart-card h3 { font-size: var(--step-1); margin-bottom: 4px; }
 .smart-card p { color: var(--text-muted); font-size: 0.92rem; }
+.smart-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.streak-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 14px; border-radius: 999px; font-size: .9rem; font-weight: 600;
+  color: var(--gold); background: color-mix(in srgb, var(--gold) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--gold) 35%, transparent); white-space: nowrap;
+}
+.streak-badge i { font-size: .95rem; }
+.streak-badge b { color: var(--ink); font-size: 1.05rem; }
+body.dark-mode .streak-badge b { color: var(--ivory); }
 
 /* stat band */
 .stat-band { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 18px; }
@@ -317,7 +331,10 @@ body.dark-mode .final-cta .btn-gold { color: #10241d; }
           <p id="smart-sub"><span class="lang-ar">حسب وقتك الآن، هذه أنسب الأذكار لتبدأ بها.</span><span class="lang-en">Based on your time now, this is the best set to begin with.</span></p>
         </div>
       </div>
-      <a id="smart-link" href="adhkar-sabah.html" class="btn btn-primary btn-sm"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read now</span></a>
+      <div class="smart-actions">
+        <span class="streak-badge" data-streak hidden aria-live="polite"></span>
+        <a id="smart-link" href="adhkar-sabah.html" class="btn btn-primary btn-sm"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read now</span></a>
+      </div>
     </div>
   </div>
 

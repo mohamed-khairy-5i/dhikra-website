@@ -4,6 +4,9 @@ build_articles.py
 build_index.py
 inject.py
 
+# Internal strategy docs — kept local, never published
+ROADMAP.md
+
 # OS / editor
 .DS_Store
 Thumbs.db
