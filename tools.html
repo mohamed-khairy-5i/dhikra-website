@@ -152,6 +152,22 @@ body.dark-mode .hijri-big{color:var(--emerald-soft)}
           <div class="hijri-greg" id="greg">—</div>
           <p class="loc-note"><span class="lang-ar">يُحسب بتقويم أم القرى (تقريبي).</span><span class="lang-en">Based on the Umm al-Qura calendar (approximate).</span></p>
         </div>
+
+        <div class="tool-panel" data-reveal>
+          <h2><i class="fas fa-bell"></i><span class="lang-ar">تذكير الأذكار</span><span class="lang-en">Adhkar Reminder</span></h2>
+          <p class="muted"><span class="lang-ar">تذكير يومي لطيف بأذكارك. يعمل بالكامل على جهازك دون خوادم.</span><span class="lang-en">A gentle daily nudge for your adhkar. Runs entirely on your device — no servers.</span></p>
+          <div class="reminder-row">
+            <label class="reminder-time">
+              <span class="lang-ar">وقت التذكير</span><span class="lang-en">Reminder time</span>
+              <input type="time" id="rem-time" value="07:00">
+            </label>
+            <button class="btn btn-primary btn-sm" id="rem-toggle" aria-pressed="false">
+              <i class="fas fa-bell"></i><span class="lang-ar">تفعيل</span><span class="lang-en">Enable</span>
+            </button>
+          </div>
+          <p class="loc-note" id="rem-status"><span class="lang-ar">التذكير معطّل.</span><span class="lang-en">Reminder is off.</span></p>
+          <p class="loc-note"><span class="lang-ar">ملاحظة: يظهر التذكير عند فتح الموقع في الوقت المحدّد، حفاظًا على خصوصيتك بلا إشعارات خارجية.</span><span class="lang-en">Note: the reminder appears when the site is open at the chosen time — privacy-first, with no external push service.</span></p>
+        </div>
       </div>
     </div>
   </section>
@@ -205,6 +221,7 @@ body.dark-mode .hijri-big{color:var(--emerald-soft)}
 
 <button class="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 <script src="assets/js/app.js"></script>
+<script src="assets/js/reminder.js" defer></script>
 <script src="assets/js/credit.js" defer></script>
 <script src="assets/js/modern.js" defer></script>
 <script src="assets/js/assistant.js" defer></script>

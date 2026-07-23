@@ -174,6 +174,25 @@
 .streak-badge i { font-size: .95rem; }
 .streak-badge b { color: var(--ink); font-size: 1.05rem; }
 body.dark-mode .streak-badge b { color: var(--ivory); }
+/* Dhikr of the day */
+.dotd {
+  margin-top: 22px; padding: 26px 30px; border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--emerald) 8%, var(--surface)), var(--surface));
+  border: 1px solid var(--line); box-shadow: var(--shadow-md); position: relative; overflow: hidden;
+}
+.dotd::before {
+  content: "\f10d"; font-family: "Font Awesome 6 Free"; font-weight: 900;
+  position: absolute; inset-inline-end: 20px; top: 12px; font-size: 3.4rem;
+  color: color-mix(in srgb, var(--gold) 16%, transparent); pointer-events: none;
+}
+.dotd-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--gold); font-size: .9rem; margin-bottom: 12px; }
+.dotd-text {
+  font-family: "Amiri", serif; font-size: clamp(1.35rem, 1rem + 1.6vw, 1.9rem); line-height: 1.9;
+  color: var(--ink); margin: 0 0 16px; text-wrap: pretty;
+}
+body.dark-mode .dotd-text { color: var(--ivory); }
+.dotd-foot { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+.dotd-title { color: var(--text-muted); font-size: .95rem; font-weight: 600; }
 
 /* stat band */
 .stat-band { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 18px; }
@@ -334,6 +353,20 @@ body.dark-mode .final-cta .btn-gold { color: #10241d; }
       <div class="smart-actions">
         <span class="streak-badge" data-streak hidden aria-live="polite"></span>
         <a id="smart-link" href="adhkar-sabah.html" class="btn btn-primary btn-sm"><span class="lang-ar">اقرأ الآن</span><span class="lang-en">Read now</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Dhikr of the day ===== -->
+  <div class="container">
+    <div class="dotd" data-dotd hidden data-reveal aria-live="polite">
+      <div class="dotd-head">
+        <span class="dotd-eyebrow"><i class="fas fa-sun"></i><span class="lang-ar">ذِكْر اليوم</span><span class="lang-en">Dhikr of the day</span></span>
+      </div>
+      <p class="dotd-text" data-dotd-text></p>
+      <div class="dotd-foot">
+        <span class="dotd-title" data-dotd-title></span>
+        <a class="btn btn-ghost btn-sm" data-dotd-link href="#"><span class="lang-ar">اقرأ المزيد</span><span class="lang-en">Read more</span></a>
       </div>
     </div>
   </div>

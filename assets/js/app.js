@@ -88,8 +88,37 @@
     if (top) top.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }));
 
     initStreak();
+    initDhikrOfDay();
     initDhikr();
   });
+
+  /* ==========================================================================
+     Dhikr of the day — deterministic daily pick from the site index.
+     Same dhikr for everyone on a given day (encourages a daily return),
+     rotates automatically at midnight. Offline: uses cached index.json.
+     No-ops safely if [data-dotd] is absent (non-home pages).
+     ========================================================================== */
+  function initDhikrOfDay() {
+    const box = document.querySelector('[data-dotd]');
+    if (!box) return;
+    fetch('assets/js/index.json')
+      .then(r => r.json())
+      .then(list => {
+        if (!Array.isArray(list) || !list.length) return;
+        // Deterministic day index: days since epoch → stable per calendar day.
+        const dayNo = Math.floor(Date.now() / 86400000);
+        const item = list[dayNo % list.length];
+        const textEl = box.querySelector('[data-dotd-text]');
+        const titleEl = box.querySelector('[data-dotd-title]');
+        const linkEl = box.querySelector('[data-dotd-link]');
+        if (textEl) textEl.textContent = (item.x || '').replace(/…+$/, '') + '…';
+        if (titleEl) titleEl.textContent = (html.lang === 'en' ? (item.te || item.ta) : item.ta) || '';
+        if (linkEl) linkEl.setAttribute('href', (item.p || '#') + (item.id ? '#' + item.id : ''));
+        box.hidden = false;
+        box.classList.add('in');
+      })
+      .catch(() => { /* offline & uncached: silently keep hidden */ });
+  }
 
   /* ==========================================================================
      Daily streak — pure client-side habit tracker (privacy-first, offline).
