@@ -126,6 +126,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+<url>
+    <loc>https://dhikra.netlify.app/adhkar-karb.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://dhikra.netlify.app/blog-fadl-dhikr.html</loc>
     <lastmod>2026-07-07</lastmod>
